@@ -5,13 +5,13 @@ const nextConfig = {
     return [
       // TODO: remove unused endpoint
       {
-        source: '/runs',
-        destination: 'http://localhost:8080/runs',
-        source: '/activities',
-        destination: 'http://localhost:8080/activities'
-      }
-    ]
-  }
-}
+        source: "/runs",
+        destination: "http://localhost:8080/runs",
+        source: "/activities",
+        destination: "http://localhost:8080/activities",
+      },
+    ];
+  },
+};
 
-export default nextConfig
+export default nextConfig;

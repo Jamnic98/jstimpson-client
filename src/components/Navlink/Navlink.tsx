@@ -1,24 +1,24 @@
-'use client'
-import { useState } from 'react'
-import Link from 'next/link'
+"use client";
+import { useState } from "react";
+import Link from "next/link";
 
 // import { Caret, Dropdown } from 'components'
-import { useWidth } from 'utils'
-import { type NavlinkDataType } from 'types'
-import styles from './navlink.module.css'
+import { useWidth } from "utils";
+import { type NavlinkDataType } from "types";
+import styles from "./navlink.module.css";
 
 interface NavlinkProps {
-  navlinkObj: NavlinkDataType
-  onClick: () => void
+  navlinkObj: NavlinkDataType;
+  onClick: () => void;
 }
 
 export const Navlink: React.FC<NavlinkProps> = ({
   navlinkObj,
-  onClick: handleClick
+  onClick: handleClick,
 }) => {
-  const [/* isActive */, setIsActive] = useState(false)
-  const { label, url, children } = navlinkObj
-  const screenWidth = useWidth() || 800
+  const [, /* isActive */ setIsActive] = useState(false);
+  const { label, url, children } = navlinkObj;
+  const screenWidth = useWidth() || 800;
   return (
     <>
       {screenWidth >= 800 && children.length ? (
@@ -34,7 +34,7 @@ export const Navlink: React.FC<NavlinkProps> = ({
           </Link>
           <div
             className={styles.dropdownContainer}
-            data-testid='dropdownContainer'
+            data-testid="dropdownContainer"
           >
             {/* <Dropdown
 							isOpen={isActive}
@@ -53,5 +53,5 @@ export const Navlink: React.FC<NavlinkProps> = ({
         </Link>
       )}
     </>
-  )
-}
+  );
+};

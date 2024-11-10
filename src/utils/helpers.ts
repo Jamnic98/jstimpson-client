@@ -1,4 +1,4 @@
-export const reduceSumFunc = (prev: number, cur: number) => prev + cur
+export const reduceSumFunc = (prev: number, cur: number) => prev + cur;
 
 export const getRandomElement = (array: any[]) =>
-	array[Math.floor(Math.random() * array.length)]
+  array[Math.floor(Math.random() * array.length)];

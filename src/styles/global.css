@@ -1,0 +1,87 @@
+:root {
+  --c-bg-primary: #fdfdfd;
+  --c-bg-secondary: #01051a;
+  --c-text-dark: #1b1d29;
+  --c-text-light: white;
+  --c-link: #df4a00;
+  --c-text-navbar: white;
+  --navbar-height: 3em;
+  --footer-height: 3em;
+  --elevated-content: 4px 4px 10px -2px gray;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
+  background-color: var(--c-bg-primary);
+  color: var(--c-text-dark);
+  line-height: 1.6em;
+}
+
+main {
+  margin: 3em;
+  min-height: calc(100vh - var(--navbar-height) - var(--footer-height) - 6em);
+}
+
+article {
+  display: grid;
+  row-gap: 0.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1em 0 1em;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+div#tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 0.4em;
+  background: var(--c-bg-secondary);
+  color: var(--c-text-light);
+  border: 0px;
+  border-radius: 4px;
+  pointer-events: none;
+  font-size: 0.7em;
+}
+
+ul {
+  list-style-type: square;
+  margin: 0;
+}
+
+ul > li {
+  color: var(--c-link);
+}
+
+ul > li > span {
+  color: var(--c-text-dark);
+}
+
+/* hr for subheadings */
+.subRule {
+  border: none;
+  background-color: var(--c-link);
+  height: 1px;
+  width: 100px;
+  margin-left: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    max-width: 600px;
+  }
+}
