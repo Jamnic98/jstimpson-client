@@ -1,19 +1,19 @@
 .menuIcon {
-  visibility: hidden;
-  font-size: 1.6em;
-  cursor: pointer;
-  position: absolute;
-  left: 0;
-  top: 25%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 0.3em;
-  color: var(--c-text-navbar);
+	visibility: hidden;
+	font-size: 1.6em;
+	cursor: pointer;
+	position: absolute;
+	left: 0;
+	top: 25%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 0.3em;
+	color: var(--c-text-navbar);
 }
 
 @media screen and (max-width: 800px) {
-  .menuIcon {
-    visibility: unset;
-  }
+	.menuIcon {
+		visibility: unset;
+	}
 }
