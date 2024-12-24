@@ -4,11 +4,11 @@ import Link from 'next/link'
 
 // import { Caret, Dropdown } from 'components'
 import { useWidth } from 'utils'
-import { type NavlinkDataType } from 'types'
+import { type NavlinkData } from 'types'
 import styles from './navlink.module.css'
 
 interface NavlinkProps {
-	navlinkObj: NavlinkDataType
+	navlinkObj: NavlinkData
 	onClick: () => void
 }
 
@@ -33,7 +33,7 @@ export const Navlink: React.FC<NavlinkProps> = ({ navlinkObj, onClick: handleCli
 						{/* <Dropdown
 							isOpen={isActive}
 							items={children}
-							render={(navlinkObj: NavlinkDataType) => (
+							render={(navlinkObj: NavlinkData) => (
 								<Link className={styles.navlink} href={navlinkObj.url}>
 									{navlinkObj.label}
 								</Link>

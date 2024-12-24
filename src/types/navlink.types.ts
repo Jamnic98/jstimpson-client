@@ -1,5 +1,5 @@
-export type NavlinkDataType = {
+export type NavlinkData = {
 	label: string
 	url: string
-	children: NavlinkDataType[]
+	children: NavlinkData[]
 }

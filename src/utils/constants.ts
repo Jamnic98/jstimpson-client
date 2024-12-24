@@ -1,6 +1,6 @@
-import type { NavlinkDataType } from '../types'
+import type { NavlinkData } from '../types'
 
-export const navlinkObjArr: NavlinkDataType[] = [
+export const navlinkObjArr: NavlinkData[] = [
 	{
 		label: 'logs',
 		url: '/logs/running',
