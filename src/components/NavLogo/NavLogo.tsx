@@ -2,23 +2,21 @@ import React from 'react'
 import Link from 'next/link'
 
 import { useWidth } from 'utils'
-import styles from './navLogo.module.css'
 
 export interface NavLogoProps {
-	handleClick?: () => void
-	linkURL?: string
+  linkURL?: string
 }
 
-export const NavLogo: React.FC<NavLogoProps> = ({ handleClick, linkURL = '/' }) => {
-	const width = useWidth() || 800
+export const NavLogo: React.FC<NavLogoProps> = ({ linkURL = '/' }) => {
+  const width = useWidth() || 800
 
-	return (
-		<Link
-			className={styles.navLogo}
-			href={linkURL}
-			onClick={handleClick ? () => handleClick() : undefined}
-		>
-			{width >= 800 ? 'Jamie Stimpson' : 'JS'}
-		</Link>
-	)
+  return (
+    <Link
+      className=" font-bold text-orange-600 hover:text-neutral-light transition-colors duration-300 ease-in-out"
+      href={linkURL}
+    >
+      {width >= 800 ? 'Jamie Stimpson' : 'JS'}
+    </Link>
+  )
 }
+// test comment

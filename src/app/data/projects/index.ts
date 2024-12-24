@@ -1,4 +1,4 @@
-import { ProjectDataType } from 'types'
+import { type ProjectData } from 'types'
 
 import blueCheeseClassifier from './blueCheeseClassifier'
 import cryptoViewer from './cryptoViewer'
@@ -11,17 +11,17 @@ import readingLog from './readingLog'
 import scrabbleScorekeeper from './scrabbleScorekeeper'
 import touchTyping from './touchTyping'
 
-const projects: ProjectDataType[] = [
-	blueCheeseClassifier,
-	cryptoViewer,
-	inventoryManagementSystem,
-	libraryBookRenewer,
-	looseChangeCalculator,
-	portfolioWebsite,
-	pyramidSolitaire,
-	readingLog,
-	scrabbleScorekeeper,
-	touchTyping,
+const projects: ProjectData[] = [
+  blueCheeseClassifier,
+  cryptoViewer,
+  inventoryManagementSystem,
+  libraryBookRenewer,
+  looseChangeCalculator,
+  portfolioWebsite,
+  pyramidSolitaire,
+  readingLog,
+  scrabbleScorekeeper,
+  touchTyping,
 ]
 
 export default projects

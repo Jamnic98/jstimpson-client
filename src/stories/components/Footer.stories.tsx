@@ -3,8 +3,8 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Footer } from 'components'
 
 const meta: Meta<typeof Footer> = {
-	title: 'Components/Footer',
-	component: Footer,
+  title: 'Components/Footer',
+  component: Footer,
 }
 export default meta
 

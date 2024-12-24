@@ -1,5 +1,5 @@
-export type NavlinkData = {
-	label: string
-	url: string
-	children: NavlinkData[]
+export interface NavlinkData {
+  label: string
+  url: string
+  children: NavlinkData[]
 }

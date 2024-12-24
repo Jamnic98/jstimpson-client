@@ -5,9 +5,9 @@ import { navlinkObjArr } from 'utils'
 
 //👇 This default export determines where your story goes in the story list
 const meta: Meta<typeof Navbar> = {
-	title: 'Components/Navbar',
-	component: Navbar,
-	args: { navlinkObjArr },
+  title: 'Components/Navbar',
+  component: Navbar,
+  args: { navlinkObjArr },
 }
 export default meta
 
