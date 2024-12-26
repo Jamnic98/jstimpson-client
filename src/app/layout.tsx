@@ -1,6 +1,8 @@
+'use client'
 import { Inter } from 'next/font/google'
-import { Navbar, Footer } from 'components'
-import { navlinkObjArr } from 'utils/constants'
+
+import { Header, Footer, NavLogo } from 'components'
+// import { navLinkDataArr } from 'utils/constants'
 import 'styles/global.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -13,7 +15,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar navlinkObjArr={navlinkObjArr} />
+        <Header>
+          <NavLogo />
+        </Header>
         {children}
         <Footer />
       </body>

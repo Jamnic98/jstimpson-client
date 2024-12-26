@@ -5,10 +5,10 @@ import Link from 'next/link'
 // import { Caret, Dropdown } from 'components'
 import { useWidth } from 'utils'
 import { MOBILE_SCREEN_WIDTH } from 'utils/constants'
-import { type NavlinkData } from 'types'
+import { type NavLinkData } from 'types'
 
 interface NavlinkProps {
-  navlinkObj: NavlinkData
+  navlinkObj: NavLinkData
   onClick: () => void
 }
 
@@ -29,7 +29,7 @@ export const Navlink: React.FC<NavlinkProps> = ({ navlinkObj, onClick: handleCli
             {/* <Dropdown
 							isOpen={isActive}
 							items={children}
-							render={(navlinkObj: NavlinkData) => (
+							render={(navlinkObj: NavLinkData) => (
 								<Link className={styles.navlink} href={navlinkObj.url}>
 									{navlinkObj.label}
 								</Link>

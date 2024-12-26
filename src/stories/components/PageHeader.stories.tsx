@@ -6,9 +6,11 @@ const meta: Meta<typeof PageHeader> = {
   title: 'Components/PageHeader',
   component: PageHeader,
 }
+
 export default meta
 
 type Story = StoryObj<typeof PageHeader>
+
 export const PageHeaderStory: Story = {
   args: {
     title: 'Test Title',

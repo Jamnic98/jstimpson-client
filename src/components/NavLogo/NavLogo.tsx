@@ -9,15 +9,14 @@ export interface NavLogoProps {
 }
 
 export const NavLogo: React.FC<NavLogoProps> = ({ linkURL = '/' }) => {
-  const width = useWidth() || MOBILE_SCREEN_WIDTH
+  const width = useWidth()
 
   return (
     <Link
-      className="font-bold leading-8 text-orange-600 transition-colors duration-300 ease-in-out hover:text-neutral-light"
+      className="text-3xl font-bold tracking-wide text-orange-600 transition-colors duration-300 ease-in-out hover:text-neutral-300"
       href={linkURL}
     >
-      {width >= MOBILE_SCREEN_WIDTH ? 'Jamie Stimpson' : 'JS'}
+      {width && (width >= MOBILE_SCREEN_WIDTH ? 'Jamie Stimpson' : 'JS')}
     </Link>
   )
 }
-// test comment
