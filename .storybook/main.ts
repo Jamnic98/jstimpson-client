@@ -15,5 +15,8 @@ const config: StorybookConfig = {
     options: {},
   },
   staticDirs: ['../public'],
+  env: (config) => ({
+    ...config
+  })
 }
 export default config

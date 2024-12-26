@@ -1,6 +1,6 @@
-import { LinkType, type ProjectData } from 'types'
+import { LinkType, type Project } from 'types'
 
-const readingLog: ProjectData = {
+const readingLog: Project = {
   id: 'reading-log',
   title: 'Reading Log',
   summary: 'A list of books the user has read, stored in a MySQL database.',

@@ -1,6 +1,6 @@
-import { LinkType, type ProjectData } from 'types'
+import { LinkType, type Project } from 'types'
 
-const touchTyping: ProjectData = {
+const touchTyping: Project = {
   id: 'touch-typing',
   title: 'Touch Typing',
   summary: 'A program to improve typing speed and accuracy.',

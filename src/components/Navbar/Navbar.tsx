@@ -13,16 +13,16 @@ export const Navbar: React.FC<NavbarProps> = ({ navlinkObjArr }) => {
   const handleClick = () => setIsOpen(!isOpen)
 
   return (
-    <nav id="navbar" className="">
-      <span className="container">
+    <nav id="navbar" className="top-0 z-10 h-8 items-center bg-indigo-950">
+      <div className="container">
         <MobileMenuToggle handleClick={handleClick} isOpen={isOpen} />
         <NavLogo />
-        <span>
+        <div>
           {navlinkObjArr.map((navlinkObj, index) => (
             <Navlink onClick={() => setIsOpen(false)} navlinkObj={navlinkObj} key={index} />
           ))}
-        </span>
-      </span>
+        </div>
+      </div>
     </nav>
   )
 }

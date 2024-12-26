@@ -1,6 +1,6 @@
-import { LinkType, type ProjectData } from 'types'
+import { LinkType, type Project } from 'types'
 
-const libraryBookRenewer: ProjectData = {
+const libraryBookRenewer: Project = {
   id: 'library-book-renewer',
   title: 'Library Book Renewer',
   summary: 'A web scraper that automatically renews my library books.',

@@ -3,13 +3,13 @@ export enum LinkType {
   INTERNAL = 'internal',
 }
 
-export type ProjectLinkDataType = {
+export type ProjectLink = {
   URL: string
   label: string
   type: LinkType
 }
 
-export type ProjectData = {
+export type Project = {
   id: string
   title: string
   summary: string
@@ -17,6 +17,6 @@ export type ProjectData = {
   projectPageURI: string
   screenshotURIs: string[]
   mainLanguage: string
-  links: ProjectLinkDataType[]
+  links: ProjectLink[]
   techStack: string[]
 }

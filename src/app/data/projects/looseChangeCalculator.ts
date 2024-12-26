@@ -1,6 +1,6 @@
-import { LinkType, type ProjectData } from 'types'
+import { LinkType, type Project } from 'types'
 
-const looseChangeCalculator: ProjectData = {
+const looseChangeCalculator: Project = {
   id: 'loose-change-calculator',
   title: 'Loose Change Calculator',
   summary: 'A calculator for summing loose change (GBP).',

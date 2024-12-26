@@ -1,6 +1,6 @@
-import { LinkType, type ProjectData } from 'types'
+import { LinkType, type Project } from 'types'
 
-const scrabbleScorekeeper: ProjectData = {
+const scrabbleScorekeeper: Project = {
   id: 'scrabble-scorekeeper',
   title: 'Scrabble Scorekeeper',
   summary: 'A web program for calculating turn scores in Scrabble.',

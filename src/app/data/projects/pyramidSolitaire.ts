@@ -1,6 +1,6 @@
-import { LinkType, type ProjectData } from 'types'
+import { LinkType, type Project } from 'types'
 
-const pyramidSolitaire: ProjectData = {
+const pyramidSolitaire: Project = {
   id: 'pyramid-solitaire',
   title: 'Pyramid Solitaire',
   summary: 'A program based on a variation of the card game, solitaire.',

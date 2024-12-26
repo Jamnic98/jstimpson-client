@@ -1,6 +1,6 @@
-import { type ProjectData } from 'types'
+import { type Project } from 'types'
 
-const readingLog: ProjectData = {
+const readingLog: Project = {
   id: 'crypto-viewer',
   title: 'Crypto Viewer',
   summary: 'Displays real-time cryptocurrency price data.',
