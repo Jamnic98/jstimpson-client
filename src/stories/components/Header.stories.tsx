@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Header } from 'components'
+import { Header, MenuToggle, NavLogo } from 'components'
 
 //👇 This default export determines where your story goes in the story list
 const meta: Meta<typeof Header> = {
@@ -12,4 +12,13 @@ const meta: Meta<typeof Header> = {
 export default meta
 
 type Story = StoryObj<typeof Header>
-export const HeaderStory: Story = {}
+export const HeaderStory: Story = {
+  args: {
+    children: (
+      <>
+        <MenuToggle />
+        <NavLogo />
+      </>
+    ),
+  },
+}

@@ -1,0 +1,27 @@
+.profilePictureContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.profilePicture {
+  border-radius: 50%;
+}
+
+.hr {
+  width: 100%;
+  background-color: var(--c-bg-secondary);
+  height: 1px;
+  border-style: none;
+}
+
+.projectLink {
+  color: var(--c-link);
+}
+
+.projectLink:hover {
+  color: var(--c-text-primary);
+}
+
+.description {
+  text-align: justify;
+}

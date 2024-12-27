@@ -1,7 +1,7 @@
 'use client'
 import { Inter } from 'next/font/google'
 
-import { Header, Footer, NavLogo } from 'components'
+import { Footer, Header, MenuToggle, NavLogo } from 'components'
 // import { navLinkDataArr } from 'utils/constants'
 import 'styles/global.css'
 
@@ -16,6 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header>
+          <MenuToggle />
           <NavLogo />
         </Header>
         {children}

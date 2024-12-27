@@ -1,10 +1,10 @@
 'use client'
-// import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 // import Link from 'next/link'
 
 import { PageHeader /* Explorer, RunningStats  */ } from 'components'
-import { /* Project, */ type RunData } from 'types'
-// import projects from 'data/projects'
+import { type Project, type RunData } from 'types'
+import projects from 'data/projects'
 // import styles from 'styles/index.module.css'
 
 interface HomePageProps {
@@ -13,28 +13,29 @@ interface HomePageProps {
 
 export default function Page({ runData }: HomePageProps) {
   console.log(runData)
-  // const [randomProjects, setRandomProjects] = useState<Partial<Project>[]>([])
+  const [randomProjects, setRandomProjects] = useState<Partial<Project>[]>([])
+  console.log(randomProjects)
 
-  // useEffect(() => {
-  //   // Randomly shuffle the projects only on the client
-  //   const shuffledProjects = projects
-  //     .map((project) => ({
-  //       title: project.title,
-  //       summary: project.summary,
-  //       projectPageURI: project.projectPageURI,
-  //     }))
-  //     .sort(() => Math.random() - 0.5) // Shuffle the array
-  //     .slice(0, 3) // Get the first 3 projects
+  useEffect(() => {
+    // Shuffle projects and select 3
+    const shuffledProjects = projects
+      .map((project) => ({
+        title: project.title,
+        summary: project.summary,
+        projectPageURI: project.projectPageURI,
+      }))
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 3)
 
-  //   setRandomProjects(shuffledProjects)
-  // }, [])
+    setRandomProjects(shuffledProjects)
+  }, [])
 
   return (
     <main className="container">
       <PageHeader title="Home" description="" />
       <article className="">
-        {/* <section className={styles.homeDescription}>
-          <p>Hello and welcome to my portfolio website!</p>
+        <section className="">
+          {/* <p>Hello and welcome to my portfolio website.</p> */}
           <p>
             This site was built entirely from scratch using NextJS, Python, and MongoDB. Initially,
             I used React for the frontend and NodeJs for the backend but recently transitioned to my
@@ -47,11 +48,11 @@ export default function Page({ runData }: HomePageProps) {
             development to DevOps processes and deployments, ensuring the site remains dynamic and
             functional.
           </p>
-        </section> */}
+        </section>
         {/* <section>
           <Explorer
             title="Project Explorer"
-            data={randomProjects} // Use the state for random projects
+            data={randomProjects}
           />
         </section>
         <section>

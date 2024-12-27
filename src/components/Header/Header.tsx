@@ -21,8 +21,10 @@ export const Header: React.FC<HeaderProps> = ({ children }) => (
 
 // <MobileMenuToggle handleClick={handleClick} isOpen={isOpen} />
 // <NavLogo />
-// <div>
-//   {navLinkDataArr.map((navlinkObj, index) => (
-//     <Navlink onClick={() => setIsOpen(false)} navlinkObj={navlinkObj} key={index} />
-//   ))}
-// </div>
+{
+  /* <div>
+  {navLinkDataArr.map((navlinkObj, index) => (
+    <Navlink onClick={() => setIsOpen(false)} navlinkObj={navlinkObj} key={index} />
+  ))}
+</div> */
+}

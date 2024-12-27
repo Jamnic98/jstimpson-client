@@ -5,13 +5,11 @@ import { MenuToggle } from 'components'
 const meta: Meta<typeof MenuToggle> = {
   title: 'Components/MenuToggle',
   component: MenuToggle,
-  args: { handleClick: () => null },
+  args: { clickFunction: () => null },
 }
 
 export default meta
 
 type Story = StoryObj<typeof MenuToggle>
 
-export const ClosedMenuToggleStory: Story = { args: { isOpen: false } }
-
-export const OpenMenuToggleStory: Story = { args: { isOpen: true } }
+export const MenuToggleStory: Story = {}

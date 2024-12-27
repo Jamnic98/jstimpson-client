@@ -15,7 +15,7 @@ export const navLinkDataArr: NavLinkData[] = [
   { label: 'about ', url: '/about', children: [] },
 ]
 
-export const MOBILE_SCREEN_WIDTH = 800
+export const MOBILE_SCREEN_WIDTH = 768
 
 export const PERSONAL_GITHUB_URL = 'https://github.com/Jamnic98?tab=repositories'
 
