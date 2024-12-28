@@ -2,7 +2,7 @@
 import { Inter } from 'next/font/google'
 
 import { Footer, Header, MenuToggle, NavLogo } from 'components'
-// import { navLinkDataArr } from 'utils/constants'
+
 import 'styles/global.css'
 
 const inter = Inter({ subsets: ['latin'] })

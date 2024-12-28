@@ -1,8 +1,8 @@
 'use client'
 import { useState } from 'react'
-// import Link from 'next/link'
+import Link from 'next/link'
 
-import { /* Card, */ PageHeader } from 'components'
+import { Card, PageHeader } from 'components'
 import projects from 'data/projects'
 import { type Project } from 'types'
 
@@ -21,7 +21,6 @@ export default function Page() {
     (projectData: Project) => language === '' || projectData.mainLanguage === language
   )
 
-  console.log(filteredProjects)
   return (
     <main className="container">
       <PageHeader
@@ -41,7 +40,7 @@ export default function Page() {
         </section>
         <section>
           <div className="">
-            {/* {filteredProjects.map((projectData: Project) => (
+            {filteredProjects.map((projectData: Project) => (
               <Link
                 href={`/projects/${projectData.id}`}
                 data-testid="application-card"
@@ -53,7 +52,7 @@ export default function Page() {
                   imageURI={projectData.screenshotURIs[0]}
                 />
               </Link>
-            ))} */}
+            ))}
           </div>
         </section>
       </article>

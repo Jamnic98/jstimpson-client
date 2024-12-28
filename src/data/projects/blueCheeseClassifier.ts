@@ -22,7 +22,7 @@ const blueCheeseClassifier: Project = {
   ],
   projectPageURI: '/projects/blue-cheese-classifier',
   screenshotURIs: [
-    '/images/projects/blue-cheese-classifier-image-classification.jpeg',
+    '/images/projects/blue-cheese-classifier-image-classification.png',
     '/images/projects/blue-cheese-classifier-results-graph.png',
   ],
   mainLanguage: 'Python',
