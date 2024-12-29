@@ -32,7 +32,7 @@ export default async function Page(props: ProjectProps) {
   const projectData = getProject({ id: params.id })
 
   return (
-    <main className="container">
+    <>
       <PageHeader title={projectData.title} description={projectData.summary} />
       <article>
         <section>
@@ -59,6 +59,6 @@ export default async function Page(props: ProjectProps) {
           &larr; projects
         </Link>
       </article>
-    </main>
+    </>
   )
 }

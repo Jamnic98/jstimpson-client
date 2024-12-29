@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   title: 'About Me',
 }
 
-const About = () => (
-  <main className="container">
+export default function About() {
+  return (
     <article>
       <section>
         <div className="flex justify-center">
@@ -139,7 +139,5 @@ const About = () => (
         </p>
       </section>
     </article>
-  </main>
-)
-
-export default About
+  )
+}

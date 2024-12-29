@@ -1,11 +1,11 @@
 import { type Metadata } from 'next'
 
-import Layout from './projects-page'
+import ProjectsPage from './projects-page'
 
 export const metadata: Metadata = {
   title: 'Projects',
 }
 
-export default function Projects() {
-  return <Layout />
+export default function Page() {
+  return <ProjectsPage />
 }

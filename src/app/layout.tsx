@@ -14,12 +14,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`flex min-h-screen flex-col ${inter.className}`}>
         <Header>
           <MenuToggle />
           <NavLogo />
         </Header>
-        {children}
+        <main className="custom-container">{children}</main>
         <Footer />
       </body>
     </html>

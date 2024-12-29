@@ -13,7 +13,7 @@ const languages = [
   ) as string[]),
 ]
 
-export default function Page() {
+export default function ProjectsPage() {
   const [language, setLanguage] = useState(languages[0])
 
   // Filter the projects based on the selected language
@@ -22,7 +22,7 @@ export default function Page() {
   )
 
   return (
-    <main className="container">
+    <>
       <PageHeader
         title="Projects"
         description="Here are some of the personal projects I have worked on:"
@@ -56,6 +56,6 @@ export default function Page() {
           </div>
         </section>
       </article>
-    </main>
+    </>
   )
 }

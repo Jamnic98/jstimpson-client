@@ -5,13 +5,12 @@ import { useEffect, useState } from 'react'
 import { PageHeader /* Explorer, RunningStats  */ } from 'components'
 import { type Project, type RunData } from 'types'
 import projects from 'data/projects'
-// import styles from 'styles/index.module.css'
 
 interface HomePageProps {
   runData: RunData[] | null
 }
 
-export default function Page({ runData }: HomePageProps) {
+export default function HomePage({ runData }: HomePageProps) {
   console.log(runData)
   const [randomProjects, setRandomProjects] = useState<Partial<Project>[]>([])
   console.log(randomProjects)
@@ -31,7 +30,7 @@ export default function Page({ runData }: HomePageProps) {
   }, [])
 
   return (
-    <main className="container">
+    <>
       <PageHeader title="Home" description="" />
       <article className="">
         <section className="">
@@ -74,6 +73,6 @@ export default function Page({ runData }: HomePageProps) {
           </div>
         </section> */}
       </article>
-    </main>
+    </>
   )
 }

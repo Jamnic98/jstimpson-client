@@ -25,7 +25,7 @@ export const Navlink: React.FC<NavlinkProps> = ({ navlinkObj, onClick: handleCli
           onClick={handleClick}
         >
           <Link href={url}>{label}</Link>
-          <div data-testid="dropdownContainer">
+          <div>
             {/* <Dropdown
 							isOpen={isActive}
 							items={children}
