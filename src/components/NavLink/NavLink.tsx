@@ -1,47 +1,53 @@
 'use client'
-import { useState } from 'react'
+
+// import { useState } from 'react'
 import Link from 'next/link'
 
 // import { Caret, Dropdown } from 'components'
-import { useWidth } from 'utils'
-import { MOBILE_SCREEN_WIDTH } from 'utils/constants'
+// import { useWidth } from 'utils'
+// import { MOBILE_SCREEN_WIDTH } from 'utils/constants'
 import { type NavLinkData } from 'types'
 
 interface NavlinkProps {
   navlinkObj: NavLinkData
-  onClick: () => void
+  // onClick?: () => void
 }
 
-export const Navlink: React.FC<NavlinkProps> = ({ navlinkObj, onClick: handleClick }) => {
-  const [, /* isActive */ setIsActive] = useState(false)
-  const { label, url, children } = navlinkObj
-  const screenWidth = useWidth() || MOBILE_SCREEN_WIDTH
+export const NavLink: React.FC<NavlinkProps> = ({ navlinkObj /* , onClick: handleClick */ }) => {
+  // const [, /* isActive */ setIsActive] = useState(false)
+  const { label, url /* , children  */ } = navlinkObj
+  // const screenWidth = useWidth() || MOBILE_SCREEN_WIDTH
   return (
-    <>
-      {screenWidth >= MOBILE_SCREEN_WIDTH && children.length ? (
-        <div
-          onMouseOver={() => setIsActive(true)}
-          onMouseOut={() => setIsActive(false)}
-          onClick={handleClick}
-        >
-          <Link href={url}>{label}</Link>
-          <div>
-            {/* <Dropdown
-							isOpen={isActive}
-							items={children}
-							render={(navlinkObj: NavLinkData) => (
-								<Link className={styles.navlink} href={navlinkObj.url}>
-									{navlinkObj.label}
-								</Link>
-							)}
-						/> */}
-          </div>
-        </div>
-      ) : (
-        <Link href={url} onClick={handleClick}>
-          {label}
-        </Link>
-      )}
-    </>
+    <Link
+      href={url}
+      // onClick={handleClick}
+      className="flex items-center justify-center px-6 text-4xl font-bold text-neutral-light hover:bg-orange-600"
+    >
+      {label}
+    </Link>
+    // <>
+    //   {children.length ? (
+    //     <Link
+    //       href={url}
+    //       className="flex items-center justify-center text-3xl font-bold text-neutral-light hover:bg-orange-600"
+    //       onMouseOver={() => setIsActive(true)}
+    //       onMouseOut={() => setIsActive(false)}
+    //       onClick={handleClick}
+    //     >
+    //       {label}
+    //       {/* <Dropdown
+    //         isOpen={isActive}
+    //         items={children}
+    //         render={(navlinkObj: NavLinkData) => (
+    //           <Link className={styles.navlink} href={navlinkObj.url}>
+    //             {navlinkObj.label}
+    //           </Link>
+    //         )}
+    //       /> */}
+    //     </Link>
+    //   ) : (
+
+    //   )}
+    // </>
   )
 }

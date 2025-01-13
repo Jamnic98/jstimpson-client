@@ -16,7 +16,7 @@ const scrabbleScorekeeper: Project = {
     '/images/projects/scrabble-table.png',
     '/images/projects/scrabble-board.png',
   ],
-  mainLanguage: 'JavaScript',
+  mainLanguage: 'TypeScript',
   links: [
     {
       label: 'project link',

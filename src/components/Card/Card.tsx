@@ -1,40 +1,39 @@
 'use client'
-import { useState } from 'react'
+
+// import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export interface CardProps {
   title: string
   description: string
   imageURI: string
+  linkURI: string
 }
 
-const cardImgDimensions = { width: 300, height: 200 }
+const cardImgDimensions = { width: 300, height: 300 }
 
-export const Card: React.FC<CardProps> = ({ title, description, imageURI }) => {
-  const [isFocused, setIsFocused] = useState(false)
-  const toggleFocus = () => setIsFocused(!isFocused)
-
-  return (
-    <div
-      onMouseOver={toggleFocus}
-      onMouseOut={toggleFocus}
-      className="group flex h-48 cursor-pointer flex-row bg-gray-50 shadow-md"
-    >
-      <div className="relative h-48 w-48 flex-shrink-0 overflow-hidden">
-        <Image
-          src={imageURI}
-          alt={title}
-          className="group-hover:scale-105"
-          width={cardImgDimensions.width}
-          height={cardImgDimensions.height}
-        />
-      </div>
-      <div className="box-border line-clamp-5 overflow-hidden px-3 py-4 text-left">
-        <div className="mb-2 text-3xl font-medium text-orange-600 group-hover:text-gray-950">
-          {title}
-        </div>
-        <div className="text-2xl text-gray-950">{description}</div>
-      </div>
+export const Card: React.FC<CardProps> = ({ title, description, imageURI, linkURI }) => (
+  <Link
+    href={linkURI}
+    className="group flex h-full w-full max-w-sm cursor-pointer flex-col justify-between overflow-hidden rounded-lg bg-white shadow-md transition-transform hover:scale-105"
+  >
+    {/* Image Container */}
+    <div className="relative aspect-square w-full overflow-hidden">
+      <Image
+        src={imageURI}
+        alt={title}
+        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+        width={cardImgDimensions.width}
+        height={cardImgDimensions.height}
+      />
     </div>
-  )
-}
+    {/* Content */}
+    <div className="flex flex-grow flex-col p-4">
+      <div className="mb-2 text-3xl font-semibold text-orange-600 group-hover:text-gray-900">
+        {title}
+      </div>
+      <div className="line-clamp-3 text-2xl">{description}</div>
+    </div>
+  </Link>
+)
