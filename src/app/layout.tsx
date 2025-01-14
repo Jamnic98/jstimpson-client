@@ -27,7 +27,7 @@ export default function RootLayout({
             ))}
           </nav>
         </Header>
-        <main className="container mx-auto max-w-screen-2xl px-6">{children}</main>
+        <main className="container mx-auto max-w-screen-xl px-6">{children}</main>
         <Footer />
       </body>
     </html>

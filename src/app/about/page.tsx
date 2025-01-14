@@ -9,7 +9,7 @@ import {
   PERSONAL_GITHUB_URL,
 } from 'utils/constants'
 
-const aboutMePhotoDimensions = { width: 360, height: 360 }
+const aboutMePhotoDimensions = { width: 330, height: 330 }
 
 export const metadata: Metadata = {
   title: 'About Me',

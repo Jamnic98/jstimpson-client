@@ -15,7 +15,7 @@ export const NavLogo: React.FC<NavLogoProps> = ({ linkURL = '/' }) => {
 
   return (
     <Link
-      className="text-5xl font-bold tracking-wide text-orange-600 transition-colors duration-300 ease-in-out hover:text-neutral"
+      className="text-4xl font-bold tracking-wide text-orange-600 transition-colors duration-300 ease-in-out hover:text-neutral"
       href={linkURL}
     >
       {width && (width >= MOBILE_SCREEN_WIDTH ? 'Jamie Stimpson' : 'JS')}

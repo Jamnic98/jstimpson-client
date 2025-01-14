@@ -6,10 +6,10 @@ export interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({ children }) => (
-  <div id="header" className="top-0 z-10 h-20 bg-gray-950" aria-label="header">
+  <div id="header" className="top-0 z-10 h-16 bg-gray-950" aria-label="header">
     <div
       id="header-content"
-      className="container mx-auto flex h-full max-w-screen-2xl items-center justify-between px-6"
+      className="container mx-auto flex h-full max-w-screen-xl items-center justify-between px-6"
     >
       {children}
     </div>
