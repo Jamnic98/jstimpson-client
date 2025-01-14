@@ -1,9 +1,9 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-// import Link from 'next/link'
+import Link from 'next/link'
 
-import { PageHeader /* Explorer, RunningStats  */ } from 'components'
+import { PageHeader, Explorer, RunningStats } from 'components'
 import { type Project, type RunData } from 'types'
 import projects from 'data/projects'
 
@@ -49,11 +49,8 @@ export default function HomePage({ runData }: HomePageProps) {
             functional.
           </p>
         </section>
-        {/* <section>
-          <Explorer
-            title="Project Explorer"
-            data={randomProjects}
-          />
+        <section>
+          <Explorer title="Project Explorer" data={randomProjects} />
         </section>
         <section>
           <h3 style={{ marginBottom: 0 }}>
@@ -64,7 +61,7 @@ export default function HomePage({ runData }: HomePageProps) {
             {runData ? (
               <>
                 <RunningStats runData={runData} />
-                <div className={styles.allProjectsLink}>
+                <div className="">
                   <Link href="/logs/running">all stats</Link>
                 </div>
               </>
@@ -72,7 +69,7 @@ export default function HomePage({ runData }: HomePageProps) {
               <div>*Error fetching run data</div>
             )}
           </div>
-        </section> */}
+        </section>
       </article>
     </>
   )

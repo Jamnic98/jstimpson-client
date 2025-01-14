@@ -13,24 +13,24 @@ export default async function Page() {
 
 const getData = async () => {
   // TODO: fix
-  return null
-  // try {
-  //   // set get 1st of current month
-  //   const date = new Date()
-  //   date.setUTCDate(1)
-  //   date.setUTCHours(0, 0, 0, 0)
 
-  //   // fetch data
-  //   const URL = (process.env.NEXT_PUBLIC_SERVER_URL as string) + `/runs?after=${date.getTime()}`
-  //   const response = await fetch(URL, { next: { revalidate: 3600 } })
-  //   if (!response.ok) {
-  //     // This will activate the closest `error.js` Error Boundary
-  //     throw new Error('Failed to fetch data')
-  //   }
-  //   const { runs } = await response.json()
-  //   return runs
-  // } catch (error) {
-  //   console.error(error)
-  //   return null
-  // }
+  try {
+    // set get 1st of current month
+    const date = new Date()
+    date.setUTCDate(1)
+    date.setUTCHours(0, 0, 0, 0)
+
+    // fetch data
+    const URL = (process.env.NEXT_PUBLIC_SERVER_URL as string) + `/runs?after=${date.getTime()}`
+    const response = await fetch(URL, { next: { revalidate: 3600 } })
+    if (!response.ok) {
+      // This will activate the closest `error.js` Error Boundary
+      throw new Error('Failed to fetch data')
+    }
+    const { runs } = await response.json()
+    return runs
+  } catch (error) {
+    console.error(error)
+    return null
+  }
 }
