@@ -28,13 +28,13 @@ export default function ProjectsPage() {
       />
       <article>
         <section>
-          <span> Filter by language: </span>
+          <label className="text-lg"> Filter by language: </label>
           <select
-            className="mt-4 w-full bg-neutral-light p-2"
+            className="mt-4 w-full rounded-lg bg-slate-50 p-2"
             onChange={(e) => setLanguage(e.target.value)}
           >
             {languages.map((mainLanguage: string, index) => (
-              <option className="px-4" key={index}>
+              <option className="bg-slate-50 px-4 focus:outline-none" key={index}>
                 {mainLanguage}
               </option>
             ))}

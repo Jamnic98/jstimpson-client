@@ -1,7 +1,7 @@
 import { type Metadata } from 'next'
 import Link from 'next/link'
 
-import { PageHeader /* ProjectDescriptions, ProjectLinks, ProjectGallery */ } from 'components'
+import { PageHeader, ProjectDescriptions, ProjectLinks, ProjectGallery } from 'components'
 import projects_data from 'data/projects'
 
 export const dynamicParams = false
@@ -40,21 +40,21 @@ export default async function Page(props: ProjectProps) {
           {projectData.techStack.map((tech: string) => tech).join(', ')}
         </section>
 
-        {/* Project Links */}
-        {/* {projectData.links.length ? (
+        {projectData.links.length ? (
           <section>
+            <h3 className="mb-0 text-3xl font-semibold">Project Links</h3>
+            <hr className="my-4" />
             <ProjectLinks links={projectData.links} />
           </section>
-        ) : null} */}
-
-        {/* Gallery */}
-
-        {/* <section className={styles.gallery}>
+        ) : null}
+        <section>
+          <h3 className="mb-0 text-3xl font-semibold">Gallery</h3>
+          <hr className="my-4" />
           <ProjectGallery screenshotURIs={projectData.screenshotURIs} />
         </section>
         <section>
           <ProjectDescriptions paragraphs={projectData.paragraphs} />
-        </section> */}
+        </section>
         <Link className="" href="/projects">
           &larr; projects
         </Link>

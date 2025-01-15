@@ -53,16 +53,21 @@ export default function HomePage({ runData }: HomePageProps) {
           <Explorer title="Project Explorer" data={randomProjects} />
         </section>
         <section>
-          <h3 style={{ marginBottom: 0 }}>
+          <h3 className="mb-0 text-3xl font-semibold">
             {new Date().toLocaleString('default', { month: 'long' })} Running Stats
           </h3>
-          <hr className="subRule" />
-          <div style={{ width: 'max-content' }}>
+          <hr className="my-4" />
+          <div>
             {runData ? (
               <>
                 <RunningStats runData={runData} />
-                <div className="">
-                  <Link href="/logs/running">all stats</Link>
+                <div className="flex items-center justify-center">
+                  <Link
+                    className="text-lg text-orange-500 hover:text-gray-950"
+                    href="/logs/running"
+                  >
+                    all stats
+                  </Link>
                 </div>
               </>
             ) : (

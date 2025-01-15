@@ -16,7 +16,7 @@ export const Explorer: React.FC<ExplorerProps> = ({ title, data }) => (
     <div>
       {data.map((d, index) => (
         <Link
-          className="group my-2 block bg-slate-50 p-2 text-gray-950 hover:cursor-pointer"
+          className="group my-2 block bg-gray-50 p-2 text-gray-950 hover:cursor-pointer"
           href={d.projectPageURI || ''}
           key={index}
         >
