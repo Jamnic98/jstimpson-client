@@ -5,6 +5,7 @@ import cryptoViewer from './cryptoViewer'
 import inventoryManagementSystem from './inventoryManagementSystem'
 import libraryBookRenewer from './libraryBookRenewer'
 import looseChangeCalculator from './looseChangeCalculator'
+import pokerPreFlopSim from './pokerPreFlopSim'
 import portfolioWebsite from './portfolioWebsite'
 import pyramidSolitaire from './pyramidSolitaire'
 import readingLog from './readingLog'
@@ -17,6 +18,7 @@ const projects: Project[] = [
   inventoryManagementSystem,
   libraryBookRenewer,
   looseChangeCalculator,
+  pokerPreFlopSim,
   portfolioWebsite,
   pyramidSolitaire,
   readingLog,

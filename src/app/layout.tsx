@@ -2,7 +2,7 @@
 
 import { Inter } from 'next/font/google'
 
-import { Footer, Header, MenuToggle, NavLogo, NavLink } from 'components'
+import { Footer, Header, /* MenuToggle, */ NavLogo, NavLink } from 'components'
 import { navLinkDataArr } from 'utils'
 import { type NavLinkData } from 'types'
 
@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en" className={inter.className}>
       <body className="flex min-h-screen flex-col">
         <Header>
-          <MenuToggle />
+          {/* <MenuToggle /> */}
           <NavLogo />
           <nav className="flex h-full flex-row">
             {navLinkDataArr.map((navLinkData: NavLinkData) => (

@@ -53,9 +53,9 @@ export default function HomePage({ runData }: HomePageProps) {
           <Explorer title="Project Explorer" data={randomProjects} />
         </section>
         <section>
-          <h3 className="mb-0 text-3xl font-semibold">
+          <h2 className="mb-0 text-3xl font-semibold">
             {new Date().toLocaleString('default', { month: 'long' })} Running Stats
-          </h3>
+          </h2>
           <hr className="my-4" />
           <div>
             {runData ? (

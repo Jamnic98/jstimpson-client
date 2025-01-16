@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
-const IMAGE_DIMENSIONS = { width: 280, height: 280 }
+const IMAGE_DIMENSIONS = { width: 275, height: 275 }
 
 interface ProjectGalleryProps {
   screenshotURIs: string[]
@@ -27,7 +27,7 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({ screenshotURIs }
               alt={`Project screenshot ${index + 1}`}
               width={IMAGE_DIMENSIONS.width}
               height={IMAGE_DIMENSIONS.height}
-              className="mr-4 rounded shadow-md"
+              className="m-4 rounded shadow-md"
             />
           </div>
         ))}

@@ -42,13 +42,13 @@ export default async function Page(props: ProjectProps) {
 
         {projectData.links.length ? (
           <section>
-            <h3 className="mb-0 text-3xl font-semibold">Project Links</h3>
+            <h2 className="mb-0 text-3xl font-semibold">Project Links</h2>
             <hr className="my-4" />
             <ProjectLinks links={projectData.links} />
           </section>
         ) : null}
         <section>
-          <h3 className="mb-0 text-3xl font-semibold">Gallery</h3>
+          <h2 className="mb-0 text-3xl font-semibold">Gallery</h2>
           <hr className="my-4" />
           <ProjectGallery screenshotURIs={projectData.screenshotURIs} />
         </section>
