@@ -12,9 +12,7 @@ interface HomePageProps {
 }
 
 export default function HomePage({ runData }: HomePageProps) {
-  console.log(runData)
   const [randomProjects, setRandomProjects] = useState<Partial<Project>[]>([])
-  console.log(randomProjects)
 
   useEffect(() => {
     // Shuffle projects and select 3
@@ -25,7 +23,7 @@ export default function HomePage({ runData }: HomePageProps) {
         projectPageURI: project.projectPageURI,
       }))
       .sort(() => Math.random() - 0.5)
-      .slice(0, 3)
+      .slice(0, 5)
 
     setRandomProjects(shuffledProjects)
   }, [])
@@ -33,47 +31,48 @@ export default function HomePage({ runData }: HomePageProps) {
   return (
     <>
       <PageHeader title="Home" description="" />
-      <article className="">
-        <section className="">
+      <article>
+        <section>
           {/* <p>Hello and welcome to my portfolio website.</p> */}
-          <p>
+          <p className="text-xl">
             This site was built entirely from scratch using NextJS, Python, and MongoDB. Initially,
             I used React for the frontend and NodeJs for the backend but recently transitioned to my
             current stack. Here, you will find a range of my programming projects, primarily in
             Python and JavaScript/TypeScript, along with daily updates of my running data, which is
             fetched using Strava&apos;s API.
           </p>
-          <p>
+          <p className="text-xl">
             This is an ongoing project where I handle everything from frontend and backend
             development to DevOps processes and deployments, ensuring the site remains dynamic and
             functional.
           </p>
         </section>
         <section>
-          <Explorer title="Project Explorer" data={randomProjects} />
-        </section>
-        <section>
           <h2 className="mb-0 text-3xl font-semibold">
-            {new Date().toLocaleString('default', { month: 'long' })} Running Stats
+            {new Date().toLocaleString('default', { month: 'long' })} Running
           </h2>
           <hr className="my-4" />
-          <div>
+          <>
             {runData ? (
               <>
                 <RunningStats runData={runData} />
-                <div className="flex items-center justify-center">
+
+                <div className="flex justify-center">
                   <Link
-                    className="text-lg text-orange-500 hover:text-gray-950"
+                    className="w-fit text-xl font-medium text-orange-500 hover:text-gray-950"
                     href="/logs/running"
                   >
-                    all stats
+                    <span className="w-fit bg-slate-50 px-12 py-2 font-semibold">all stats</span>
                   </Link>
                 </div>
               </>
             ) : (
               <div>*Error fetching run data</div>
             )}
-          </div>
+          </>
+        </section>
+        <section>
+          <Explorer title="Project Explorer" projectData={randomProjects} />
         </section>
       </article>
     </>

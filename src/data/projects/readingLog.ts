@@ -16,7 +16,7 @@ const readingLog: Project = {
   mainLanguage: 'Java',
   links: [
     {
-      label: 'GitHub link',
+      label: 'GitHub Repo',
       URL: 'https://github.com/Jamnic98/reading-log',
       type: LinkType.EXTERNAL,
     },

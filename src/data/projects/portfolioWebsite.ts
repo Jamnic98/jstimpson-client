@@ -25,12 +25,12 @@ const portfolioWebsite: Project = {
   links: [
     {
       URL: 'https://github.com/Jamnic98/website-client',
-      label: 'GitHub link (client)',
+      label: 'GitHub Repo (client)',
       type: LinkType.EXTERNAL,
     },
     {
       URL: 'https://github.com/Jamnic98/website-server',
-      label: 'GitHub link (server)',
+      label: 'GitHub Repo (server)',
       type: LinkType.EXTERNAL,
     },
   ],

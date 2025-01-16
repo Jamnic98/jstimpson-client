@@ -13,7 +13,7 @@ const looseChangeCalculator: Project = {
   mainLanguage: 'Python',
   links: [
     {
-      label: 'GitHub link',
+      label: 'GitHub Repo',
       URL: 'https://github.com/Jamnic98/loose-change-calculator',
       type: LinkType.EXTERNAL,
     },

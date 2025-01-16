@@ -22,7 +22,7 @@ const touchTyping: Project = {
   links: [
     {
       URL: 'https://github.com/Jamnic98/touch-typing',
-      label: 'GitHub link',
+      label: 'GitHub Repo',
       type: LinkType.EXTERNAL,
     },
   ],

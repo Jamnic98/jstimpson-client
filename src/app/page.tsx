@@ -12,8 +12,6 @@ export default async function Page() {
 }
 
 const getData = async () => {
-  // TODO: fix
-
   try {
     // set get 1st of current month
     const date = new Date()

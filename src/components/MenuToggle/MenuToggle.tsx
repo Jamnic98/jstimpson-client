@@ -9,7 +9,6 @@ export interface MenuToggleProps {
 
 export const MenuToggle: React.FC<MenuToggleProps> = ({ clickFunction }) => {
   const [isOpen, setIsOpen] = useState(false)
-  console.log(isOpen)
 
   const handleOnClick = () => {
     if (clickFunction) {

@@ -37,7 +37,7 @@ const inventoryManagementSystem: Project = {
   mainLanguage: 'JavaScript',
   links: [
     {
-      label: 'GitHub link',
+      label: 'GitHub Repo',
       URL: 'https://github.com/Jamnic98/inventory-management-system',
       type: LinkType.EXTERNAL,
     },

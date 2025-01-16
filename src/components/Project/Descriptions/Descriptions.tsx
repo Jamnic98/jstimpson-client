@@ -5,7 +5,9 @@ interface ProjectDescriptionsProps {
 export const ProjectDescriptions: React.FC<ProjectDescriptionsProps> = ({ paragraphs }) => (
   <>
     {paragraphs.map((paragraph: string, index) => (
-      <p key={index}>{paragraph}</p>
+      <p className="text-xl" key={index}>
+        {paragraph}
+      </p>
     ))}
   </>
 )

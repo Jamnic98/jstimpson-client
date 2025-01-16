@@ -19,13 +19,13 @@ const scrabbleScorekeeper: Project = {
   mainLanguage: 'TypeScript',
   links: [
     {
-      label: 'project link',
-      URL: 'https://scrabble-scorekeeper.netlify.app/',
+      label: 'GitHub Repo',
+      URL: 'https://github.com/Jamnic98/scrabble-scorekeeper',
       type: LinkType.EXTERNAL,
     },
     {
-      label: 'GitHub link',
-      URL: 'https://github.com/Jamnic98/scrabble-scorekeeper',
+      label: 'Project',
+      URL: 'https://scrabble-scorekeeper.netlify.app/',
       type: LinkType.EXTERNAL,
     },
   ],

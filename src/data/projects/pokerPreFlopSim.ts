@@ -17,7 +17,7 @@ const pokerPreFlopSim: Project = {
   mainLanguage: 'Python',
   links: [
     {
-      label: 'GitHub link',
+      label: 'GitHub Repo',
       URL: 'https://github.com/Jamnic98/poker-simulator',
       type: LinkType.EXTERNAL,
     },

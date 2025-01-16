@@ -18,7 +18,7 @@ const pyramidSolitaire: Project = {
   mainLanguage: 'Python',
   links: [
     {
-      label: 'GitHub link',
+      label: 'GitHub Repo',
       URL: 'https://github.com/Jamnic98/pyramid-solitaire',
       type: LinkType.EXTERNAL,
     },

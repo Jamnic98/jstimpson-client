@@ -16,7 +16,7 @@ const libraryBookRenewer: Project = {
   mainLanguage: 'Python',
   links: [
     {
-      label: 'GitHub link',
+      label: 'GitHub Repo',
       URL: 'https://github.com/Jamnic98/library-book-auto-renewer',
       type: LinkType.EXTERNAL,
     },

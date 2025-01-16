@@ -28,7 +28,7 @@ const blueCheeseClassifier: Project = {
   mainLanguage: 'Python',
   links: [
     {
-      label: 'GitHub link',
+      label: 'GitHub Repo',
       URL: 'https://github.com/Jamnic98/blue-cheese-classifier',
       type: LinkType.EXTERNAL,
     },
