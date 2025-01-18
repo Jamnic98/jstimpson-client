@@ -16,7 +16,7 @@ export const HeaderStory: Story = {
   args: {
     children: (
       <>
-        <MenuToggle />
+        <MenuToggle isOpen={false} />
         <NavLogo />
       </>
     ),
