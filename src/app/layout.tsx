@@ -27,7 +27,7 @@ const RootLayout: React.FC<
         <Header>
           <NavLogo />
           <nav
-            className={`flex h-full bg-gray-950 ${isMobile ? `absolute left-0 top-0 h-max w-full translate-y-16 flex-col ${isOpen ? '' : 'translate-x-full'}` : 'transition-none'} `}
+            className={`flex h-full bg-gray-950 ${isMobile ? `absolute left-0 top-0 h-max w-full translate-y-16 flex-col ${isOpen ? '' : 'hidden'}` : 'transition-none'} `}
           >
             {navLinkDataArr.map((navLinkData: NavLinkData) => (
               <NavLink

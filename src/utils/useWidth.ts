@@ -9,8 +9,9 @@ export const useWidth = () => {
     const handleResize = () => setWidth(window.innerWidth)
     handleResize() // Set initial width
     window.addEventListener('resize', handleResize)
+    console.log(width)
     return () => window.removeEventListener('resize', handleResize)
-  }, [])
+  })
 
   return width
 }
