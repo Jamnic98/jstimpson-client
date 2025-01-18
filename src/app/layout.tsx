@@ -23,7 +23,7 @@ const RootLayout: React.FC<
 
   return (
     <html lang="en" className={inter.className}>
-      <body className="flex min-h-screen flex-col overflow-hidden">
+      <body className="flex min-h-screen flex-col">
         <Header>
           <NavLogo />
           <nav
