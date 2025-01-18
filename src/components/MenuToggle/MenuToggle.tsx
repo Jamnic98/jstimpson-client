@@ -4,13 +4,13 @@ import { FaTimes, FaBars } from 'react-icons/fa'
 
 export interface MenuToggleProps {
   isOpen: boolean
-  clickFunction?: () => void
+  onClick?: () => void
 }
 
-export const MenuToggle: React.FC<MenuToggleProps> = ({ isOpen, clickFunction }) => {
+export const MenuToggle: React.FC<MenuToggleProps> = ({ isOpen, onClick }) => {
   const handleOnClick = () => {
-    if (clickFunction) {
-      clickFunction()
+    if (onClick) {
+      onClick()
     }
   }
 

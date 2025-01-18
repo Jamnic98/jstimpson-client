@@ -5,7 +5,7 @@ import { MenuToggle } from 'components'
 const meta: Meta<typeof MenuToggle> = {
   title: 'Components/MenuToggle',
   component: MenuToggle,
-  args: { clickFunction: () => null },
+  args: { onClick: () => null },
 }
 
 export default meta

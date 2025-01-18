@@ -1,27 +1,31 @@
 'use client'
 
-// import { useState } from 'react'
 import Link from 'next/link'
 
-// import { Caret, Dropdown } from 'components'
-// import { useWidth } from 'utils'
-// import { MOBILE_SCREEN_WIDTH } from 'utils/constants'
+import { MOBILE_SCREEN_WIDTH, useWidth } from 'utils'
 import { type NavLinkData } from 'types'
 
 interface NavlinkProps {
   navlinkObj: NavLinkData
-  // onClick?: () => void
+  onClick?: () => void
 }
 
-export const NavLink: React.FC<NavlinkProps> = ({ navlinkObj /* , onClick: handleClick */ }) => {
-  // const [, /* isActive */ setIsActive] = useState(false)
+export const NavLink: React.FC<NavlinkProps> = ({ navlinkObj, onClick }) => {
   const { label, url /* , children  */ } = navlinkObj
-  // const screenWidth = useWidth() || MOBILE_SCREEN_WIDTH
+
+  const isMobile = (useWidth() || MOBILE_SCREEN_WIDTH) <= MOBILE_SCREEN_WIDTH
+
+  const handleClick = () => {
+    if (onClick) {
+      onClick()
+    }
+  }
+
   return (
     <Link
       href={url}
-      // onClick={handleClick}
-      className="flex items-center justify-center px-6 text-2xl font-bold text-neutral-light hover:bg-orange-600"
+      onClick={handleClick}
+      className={`${isMobile ? 'py-4' : ''} flex items-center justify-center px-6 text-2xl font-bold text-neutral-light hover:bg-orange-600`}
     >
       {label}
     </Link>

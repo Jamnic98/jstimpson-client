@@ -17,5 +17,6 @@ export const CardStory: Story = {
     title: 'Card Title',
     description: LOREM_IPSUM,
     imageURI: '/images/profile-picture.jpg',
+    linkURI: '',
   },
 }
