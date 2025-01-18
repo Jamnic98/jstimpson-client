@@ -1,4 +1,3 @@
-import React from 'react'
 import Link from 'next/link'
 import { CgExternal, CgInternal } from 'react-icons/cg'
 

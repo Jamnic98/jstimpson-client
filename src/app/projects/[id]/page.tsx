@@ -5,30 +5,11 @@ import { FaArrowLeftLong } from 'react-icons/fa6'
 import { PageHeader, ProjectDescriptions, ProjectLinks, ProjectGallery } from 'components'
 import projects_data from 'data/projects'
 
-export const dynamicParams = false
-
-export const generateStaticParams = () => {
-  return projects_data.map((project) => ({
-    id: project.id,
-  }))
-}
-
-const getProject = (params: { id: string }) =>
-  projects_data.filter((project) => project.id === params.id)[0]
-
-export async function generateMetadata(props: ProjectProps): Promise<Metadata> {
-  const params = await props.params
-  const projectData = getProject({ id: params.id })
-  return {
-    title: projectData.title,
-  }
-}
-
 interface ProjectProps {
   params: Promise<{ id: string }>
 }
 
-export default async function Page(props: ProjectProps) {
+const Page = async (props: ProjectProps) => {
   const params = await props.params
   const projectData = getProject({ id: params.id })
 
@@ -65,9 +46,35 @@ export default async function Page(props: ProjectProps) {
           className="flex w-fit space-x-2 bg-slate-50 px-12 py-2 text-xl font-semibold leading-none text-orange-500 hover:text-black"
           href="/projects"
         >
-          <FaArrowLeftLong className="text-2xl" /> <span>projects</span>
+          <FaArrowLeftLong className="text-2xl" /> projects
         </Link>
       </article>
     </>
   )
+}
+
+export default Page
+
+export const dynamicParams = false
+
+export const generateStaticParams = (): { id: string }[] => {
+  return projects_data.map((project) => ({
+    id: project.id,
+  }))
+}
+
+const getProject = (params: { id: string }) => {
+  const project = projects_data.find((project) => project.id === params.id)
+  if (!project) {
+    throw new Error(`Project with id "${params.id}" not found`)
+  }
+  return project
+}
+
+export async function generateMetadata(props: ProjectProps): Promise<Metadata> {
+  const params = await props.params
+  const projectData = getProject({ id: params.id })
+  return {
+    title: projectData.title,
+  }
 }

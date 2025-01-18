@@ -4,14 +4,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+const cardImgDimensions = { width: 300, height: 300 }
+
 export interface CardProps {
   title: string
   description: string
   imageURI: string
   linkURI: string
 }
-
-const cardImgDimensions = { width: 300, height: 300 }
 
 export const Card: React.FC<CardProps> = ({ title, description, imageURI, linkURI }) => (
   <Link

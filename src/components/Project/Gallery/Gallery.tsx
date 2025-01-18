@@ -16,7 +16,7 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({ screenshotURIs }
     <>
       {/* Grid Gallery */}
       <div className="my-8 flex justify-center">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {screenshotURIs.map((screenshotURI, index) => (
             <div
               key={index}

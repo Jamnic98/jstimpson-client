@@ -11,7 +11,7 @@ interface HomePageProps {
   runData: RunData[] | null
 }
 
-export default function HomePage({ runData }: HomePageProps) {
+const HomePage: React.FC<HomePageProps> = ({ runData }) => {
   const [randomProjects, setRandomProjects] = useState<Partial<Project>[]>([])
 
   useEffect(() => {
@@ -67,7 +67,7 @@ export default function HomePage({ runData }: HomePageProps) {
                 </div>
               </>
             ) : (
-              <div>*Error fetching run data</div>
+              <div>*Error fetching data</div>
             )}
           </>
         </section>
@@ -78,3 +78,5 @@ export default function HomePage({ runData }: HomePageProps) {
     </>
   )
 }
+
+export default HomePage

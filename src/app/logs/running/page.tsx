@@ -4,7 +4,7 @@ import { PageHeader, RunningDataView } from 'components'
 
 const pageTitle = 'Running'
 const pageHeaderDescription = 'Here is my running data:'
-const errorMsg = '*error retrieving running data*'
+const errorMsg = '*Error fetching data'
 
 export const metadata: Metadata = {
   title: 'Running',

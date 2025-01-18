@@ -1,10 +1,8 @@
 'use client'
 
-import React from 'react'
 import Link from 'next/link'
 
-import { useWidth } from 'utils'
-import { MOBILE_SCREEN_WIDTH } from 'utils/constants'
+import { MOBILE_SCREEN_WIDTH, useWidth } from 'utils'
 
 export interface NavLogoProps {
   linkURL?: string
