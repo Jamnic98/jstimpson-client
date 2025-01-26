@@ -62,7 +62,7 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
                     className="w-fit text-xl font-medium text-orange-500 hover:text-gray-950"
                     href="/logs/running"
                   >
-                    <span className="w-fit bg-slate-50 px-12 py-2 font-semibold">all stats</span>
+                    <span className="w-fit bg-slate-100 px-12 py-2 font-semibold">all stats</span>
                   </Link>
                 </div>
               </>

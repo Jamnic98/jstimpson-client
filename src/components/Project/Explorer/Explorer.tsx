@@ -26,7 +26,7 @@ export const Explorer: React.FC<ExplorerProps> = ({ title, projectData }) => (
     ))}
     <div className="flex justify-center">
       <Link className="text-xl font-medium text-orange-500 hover:text-gray-950" href="/projects">
-        <span className="w-fit bg-slate-50 px-12 py-2 font-semibold">all projects</span>
+        <span className="w-fit bg-slate-100 px-12 py-2 font-semibold">all projects</span>
       </Link>
     </div>
   </>
