@@ -7,6 +7,8 @@ import { PageHeader, Explorer, RunningStats } from 'components'
 import { type Project, type RunData } from 'types'
 import projects from 'data/projects'
 
+const PROJECT_COUNT = 4
+
 interface HomePageProps {
   runData: RunData[] | null
 }
@@ -23,7 +25,7 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
         projectPageURI: project.projectPageURI,
       }))
       .sort(() => Math.random() - 0.5)
-      .slice(0, 5)
+      .slice(0, PROJECT_COUNT)
 
     setRandomProjects(shuffledProjects)
   }, [])
@@ -33,10 +35,10 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
       <PageHeader title="Home" description="" />
       <article>
         <section>
-          {/* <p>Hello and welcome to my portfolio website.</p> */}
+          <p className="text-xl">Hello and welcome to my portfolio website.</p>
           <p className="text-xl">
-            This site was built entirely from scratch using NextJS, Python, and MongoDB. Initially,
-            I used React for the frontend and NodeJs for the backend but recently transitioned to my
+            I built this site entirely from scratch using NextJS, Python, and MongoDB. Initially, I
+            used React for the frontend and NodeJs for the backend but recently transitioned to my
             current stack. Here, you will find a range of my programming projects, primarily in
             Python and JavaScript/TypeScript, along with daily updates of my running data, which is
             fetched using Strava&apos;s API.
