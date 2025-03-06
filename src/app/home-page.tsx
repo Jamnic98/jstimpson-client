@@ -57,7 +57,9 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
           <>
             {runData ? (
               <>
-                <RunningStats runData={runData} />
+                <div className="mb-8">
+                  <RunningStats runData={runData} />
+                </div>
 
                 <div className="flex justify-center">
                   <Link
