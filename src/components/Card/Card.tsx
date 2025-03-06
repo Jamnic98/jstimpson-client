@@ -29,7 +29,7 @@ export const Card: React.FC<CardProps> = ({ title, description, imageURI, linkUR
       />
     </div>
     {/* Content */}
-    <div className="flex flex-grow flex-col p-4">
+    <div className="flex grow flex-col p-4">
       <div className="mb-2 text-2xl font-semibold text-orange-600 group-hover:text-gray-900">
         {title}
       </div>

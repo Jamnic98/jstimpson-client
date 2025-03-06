@@ -25,7 +25,7 @@ export const NavLink: React.FC<NavlinkProps> = ({ navlinkObj, onClick }) => {
     <Link
       href={url}
       onClick={handleClick}
-      className={`${isMobile ? 'py-4' : ''} flex items-center justify-center px-6 text-2xl font-bold text-neutral-light hover:bg-orange-600`}
+      className={`${isMobile ? 'py-4' : ''} text-neutral-light flex items-center justify-center px-6 text-2xl font-bold hover:bg-orange-600`}
     >
       {label}
     </Link>
