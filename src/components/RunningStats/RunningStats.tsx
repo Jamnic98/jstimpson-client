@@ -27,7 +27,7 @@ export const RunningStats: React.FC<RunningStatsProps> = ({ runData }) => {
     : 0
 
   return (
-    <ul className="mb-8 grid list-inside list-disc grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-4 p-0">
+    <ul className="grid list-inside list-disc grid-cols-[repeat(auto-fit,_minmax(320px,_1fr))] gap-4 p-0">
       <li className="text-2xl text-orange-500">
         <span className="text-xl text-black">{getTotalDistanceString(totalDistanceInMeters)}</span>
       </li>
