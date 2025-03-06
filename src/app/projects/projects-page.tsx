@@ -30,11 +30,11 @@ export default function ProjectsPage() {
         <section>
           <label className="text-lg"> Filter by language: </label>
           <select
-            className="mt-4 w-full rounded-lg bg-slate-100 p-2 focus:outline-hidden"
+            className="focus:outline-hidden mt-4 w-full rounded-lg bg-slate-100 p-2"
             onChange={(e) => setLanguage(e.target.value)}
           >
             {languages.map((mainLanguage: string, index) => (
-              <option className="border-none bg-slate-100 px-4 focus:outline-hidden" key={index}>
+              <option className="focus:outline-hidden border-none bg-slate-100 px-4" key={index}>
                 {mainLanguage}
               </option>
             ))}

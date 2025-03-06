@@ -9,7 +9,7 @@ import {
   PERSONAL_GITHUB_URL,
 } from 'utils/constants'
 
-const aboutMePhotoDimensions = { width: 330, height: 330 }
+const aboutMePhotoDimensions = { width: 300, height: 300 }
 
 export const metadata: Metadata = {
   title: 'About Me',
@@ -29,11 +29,11 @@ export default function About() {
           />
         </div>
       </section>
-      {/* <hr className="w-full border-none bg-gray-950" style={{ height: '1px' }} /> */}
       <section>
-        <h2 className="mb-8 text-2xl font-semibold">Intro</h2>
+        <h2 className="mb-4 text-3xl font-semibold">Intro</h2>
         <p className="text-xl">
-          A Full-Stack Software Engineer, based in London. Connect with me on
+          I'm a Full-Stack Software Engineer and tech enthusiast, based in London. Connect with me
+          on
           <>
             {' '}
             <a
@@ -61,7 +61,7 @@ export default function About() {
         </p>
       </section>
       <section>
-        <h2 className="mb-8 text-2xl font-semibold">Coding Experience</h2>
+        <h2 className="mb-4 text-3xl font-semibold">Coding Experience</h2>
         <p className="text-xl">
           TypeScript and Python are the langauges I excell with, having used them both commercially
           and personally to build performant and scalable full-stack web applications, with tools
@@ -89,7 +89,7 @@ export default function About() {
         </p>
       </section>
       <section>
-        <h2 className="mb-8 text-2xl font-semibold">Hackathon Win</h2>
+        <h2 className="mb-4 text-3xl font-semibold">Hackathon Win</h2>
         <p className="text-xl">
           On the 8th of March 2024 I participated in the largest
           <>
@@ -124,7 +124,7 @@ export default function About() {
         </p>
       </section>
       <section>
-        <h2 className="mb-8 text-2xl font-semibold">Running and Marathon</h2>
+        <h2 className="mb-4 text-3xl font-semibold">Running and Marathon</h2>
         <p className="text-xl">
           Since late 2020, I have developed a regular running routine, aspiring to one day complete
           an ultramarathon (&#8805;50km).
