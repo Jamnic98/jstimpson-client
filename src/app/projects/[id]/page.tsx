@@ -45,7 +45,7 @@ const Page = async (props: ProjectProps) => {
         </section>
 
         <Link
-          className="my-4 flex w-fit space-x-2 rounded-lg bg-slate-50 px-12 py-2 text-xl font-semibold leading-none text-orange-500 hover:text-black"
+          className="my-4 flex w-fit space-x-2 rounded-lg bg-slate-50 px-12 py-2 text-xl leading-none font-semibold text-orange-500 hover:text-black"
           href="/projects"
         >
           <FaArrowLeftLong className="text-2xl" /> <span>projects</span>

@@ -27,7 +27,7 @@ const RootLayout: React.FC<
         <Header>
           <NavLogo />
           <nav
-            className={`flex h-full bg-gray-950 ${isMobile ? `absolute left-0 top-0 h-max w-full translate-y-16 flex-col ${isOpen ? '' : 'hidden'}` : 'transition-none'} `}
+            className={`flex h-full bg-gray-950 ${isMobile ? `absolute top-0 left-0 h-max w-full translate-y-16 flex-col ${isOpen ? '' : 'hidden'}` : 'transition-none'} `}
           >
             {navLinkDataArr.map((navLinkData: NavLinkData) => (
               <NavLink
@@ -39,7 +39,7 @@ const RootLayout: React.FC<
           </nav>
           <MenuToggle isOpen={isOpen} onClick={handleOnClick} />
         </Header>
-        <main className="max-w-(--breakpoint-xl) container mx-auto px-6">{children}</main>
+        <main className="container mx-auto max-w-(--breakpoint-xl) px-6">{children}</main>
         <Footer />
       </body>
     </html>
