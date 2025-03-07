@@ -28,7 +28,7 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({ screenshotURIs }
                 alt={`Project screenshot ${index + 1}`}
                 width={IMAGE_DIMENSIONS.width}
                 height={IMAGE_DIMENSIONS.height}
-                className="rounded-sm object-cover shadow-md"
+                className="rounded-xs object-cover shadow-md"
               />
             </div>
           ))}
@@ -38,7 +38,7 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({ screenshotURIs }
       {/* Lightbox Modal */}
       {selectedImage && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
+          className="bg-opacity-75 fixed inset-0 z-50 flex items-center justify-center bg-black"
           onClick={() => setSelectedImage(null)}
         >
           <div
@@ -50,10 +50,10 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({ screenshotURIs }
               alt="Selected project image"
               width={800}
               height={800}
-              className="rounded-sm object-cover"
+              className="rounded-xs object-cover"
             />
             <button
-              className="focus:outline-hidden absolute right-4 top-4 text-2xl text-white"
+              className="absolute top-4 right-4 text-2xl text-white focus:outline-hidden"
               onClick={() => setSelectedImage(null)}
               aria-label="Close modal"
             >

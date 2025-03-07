@@ -9,7 +9,7 @@ export const Header: React.FC<HeaderProps> = ({ children }) => (
   <div id="header" className="relative top-0 z-10 h-16 bg-gray-950" aria-label="header">
     <div
       id="header-content"
-      className="max-w-(--breakpoint-xl) container mx-auto flex h-full flex-row items-center justify-between px-6"
+      className="container mx-auto flex h-full max-w-(--breakpoint-xl) flex-row items-center justify-between px-6"
     >
       {children}
     </div>
