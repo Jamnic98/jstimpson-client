@@ -16,7 +16,7 @@ export interface CardProps {
 export const Card: React.FC<CardProps> = ({ title, description, imageURI, linkURI }) => (
   <Link
     href={linkURI}
-    className="group flex h-full w-full max-w-96 cursor-pointer flex-col justify-between overflow-hidden rounded-lg bg-white shadow-md transition-transform hover:scale-105"
+    className="group flex h-full w-full max-w-96 cursor-pointer flex-col justify-between overflow-hidden rounded-lg bg-white shadow-xl transition-transform hover:scale-105"
   >
     {/* Image Container */}
     <div className="relative aspect-square w-full overflow-hidden">
