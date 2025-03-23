@@ -21,7 +21,7 @@ const touchTyping: Project = {
   mainLanguage: 'JavaScript',
   links: [
     {
-      URL: 'https://github.com/Jamnic98/touch-typing',
+      URL: 'https://github.com/Jamnic98/touch-typing-client',
       label: 'GitHub Repo',
       type: LinkType.EXTERNAL,
     },
