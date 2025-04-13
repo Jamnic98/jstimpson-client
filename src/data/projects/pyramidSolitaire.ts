@@ -9,7 +9,7 @@ const pyramidSolitaire: Project = {
     This program was written in Python using the Pygame library. It features sprite animations, programmed with
     vector maths, and can detect when there are no further moves playable.`,
   ],
-  projectPageURI: '/projects/pyramid-solitaire',
+  projectPageURI: '/coding/pyramid-solitaire',
   screenshotURIs: [
     '/images/projects/pyramid-solitaire.png',
     '/images/projects/pyramid-solitaire-end-game.png',

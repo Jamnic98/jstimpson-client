@@ -27,7 +27,7 @@ const inventoryManagementSystem: Project = {
     to send a low stock alert, which will send emails to specified users with the list of low stock items.
   `,
   ],
-  projectPageURI: '/projects/inventory-management-system',
+  projectPageURI: '/coding/inventory-management-system',
   screenshotURIs: [
     '/images/projects/ims.png',
     '/images/projects/edit-item-modal.png',

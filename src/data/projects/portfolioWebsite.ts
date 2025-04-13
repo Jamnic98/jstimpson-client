@@ -13,7 +13,7 @@ const portfolioWebsite: Project = {
      The server updates the database twice daily with new running data. To ensure scalability, I deployed the server to the cloud using AWS Elastic Beanstalk.`,
   ],
 
-  projectPageURI: '/projects/portfolio-website',
+  projectPageURI: '/coding/portfolio-website',
   screenshotURIs: [
     '/images/projects/portfolio-website.png',
     '/images/projects/portfolio-website-projects.png',

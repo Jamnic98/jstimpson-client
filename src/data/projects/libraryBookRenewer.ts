@@ -11,7 +11,7 @@ const libraryBookRenewer: Project = {
      cron to check if there are any books due. The program also sends a confirmation email relaying information
      about which books were renewed.`,
   ],
-  projectPageURI: '/projects/library-book-renewer',
+  projectPageURI: '/coding/library-book-renewer',
   screenshotURIs: ['/images/projects/library-book-renewer-code.png'],
   mainLanguage: 'Python',
   links: [

@@ -173,26 +173,26 @@ const leastSquares = (xSeries: number[], ySeries: number[]) => {
     return prev + cur
   }
 
-  const xBar = (xSeries.reduce(reduceSumFunc) * 1.0) / xSeries.length
-  const yBar = (ySeries.reduce(reduceSumFunc) * 1.0) / ySeries.length
+  const xBar = (xSeries.reduce(reduceSumFunc, 0) * 1.0) / xSeries.length
+  const yBar = (ySeries.reduce(reduceSumFunc, 0) * 1.0) / ySeries.length
 
   const ssXX = xSeries
     .map(function (d) {
       return Math.pow(d - xBar, 2)
     })
-    .reduce(reduceSumFunc)
+    .reduce(reduceSumFunc, 0)
 
   const ssYY = ySeries
     .map(function (d) {
       return Math.pow(d - yBar, 2)
     })
-    .reduce(reduceSumFunc)
+    .reduce(reduceSumFunc, 0)
 
   const ssXY = xSeries
     .map(function (d, i) {
       return (d - xBar) * (ySeries[i] - yBar)
     })
-    .reduce(reduceSumFunc)
+    .reduce(reduceSumFunc, 0)
 
   const slope = ssXY / ssXX
   const intercept = yBar - xBar * slope

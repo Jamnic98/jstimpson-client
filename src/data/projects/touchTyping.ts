@@ -16,7 +16,7 @@ const touchTyping: Project = {
      a fully fledged website but stopped working on the project as I believed the end result would be
      too similar to another site that I took inspiration from.`,
   ],
-  projectPageURI: '/projects/touch-typing',
+  projectPageURI: '/coding/touch-typing',
   screenshotURIs: ['/images/projects/touch-typing.png', '/images/projects/touch-typing-graph.png'],
   mainLanguage: 'JavaScript',
   links: [

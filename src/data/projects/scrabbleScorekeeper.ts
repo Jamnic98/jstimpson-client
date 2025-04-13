@@ -10,7 +10,7 @@ const scrabbleScorekeeper: Project = {
     `It features an easy-to-use graphical user interface comprised of a virtual Scrabble board and a table for displaying
      player scores. A dictionary is included to validate each word formed. The board, table and tiles were styled using CSS.`,
   ],
-  projectPageURI: '/projects/scrabble-scorekeeper',
+  projectPageURI: '/coding/scrabble-scorekeeper',
   screenshotURIs: [
     '/images/projects/scrabble-tiles.png',
     '/images/projects/scrabble-table.png',

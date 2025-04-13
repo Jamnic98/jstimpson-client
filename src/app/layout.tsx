@@ -19,7 +19,7 @@ const RootLayout: React.FC<
   const [isOpen, setIsOpen] = useState(false)
   const handleOnClick = () => setIsOpen(!isOpen)
 
-  const isMobile = (useWidth() || MOBILE_SCREEN_WIDTH) <= MOBILE_SCREEN_WIDTH
+  const isMobile = (useWidth() || MOBILE_SCREEN_WIDTH) < MOBILE_SCREEN_WIDTH
 
   return (
     <html lang="en" className={inter.className}>

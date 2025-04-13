@@ -11,7 +11,7 @@ const readingLog: Project = {
       and also comments about the book. The graphical user interface was made using the JavaFX library and features
       a search bar to filter data.`,
   ],
-  projectPageURI: '/projects/reading-log',
+  projectPageURI: '/coding/reading-log',
   screenshotURIs: ['/images/projects/reading-log.jpg', '/images/projects/reading-log-move.png'],
   mainLanguage: 'Java',
   links: [

@@ -20,7 +20,7 @@ const blueCheeseClassifier: Project = {
      been trained on images of cheese. I wrote a Python script which used the pre-trained model to generate co-ordinates of the bounding box of each cheese in each image, then calculate 
      the center point of the cheese, crop around that point and save the cropped image. With the updated image set, I trained the model again, which resulted in a 6% increase in the accuracy score.`,
   ],
-  projectPageURI: '/projects/blue-cheese-classifier',
+  projectPageURI: '/coding/blue-cheese-classifier',
   screenshotURIs: [
     '/images/projects/blue-cheese-classifier-image-classification.png',
     '/images/projects/blue-cheese-classifier-results-graph.png',

@@ -33,7 +33,7 @@ export const Explorer: React.FC<ExplorerProps> = ({ title, projectData }) => (
 
     {/* All projects button */}
     <div className="my-12 flex justify-center">
-      <Link className="group rounded-lg bg-slate-100 px-2 py-2" href="/projects">
+      <Link className="group rounded-lg bg-slate-100 px-2 py-2" href="/coding">
         <span className="text-xl font-semibold text-orange-500 group-hover:text-gray-950">
           - all projects -
         </span>

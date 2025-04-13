@@ -3,7 +3,7 @@ import { type Metadata } from 'next'
 import ProjectsPage from './projects-page'
 
 export const metadata: Metadata = {
-  title: 'Projects',
+  title: 'Coding Projects',
 }
 
 export default function Page() {

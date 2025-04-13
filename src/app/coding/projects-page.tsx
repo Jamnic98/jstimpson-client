@@ -23,8 +23,8 @@ export default function ProjectsPage() {
   return (
     <>
       <PageHeader
-        title="Projects"
-        description="Here are some of the personal projects I have worked on:"
+        title="Coding Projects"
+        description="Here are some of the personal programming projects I have worked on:"
       />
       <article>
         <section>
@@ -33,11 +33,13 @@ export default function ProjectsPage() {
             className="mt-4 w-full rounded-lg bg-slate-100 p-2 focus:outline-hidden"
             onChange={(e) => setLanguage(e.target.value)}
           >
-            {languages.map((mainLanguage: string, index) => (
-              <option className="border-none bg-slate-100 px-4 focus:outline-hidden" key={index}>
-                {mainLanguage}
-              </option>
-            ))}
+            {languages
+              .sort((a, b) => a.localeCompare(b))
+              .map((mainLanguage: string, index) => (
+                <option className="border-none bg-slate-100 px-4 focus:outline-hidden" key={index}>
+                  {mainLanguage}
+                </option>
+              ))}
           </select>
         </section>
         <section>
@@ -48,7 +50,7 @@ export default function ProjectsPage() {
                   title={projectData.title}
                   description={projectData.summary}
                   imageURI={projectData.screenshotURIs[0]}
-                  linkURI={`/projects/${projectData.id}`}
+                  linkURI={`/coding/${projectData.id}`}
                 />
               </div>
             ))}

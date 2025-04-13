@@ -13,7 +13,7 @@ interface NavlinkProps {
 export const NavLink: React.FC<NavlinkProps> = ({ navlinkObj, onClick }) => {
   const { label, url /* , children  */ } = navlinkObj
 
-  const isMobile = (useWidth() || MOBILE_SCREEN_WIDTH) <= MOBILE_SCREEN_WIDTH
+  const isMobile = (useWidth() || MOBILE_SCREEN_WIDTH) < MOBILE_SCREEN_WIDTH
 
   const handleClick = () => {
     if (onClick) {

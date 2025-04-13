@@ -3,13 +3,15 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
-const IMAGE_DIMENSIONS = { width: 400, height: 400 }
-
 interface ProjectGalleryProps {
   screenshotURIs: string[]
+  imageDimensions?: { width: number; height: number }
 }
 
-export const ProjectGallery: React.FC<ProjectGalleryProps> = ({ screenshotURIs }) => {
+export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
+  screenshotURIs,
+  imageDimensions = { width: 400, height: 400 },
+}) => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   return (
@@ -26,8 +28,8 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({ screenshotURIs }
               <Image
                 src={screenshotURI}
                 alt={`Project screenshot ${index + 1}`}
-                width={IMAGE_DIMENSIONS.width}
-                height={IMAGE_DIMENSIONS.height}
+                width={imageDimensions.width}
+                height={imageDimensions.height}
                 className="rounded-xs object-cover shadow-md"
               />
             </div>
@@ -38,7 +40,7 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({ screenshotURIs }
       {/* Lightbox Modal */}
       {selectedImage && (
         <div
-          className="bg-opacity-75 fixed inset-0 z-50 flex items-center justify-center bg-black"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900/75"
           onClick={() => setSelectedImage(null)}
         >
           <div
@@ -53,7 +55,7 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({ screenshotURIs }
               className="rounded-xs object-cover"
             />
             <button
-              className="absolute top-4 right-4 text-2xl text-white focus:outline-hidden"
+              className="absolute top-4 right-4 cursor-pointer text-2xl text-white focus:outline-hidden"
               onClick={() => setSelectedImage(null)}
               aria-label="Close modal"
             >

@@ -8,7 +8,7 @@ const looseChangeCalculator: Project = {
     `This is one of the first Python programs I wrote. The application is designed so that the user 
     only has to enter the number of coins for each denomination and the calculator will return the total.`,
   ],
-  projectPageURI: '/projects/loose-change-calculator',
+  projectPageURI: '/coding/loose-change-calculator',
   screenshotURIs: ['/images/projects/loose-change-calculator.png'],
   mainLanguage: 'Python',
   links: [

@@ -14,6 +14,7 @@ export const RunningDataView = ({ runData }: RunningDataViewProps) => (
     <hr className="my-4" />
     <RunningStats runData={runData} />
     <br />
+    <br />
 
     <h3 className="text-2xl font-semibold">Date / Distance:</h3>
     <LineGraph
@@ -34,6 +35,8 @@ export const RunningDataView = ({ runData }: RunningDataViewProps) => (
         labelOffset: -10,
       }}
     />
+
+    <br />
 
     <h3 className="text-2xl font-semibold">Distance / Average Pace:</h3>
     <ScatterGraph
