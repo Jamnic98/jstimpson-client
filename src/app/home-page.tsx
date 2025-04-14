@@ -49,6 +49,11 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
             functional.
           </p>
         </section>
+
+        <section>
+          <Explorer title="Coding Projects" projectData={randomProjects} />
+        </section>
+
         <section>
           <h2 className="mb-0 text-3xl font-semibold">
             {new Date().toLocaleString('default', { month: 'long' })} Running
@@ -57,12 +62,12 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
           <>
             {runData ? (
               <>
-                <div className="mb-8">
+                <div className="mb-4">
                   <RunningStats runData={runData} />
                 </div>
 
-                <div className="my-12 flex justify-center">
-                  <Link className="group rounded-lg bg-slate-100 px-2 py-2" href="/logs">
+                <div className="my-4 flex justify-center">
+                  <Link className="group rounded-lg px-2 py-2" href="/logs">
                     <span className="text-xl font-semibold text-orange-500 group-hover:text-gray-950">
                       - all stats -
                     </span>
@@ -73,9 +78,6 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
               <div>*Error fetching data</div>
             )}
           </>
-        </section>
-        <section>
-          <Explorer title="Project Explorer" projectData={randomProjects} />
         </section>
       </article>
     </>

@@ -16,14 +16,14 @@ export interface CardProps {
 export const Card: React.FC<CardProps> = ({ title, description, imageURI, linkURI }) => (
   <Link
     href={linkURI}
-    className="group flex h-full w-full max-w-96 cursor-pointer flex-col justify-between overflow-hidden rounded-lg bg-white shadow-xl transition-transform hover:scale-105"
+    className="group flex h-full w-full max-w-96 cursor-pointer flex-col justify-between overflow-hidden rounded-lg bg-white shadow transition-transform hover:scale-[104%] hover:shadow-md"
   >
     {/* Image Container */}
     <div className="relative aspect-square w-full overflow-hidden">
       <Image
         src={imageURI}
         alt={title}
-        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+        className="h-full w-full object-cover transition-transform duration-300"
         width={cardImgDimensions.width}
         height={cardImgDimensions.height}
       />

@@ -21,7 +21,9 @@ export default function threeD() {
           screenshotURIs={[
             `${diceImageFolder}/action_dice.webp`,
             `${diceImageFolder}/mysterious_dice.webp`,
+            `${diceImageFolder}/dynamic_dice_test.webp`,
             `${diceImageFolder}/test_v7_composite.webp`,
+            `${diceImageFolder}/dice_sunset_v3.webp`,
             `${diceImageFolder}/dice_party_v3.webp`,
           ]}
           imageDimensions={{ width: 600, height: 250 }}

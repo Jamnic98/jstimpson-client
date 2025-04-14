@@ -18,11 +18,11 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
     <>
       {/* Grid Gallery */}
       <div className="my-8 flex justify-center">
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
           {screenshotURIs.map((screenshotURI, index) => (
             <div
               key={index}
-              className="relative w-fit cursor-pointer transition-transform hover:scale-105"
+              className="relative w-fit cursor-pointer transition-transform hover:scale-[104%]"
               onClick={() => setSelectedImage(screenshotURI)}
             >
               <Image
@@ -30,7 +30,7 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
                 alt={`Project screenshot ${index + 1}`}
                 width={imageDimensions.width}
                 height={imageDimensions.height}
-                className="rounded-xs object-cover shadow-md"
+                className="rounded object-cover shadow-md"
               />
             </div>
           ))}
@@ -40,19 +40,19 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
       {/* Lightbox Modal */}
       {selectedImage && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900/75"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-gray-950/75"
           onClick={() => setSelectedImage(null)}
         >
           <div
-            className="relative"
+            className="relative mx-4"
             onClick={(e) => e.stopPropagation()} // Prevent modal close when clicking inside
           >
             <Image
               src={selectedImage}
               alt="Selected project image"
-              width={800}
-              height={800}
-              className="rounded-xs object-cover"
+              width={1280}
+              height={720}
+              className="rounded object-cover"
             />
             <button
               className="absolute top-4 right-4 cursor-pointer text-2xl text-white focus:outline-hidden"
