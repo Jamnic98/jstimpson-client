@@ -62,7 +62,7 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
                 </div>
 
                 <div className="my-12 flex justify-center">
-                  <Link className="group rounded-lg bg-slate-100 px-2 py-2" href="/logs/running">
+                  <Link className="group rounded-lg bg-slate-100 px-2 py-2" href="/logs">
                     <span className="text-xl font-semibold text-orange-500 group-hover:text-gray-950">
                       - all stats -
                     </span>
