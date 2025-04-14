@@ -3,7 +3,8 @@ import { LinkType, type Project } from 'types'
 const portfolioWebsite: Project = {
   id: 'portfolio-website',
   title: 'Portfolio Website',
-  summary: 'My website.',
+  summary:
+    'My website, designed and built from scratch to showcase my coding skills, 3D modelling skills and running stats.',
   paragraphs: [
     `This is the second iteration of my website. The first version was built with React alone, which restricted navigation to the home page due to a lack of proper routing.
      I was also dissatisfied with the styling, so I decided to rebuild the site to improve accessibility and update the design.`,

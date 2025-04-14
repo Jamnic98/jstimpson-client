@@ -16,7 +16,7 @@ export const Explorer: React.FC<ExplorerProps> = ({ title, projectData }) => (
     <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
       {projectData.map((dataObj, index) => (
         <Link
-          className="group col-span-1 block rounded-md bg-neutral-50 p-4 shadow hover:scale-[104%] hover:cursor-pointer hover:shadow-md"
+          className="group col-span-1 block rounded bg-neutral-50 p-4 shadow hover:scale-[102%] hover:cursor-pointer hover:shadow-md"
           href={dataObj.projectPageURI || ''}
           key={index}
         >
@@ -33,7 +33,7 @@ export const Explorer: React.FC<ExplorerProps> = ({ title, projectData }) => (
 
     {/* All projects button */}
     <div className="my-4 flex justify-center">
-      <Link className="group rounded-lg px-2 py-2" href="/coding">
+      <Link className="group" href="/coding">
         <span className="text-xl font-semibold text-orange-500 group-hover:text-gray-950">
           - all projects -
         </span>

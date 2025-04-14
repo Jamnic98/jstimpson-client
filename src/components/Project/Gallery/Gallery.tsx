@@ -1,28 +1,45 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { IoClose } from 'react-icons/io5'
 
 interface ProjectGalleryProps {
   screenshotURIs: string[]
   imageDimensions?: { width: number; height: number }
+  isBlenderImage?: boolean
 }
 
 export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
   screenshotURIs,
-  imageDimensions = { width: 400, height: 400 },
+  imageDimensions = { width: 750, height: 750 },
+  isBlenderImage = false,
 }) => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
+
+  useEffect(() => {
+    if (selectedImage) {
+      document.body.classList.add('overflow-hidden')
+    } else {
+      document.body.classList.remove('overflow-hidden')
+    }
+
+    return () => {
+      document.body.classList.remove('overflow-hidden')
+    }
+  }, [selectedImage])
 
   return (
     <>
       {/* Grid Gallery */}
       <div className="my-8 flex justify-center">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+        <div
+          className={`grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 ${isBlenderImage ? 'lg:grid-cols-3' : 'lg:grid-cols-4'}`}
+        >
           {screenshotURIs.map((screenshotURI, index) => (
             <div
               key={index}
-              className="relative w-fit cursor-pointer transition-transform hover:scale-[104%]"
+              className="relative w-fit cursor-pointer transition-transform hover:scale-[103%]"
               onClick={() => setSelectedImage(screenshotURI)}
             >
               <Image
@@ -50,16 +67,16 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
             <Image
               src={selectedImage}
               alt="Selected project image"
-              width={1280}
-              height={720}
+              width={isBlenderImage ? 1280 : imageDimensions.width}
+              height={isBlenderImage ? 720 : imageDimensions.height}
               className="rounded object-cover"
             />
             <button
-              className="absolute top-4 right-4 cursor-pointer text-2xl text-white focus:outline-hidden"
+              className="absolute top-4 right-4 cursor-pointer focus:outline-hidden"
               onClick={() => setSelectedImage(null)}
               aria-label="Close modal"
             >
-              ×
+              <IoClose className="text-3xl text-white hover:text-orange-500" />
             </button>
           </div>
         </div>

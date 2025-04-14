@@ -26,7 +26,7 @@ export default function threeD() {
             `${diceImageFolder}/dice_sunset_v3.webp`,
             `${diceImageFolder}/dice_party_v3.webp`,
           ]}
-          imageDimensions={{ width: 600, height: 250 }}
+          isBlenderImage={true}
         />
         <p className="text-xl">
           This model went through a couple of iterations before I settled on the final design.
