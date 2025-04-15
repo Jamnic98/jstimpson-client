@@ -66,14 +66,20 @@ export default function About() {
         <p className="text-xl">
           TypeScript and Python are the langauges I excell with, having used them both commercially
           and personally to build performant and scalable full-stack web applications, with tools
-          like React, Node.js and Flask. During my 2.5 years at Qudo, I gained exposure to DevOps
-          tools such as Docker, Ansible, and Git CI/CD pipelines.
+          like React, Node.js, Flask and FastAPI. During my 2.5 years at Qudo, I gained exposure to
+          DevOps tools such as Docker, Ansible, and Git CI/CD pipelines. At BelleVie I took full
+          responsibility for their bespoke survey report generation tool, which involved data
+          processing in Python with NumPy and Pandas, and completely redesigning the results page to
+          be responsive on multiple screens. I also built a custom table for displaying client's
+          medication data, which involved writing a GraphQL API to fetch data from a DynamoDB
+          database.
         </p>
         <p className="text-xl">
           As Lead AI developer at GeniusLead, I led a small team of junior team members to build
           bespoke voice applications for Alexa and Google Hub devices. I was also responisble for my
           building my own projects, deploying them to AWS Lambda, the Alexa Store and Google Cloud
-          Platform.
+          Platform. The main project I worked on was an app for pilots to help them prepare for a
+          flight by querying the METAR and TAF weather reports for a specific airport.
         </p>
         <p className="text-xl">
           I have also completed a number of online courses, including an Advanced Python course, an
@@ -82,8 +88,8 @@ export default function About() {
           at some of the personal
           <>
             {' '}
-            <Link className="" href="/projects">
-              projects
+            <Link className="text-orange-600 hover:text-black" href="/coding">
+              coding projects
             </Link>{' '}
             I have worked on.
           </>

@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { PageHeader, Explorer, RunningStats } from 'components'
 import { type Project, type RunData } from 'types'
 import projects from 'data/projects'
+import portfolioWebsite from 'data/projects/portfolioWebsite'
 
 const PROJECT_COUNT = 4
 
@@ -37,11 +38,23 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
         <section>
           <p className="text-xl">Hello and welcome to my portfolio website.</p>
           <p className="text-xl">
-            I built this site entirely from scratch using NextJS, Python, and MongoDB. Initially, I
-            used React for the frontend and NodeJs for the backend but recently transitioned to my
-            current stack. Here, you will find a range of my programming projects, primarily in
-            Python and JavaScript/TypeScript, along with daily updates of my running data, which is
-            fetched using Strava&apos;s API.
+            I built this site entirely from scratch using NextJS, TypeScript, Python, and MongoDB.
+            The front is made using custom components. Initially, I used React for the frontend and
+            NodeJs for the backend but transitioned to the current stack for ease of development
+            reasons. Here, you will find a range of my programming projects, mainly in Python,
+            JavaScript and TypeScript, along with daily updates of my running data, which is fetched
+            using Strava&apos;s API. Read more about my website{' '}
+            <Link
+              className="text-orange-600 hover:text-black"
+              href={portfolioWebsite.projectPageURI}
+            >
+              here
+            </Link>
+            . I also recently added a section for{' '}
+            <Link className="text-orange-600 hover:text-black" href="/3d">
+              3D renders
+            </Link>{' '}
+            of projects I have made using Blender.
           </p>
           <p className="text-xl">
             This is an ongoing project where I handle everything from frontend and backend
@@ -68,7 +81,7 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
 
                 <div className="my-4 flex justify-center">
                   <Link className="group" href="/logs">
-                    <span className="text-xl font-semibold text-orange-500 group-hover:text-gray-950">
+                    <span className="text-xl font-semibold text-orange-600 group-hover:text-gray-950">
                       - all stats -
                     </span>
                   </Link>

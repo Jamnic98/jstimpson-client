@@ -76,7 +76,7 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
               onClick={() => setSelectedImage(null)}
               aria-label="Close modal"
             >
-              <IoClose className="text-3xl text-white hover:text-orange-500" />
+              <IoClose className="text-3xl text-white hover:text-orange-600" />
             </button>
           </div>
         </div>

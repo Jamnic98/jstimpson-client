@@ -21,7 +21,7 @@ export const Explorer: React.FC<ExplorerProps> = ({ title, projectData }) => (
           key={index}
         >
           {/* Project name */}
-          <h3 className="mb-4 text-2xl font-bold text-orange-500 group-hover:text-gray-950">
+          <h3 className="mb-4 text-2xl font-bold text-orange-600 group-hover:text-gray-950">
             {dataObj.title}
           </h3>
 
@@ -34,7 +34,7 @@ export const Explorer: React.FC<ExplorerProps> = ({ title, projectData }) => (
     {/* All projects button */}
     <div className="my-4 flex justify-center">
       <Link className="group" href="/coding">
-        <span className="text-xl font-semibold text-orange-500 group-hover:text-gray-950">
+        <span className="text-xl font-semibold text-orange-600 group-hover:text-gray-950">
           - all projects -
         </span>
       </Link>

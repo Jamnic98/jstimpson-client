@@ -19,7 +19,7 @@ const Page = async (props: ProjectProps) => {
       <article>
         <section>
           <p className="text-xl">
-            <span className="font-bold text-orange-500">Tech stack: </span>
+            <span className="font-bold text-orange-600">Tech stack: </span>
             {projectData.techStack.map((tech: string) => tech).join(', ')}
           </p>
         </section>
@@ -45,7 +45,7 @@ const Page = async (props: ProjectProps) => {
         </section>
 
         <Link
-          className="my-4 flex w-fit space-x-2 rounded bg-slate-50 px-12 py-2 text-xl leading-none font-semibold text-orange-500 hover:text-black"
+          className="my-4 flex w-fit space-x-2 rounded bg-slate-50 px-12 py-2 text-xl leading-none font-semibold text-orange-600 hover:text-black"
           href="/coding"
         >
           <FaArrowLeftLong className="text-2xl" /> <span>projects</span>
