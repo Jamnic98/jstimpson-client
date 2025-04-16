@@ -39,11 +39,11 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
           <p className="text-xl">Hello and welcome to my portfolio website.</p>
           <p className="text-xl">
             I built this site entirely from scratch using NextJS, TypeScript, Python, and MongoDB.
-            The front is made using custom components. Initially, I used React for the frontend and
-            NodeJs for the backend but transitioned to the current stack for ease of development
-            reasons. Here, you will find a range of my programming projects, mainly in Python,
-            JavaScript and TypeScript, along with daily updates of my running data, which is fetched
-            using Strava&apos;s API. Read more about my website{' '}
+            The frontend is made using custom components. Initially, I used React for the frontend
+            and NodeJs for the backend but transitioned to the current stack for ease of development
+            reasons. Here, you will find a range of my programming projects, mainly in Python, and
+            TypeScript, along with daily updates of my running data, which is fetched using
+            Strava&apos;s API. Read more about this website{' '}
             <Link
               className="text-orange-600 hover:text-black"
               href={portfolioWebsite.projectPageURI}

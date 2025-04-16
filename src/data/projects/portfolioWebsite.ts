@@ -13,7 +13,7 @@ const portfolioWebsite: Project = {
     `This website has undergone extensive updates since I first deployed it ${yearsSinceDeployment} years ago.
       The first version was built with just React as a single page application and styled with pure CSS.
       As I wanted to record my running data I transitioned to a full stack application using Node.js and Express for the backend, and MongoDB for the database.
-      I also switched to Next.js for the front end, which allowed me to use server-side rendering and static site generation.
+      I also switched to Next.js for the frontend, which allowed me to use server-side rendering and static site generation.
       This made the site much faster and more efficient, especially for the project pages which are now generated dynamically. 
       A similar approach of dynamic data loading is used to create the project 'cards' displayed on the main projects page.`,
 

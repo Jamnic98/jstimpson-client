@@ -18,7 +18,7 @@ const touchTyping: Project = {
   ],
   projectPageURI: '/coding/touch-typing',
   screenshotURIs: ['/images/projects/touch-typing.png', '/images/projects/touch-typing-graph.png'],
-  mainLanguage: 'JavaScript',
+  mainLanguage: 'TypeScript',
   links: [
     {
       URL: 'https://github.com/Jamnic98/touch-typing-client',
@@ -31,18 +31,7 @@ const touchTyping: Project = {
     //   type: LinkType.EXTERNAL,
     // },
   ],
-  techStack: [
-    'React',
-    'React Testing Library',
-    'Jest',
-    'HTML',
-    'CSS',
-    'Node.js',
-    'Express.js',
-    'Python',
-    'Matplotlib',
-    'JSON',
-  ],
+  techStack: ['TypeScript', 'React', 'Node.js', 'Express.js', 'Jest', 'HTML', 'CSS', 'JSON'],
 }
 
 export default touchTyping
