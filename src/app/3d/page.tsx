@@ -38,10 +38,10 @@ export default function threeD() {
         </p>
         <p className="text-xl">
           My favourite thing about this project was trying to give the dice character and
-          personality, especially in the images where the dice are static and grounded. By placing
-          two die close together and rotating them such that the dots on the die are facing the
-          direction of the camera, they appear to be looking out beyond the scene together, which I
-          thought was a fun touch.
+          personality, especially in the images where the dice are on the ground . By placing two
+          die close together and rotating them such that the dots on the die are facing the
+          direction of the camera, they appear to be looking out beyond the scene, which I thought
+          was a fun touch.
         </p>
       </section>
 

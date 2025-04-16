@@ -37,19 +37,16 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
           className={`grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 ${isBlenderImage ? 'lg:grid-cols-3' : 'lg:grid-cols-4'}`}
         >
           {screenshotURIs.map((screenshotURI, index) => (
-            <div
+            <Image
               key={index}
-              className="relative w-fit cursor-pointer transition-transform hover:scale-[103%]"
+              className="relative cursor-pointer rounded shadow-md transition-transform hover:scale-[103%]"
               onClick={() => setSelectedImage(screenshotURI)}
-            >
-              <Image
-                src={screenshotURI}
-                alt={`Project screenshot ${index + 1}`}
-                width={imageDimensions.width}
-                height={imageDimensions.height}
-                className="rounded object-cover shadow-md"
-              />
-            </div>
+              src={screenshotURI}
+              alt={`Project screenshot ${index + 1}`}
+              width={imageDimensions.width}
+              height={imageDimensions.height}
+              // className=""
+            />
           ))}
         </div>
       </div>
