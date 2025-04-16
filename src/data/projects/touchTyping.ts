@@ -25,6 +25,11 @@ const touchTyping: Project = {
       label: 'GitHub Repo',
       type: LinkType.EXTERNAL,
     },
+    // {
+    //   URL: 'https://main.d37l1d2nbj7vsq.amplifyapp.com/',
+    //   label: 'Project Link',
+    //   type: LinkType.EXTERNAL,
+    // },
   ],
   techStack: [
     'React',

@@ -10,6 +10,7 @@ import portfolioWebsite from './portfolioWebsite'
 import pyramidSolitaire from './pyramidSolitaire'
 import readingLog from './readingLog'
 import scrabbleScorekeeper from './scrabbleScorekeeper'
+import ticTacGo from './ticTacGo'
 import touchTyping from './touchTyping'
 
 const projects: Project[] = [
@@ -23,6 +24,7 @@ const projects: Project[] = [
   pyramidSolitaire,
   readingLog,
   scrabbleScorekeeper,
+  ticTacGo,
   touchTyping,
 ]
 

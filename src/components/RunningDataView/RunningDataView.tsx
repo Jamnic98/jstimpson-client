@@ -42,9 +42,10 @@ export const RunningDataView = ({ runData }: RunningDataViewProps) => (
     <ScatterGraph
       data={runData?.map((data: any) => {
         const { distance, duration, start_date_local } = data
+        const distanceInKm = distance / 1000
         return {
-          x: distance / 1000,
-          y: duration / 60 / (distance / 1000),
+          x: distanceInKm,
+          y: duration / 60 / distanceInKm,
           start_date_local,
         }
       })}
