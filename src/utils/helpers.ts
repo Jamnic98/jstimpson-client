@@ -1,3 +1,37 @@
 export const reduceSumFunc = (prev: number, cur: number) => prev + cur
 
 export const getRandomElement = <T>(array: T[]) => array[Math.floor(Math.random() * array.length)]
+
+export const getRunningData = async (timestamp?: number) => {
+  const url = new URL('/runs', process.env.NEXT_PUBLIC_SERVER_URL as string)
+  if (timestamp) {
+    url.searchParams.append('after', timestamp.toString())
+  }
+
+  try {
+    const response = await fetch(url.toString(), { next: { revalidate: 3600 } })
+    if (!response.ok) {
+      throw new Error(`Failed to fetch running data`)
+    }
+
+    const { runs } = await response.json()
+    return runs
+  } catch (error) {
+    console.error(error)
+
+    // Different error messages based on the type of error
+    if (error instanceof SyntaxError) {
+      // This handles JSON parsing errors
+      throw new Error('Failed to parse the running data')
+    } else if (error instanceof TypeError) {
+      // This handles network errors (e.g., failed to fetch)
+      throw new Error('Network error: Failed to connect to the server')
+    } else if (error instanceof Error) {
+      // If it's a custom error or response error (non-specific)
+      throw new Error(`Unexpected error: ${error.message}`)
+    } else {
+      // Fallback if the error is of an unknown type
+      throw new Error('An unknown error occurred while fetching running data')
+    }
+  }
+}

@@ -1,17 +1,17 @@
 import { type Metadata } from 'next'
 
 import { PageHeader, RunningDataView } from 'components'
+import { getRunningData } from 'utils'
 
 const pageTitle = 'Running'
 const pageHeaderDescription = 'Here is my running data:'
-const errorMsg = '*Error fetching data'
 
 export const metadata: Metadata = {
   title: 'Running',
 }
 
 export default async function Page() {
-  const runs = await getData()
+  const runs = await getRunningData()
 
   return (
     <>
@@ -29,26 +29,8 @@ export default async function Page() {
             Marathon and raised £275 for The Alzheimer&apos;s Society!
           </p>
         </section>
-        <section>{runs ? <RunningDataView runData={runs} /> : <div>{errorMsg}</div>}</section>
+        <section>{runs && <RunningDataView runData={runs} />}</section>
       </article>
     </>
   )
-}
-
-const getData = async () => {
-  try {
-    // fetch data
-    const URL = (process.env.NEXT_PUBLIC_SERVER_URL as string) + '/runs'
-    const response = await fetch(URL, { next: { revalidate: 3600 } })
-
-    if (!response.ok) {
-      throw new Error('Failed to fetch data')
-    }
-    const { runs } = await response.json()
-    console.log('Fetched runs:', runs)
-    return runs
-  } catch (error) {
-    console.error(error)
-    return null
-  }
 }
