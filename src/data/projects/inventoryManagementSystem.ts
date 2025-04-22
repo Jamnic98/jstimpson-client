@@ -34,7 +34,7 @@ const inventoryManagementSystem: Project = {
     '/images/projects/remove-item-modal.png',
     '/images/projects/email-settings.png',
   ],
-  mainLanguage: 'JavaScript',
+  mainLanguage: ['JavaScript'],
   links: [
     {
       label: 'GitHub Repo',

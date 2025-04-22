@@ -13,7 +13,7 @@ const ticTacGo: Project = {
 
   projectPageURI: '/coding/tic-tac-go',
   screenshotURIs: ['/images/projects/tic_tac_go_code.png', '/images/projects/tic_tac_go.png'],
-  mainLanguage: 'Golang',
+  mainLanguage: ['Golang'],
   links: [
     {
       URL: 'https://github.com/Jamnic98/tic-tac-go',

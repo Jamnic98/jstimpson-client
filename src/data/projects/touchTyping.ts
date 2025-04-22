@@ -5,20 +5,26 @@ const touchTyping: Project = {
   title: 'Touch Typing',
   summary: 'A program to improve typing speed and accuracy.',
   paragraphs: [
-    `The idea behind this project was to make an application that would analyse 
-     the user's typing patterns and present them with words that contained combinations 
-     of letters that they were having trouble typing, in theory increasing their rate of improvement.
-     To test my hypothesis, I created a typing interface with React and Node.js that would randomly 
-     select words for the user to type, then save the hits and misses of individual letters and letter
-     combinations to a JSON file which I would later use for analysis.`,
-    `After gathering my typing data by practicing with the app, I wrote a Python script to extract
-     the data from the JSON file, then analyse and plot it using Matplotlib. I wanted to make the app
-     a fully fledged website but stopped working on the project as I believed the end result would be
-     too similar to another site that I took inspiration from.`,
+    `The idea behind this project was to build an application that analyses 
+     the user's typing patterns and presents them with words containing combinations 
+     of letters they struggle with—aiming to accelerate their improvement over time.
+     To test this hypothesis, I created a typing interface using React with Vite on the 
+     frontend, and a backend now written in Go (Golang). The system tracks hits and misses 
+     on individual letters and letter combinations, storing the data in JSON format for later analysis.
+     There's also a Python-based text generation service that dynamically provides 
+     personalised practice words based on the user's performance. Redis is used as a job queue 
+     to handle requests to the text generation service asynchronously, helping keep the app responsive.`,
+
+    `To manage the project infrastructure, I’m using Docker and Docker Compose 
+     to containerise and orchestrate the various services. After collecting my own 
+     typing data by using the app, I wrote a Python script to extract and visualise 
+     the data using Matplotlib. While I initially put the project on hold due to 
+     similarities with another site I drew inspiration from, I've since resumed 
+     development, and the project is currently a work in progress.`,
   ],
   projectPageURI: '/coding/touch-typing',
   screenshotURIs: ['/images/projects/touch-typing.png', '/images/projects/touch-typing-graph.png'],
-  mainLanguage: 'TypeScript',
+  mainLanguage: ['TypeScript', 'Python', 'Golang'],
   links: [
     {
       URL: 'https://github.com/Jamnic98/touch-typing-client',
@@ -31,7 +37,20 @@ const touchTyping: Project = {
     //   type: LinkType.EXTERNAL,
     // },
   ],
-  techStack: ['TypeScript', 'React', 'Node.js', 'Express.js', 'Jest', 'HTML', 'CSS', 'JSON'],
+  techStack: [
+    'TypeScript',
+    'React',
+    'Vite',
+    'Python',
+    'Golang',
+    'Redis',
+    'Docker',
+    'Docker Compose',
+    'Jest',
+    'HTML',
+    'CSS',
+    'JSON',
+  ],
 }
 
 export default touchTyping

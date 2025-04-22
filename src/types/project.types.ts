@@ -16,7 +16,7 @@ export type Project = {
   paragraphs: string[]
   projectPageURI: string
   screenshotURIs: string[]
-  mainLanguage: string
+  mainLanguage: string[]
   links: ProjectLink[]
   techStack: string[]
 }

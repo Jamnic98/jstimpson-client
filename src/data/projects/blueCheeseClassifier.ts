@@ -25,7 +25,7 @@ const blueCheeseClassifier: Project = {
     '/images/projects/blue-cheese-classifier-image-classification.png',
     '/images/projects/blue-cheese-classifier-results-graph.png',
   ],
-  mainLanguage: 'Python',
+  mainLanguage: ['Python'],
   links: [
     {
       label: 'GitHub Repo',

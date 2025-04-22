@@ -15,7 +15,7 @@ const pyramidSolitaire: Project = {
     '/images/projects/pyramid-solitaire-end-game.png',
     '/images/projects/pyramid-solitaire-start-screen.png',
   ],
-  mainLanguage: 'Python',
+  mainLanguage: ['Python'],
   links: [
     {
       label: 'GitHub Repo',

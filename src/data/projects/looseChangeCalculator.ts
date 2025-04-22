@@ -10,7 +10,7 @@ const looseChangeCalculator: Project = {
   ],
   projectPageURI: '/coding/loose-change-calculator',
   screenshotURIs: ['/images/projects/loose-change-calculator.png'],
-  mainLanguage: 'Python',
+  mainLanguage: ['Python'],
   links: [
     {
       label: 'GitHub Repo',

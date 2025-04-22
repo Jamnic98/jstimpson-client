@@ -36,7 +36,7 @@ const portfolioWebsite: Project = {
     '/images/projects/portfolio-website-projects.png',
     '/images/projects/portfolio-website-about.png',
   ],
-  mainLanguage: 'TypeScript',
+  mainLanguage: ['TypeScript', 'Python'],
   links: [
     // {
     //   URL: 'https://github.com/Jamnic98/website-client',

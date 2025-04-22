@@ -9,7 +9,7 @@ import { type Project } from 'types'
 
 const languages = [
   'All',
-  ...Array.from(new Set(projects.map((projectData: Project) => projectData.mainLanguage))),
+  ...Array.from(new Set(projects.map((projectData: Project) => projectData.mainLanguage).flat())),
 ]
 
 export default function ProjectsPage() {
@@ -17,7 +17,8 @@ export default function ProjectsPage() {
 
   // Filter the projects based on the selected language
   const filteredProjects = projects.filter(
-    (projectData: Project) => language === 'All' || projectData.mainLanguage === language
+    (projectData: Project) =>
+      language === 'All' || projectData.mainLanguage.indexOf(language) !== -1
   )
 
   return (

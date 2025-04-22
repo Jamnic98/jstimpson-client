@@ -21,8 +21,8 @@ export default function threeD() {
           screenshotURIs={[
             `${diceImageFolder}/action_dice.webp`,
             `${diceImageFolder}/mysterious_dice.webp`,
-            `${diceImageFolder}/dynamic_dice_test.webp`,
-            `${diceImageFolder}/test_v7_composite.webp`,
+            `${diceImageFolder}/test_v8_composite.webp`,
+            `${diceImageFolder}/blue_and_yellow.webp`,
             `${diceImageFolder}/dice_sunset_v3.webp`,
             `${diceImageFolder}/dice_party_v3.webp`,
           ]}
@@ -37,11 +37,10 @@ export default function threeD() {
           favorites here.
         </p>
         <p className="text-xl">
-          My favourite thing about this project was trying to give the dice character and
-          personality, especially in the images where the dice are on the ground . By placing two
-          die close together and rotating them such that the dots on the die are facing the
-          direction of the camera, they appear to be looking out beyond the scene, which I thought
-          was a fun touch.
+          My favourite part of this project was trying to personify the dice and give them a sense
+          of character—especially in the shots where they're lying on the ground together. By
+          placing two dice close together and rotating them so the dots face the camera, they appear
+          to be gazing out beyond the scene, as if admiring the view.
         </p>
       </section>
 

@@ -13,7 +13,7 @@ const libraryBookRenewer: Project = {
   ],
   projectPageURI: '/coding/library-book-renewer',
   screenshotURIs: ['/images/projects/library-book-renewer-code.png'],
-  mainLanguage: 'Python',
+  mainLanguage: ['Python'],
   links: [
     {
       label: 'GitHub Repo',

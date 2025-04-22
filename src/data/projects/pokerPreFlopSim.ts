@@ -14,7 +14,7 @@ const pokerPreFlopSim: Project = {
     '/images/projects/poker-sim.png',
     '/images/projects/poker-pre-flop-sim-results-graph.png',
   ],
-  mainLanguage: 'Python',
+  mainLanguage: ['Python'],
   links: [
     {
       label: 'GitHub Repo',

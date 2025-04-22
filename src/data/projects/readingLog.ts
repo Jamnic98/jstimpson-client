@@ -13,7 +13,7 @@ const readingLog: Project = {
   ],
   projectPageURI: '/coding/reading-log',
   screenshotURIs: ['/images/projects/reading-log.jpg', '/images/projects/reading-log-move.png'],
-  mainLanguage: 'Java',
+  mainLanguage: ['Java'],
   links: [
     {
       label: 'GitHub Repo',

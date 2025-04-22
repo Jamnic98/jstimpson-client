@@ -18,7 +18,7 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
   const [randomProjects, setRandomProjects] = useState<Partial<Project>[]>([])
 
   useEffect(() => {
-    // Shuffle projects and select 3
+    // Shuffle projects and select 4
     const shuffledProjects = projects
       .map((project) => ({
         title: project.title,

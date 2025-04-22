@@ -16,7 +16,7 @@ const scrabbleScorekeeper: Project = {
     '/images/projects/scrabble-table.png',
     '/images/projects/scrabble-board.png',
   ],
-  mainLanguage: 'TypeScript',
+  mainLanguage: ['TypeScript'],
   links: [
     {
       label: 'GitHub Repo',
