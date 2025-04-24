@@ -11,7 +11,7 @@ import portfolioWebsite from 'data/projects/portfolioWebsite'
 const PROJECT_COUNT = 4
 
 interface HomePageProps {
-  runData: RunData[] | null
+  runData: RunData[]
 }
 
 const HomePage: React.FC<HomePageProps> = ({ runData }) => {
@@ -73,7 +73,7 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
           </h2>
           <hr className="my-4" />
           <>
-            {runData ? (
+            {runData && (
               <>
                 <div className="mb-4">
                   <RunningStats runData={runData} />
@@ -87,8 +87,6 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
                   </Link>
                 </div>
               </>
-            ) : (
-              <div>*Error fetching data</div>
             )}
           </>
         </section>
