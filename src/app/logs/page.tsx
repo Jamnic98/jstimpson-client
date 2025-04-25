@@ -4,7 +4,7 @@ import { PageHeader, RunningDataView } from 'components'
 import { getRunningData } from 'utils'
 
 const pageTitle = 'Running'
-const pageHeaderDescription = 'Here is my running data:'
+const pageHeaderDescription = 'Here is my running data.'
 
 export const metadata: Metadata = {
   title: 'Running',

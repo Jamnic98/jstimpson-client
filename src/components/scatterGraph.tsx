@@ -114,7 +114,7 @@ export const ScatterGraph: React.FC<ScatterGraphProps> = ({ data, xAxisObj, yAxi
       .append('text')
       .attr('transform', 'translate(' + width / 2 + ' ,' + (height + margins.top) + ')')
       .style('text-anchor', 'middle')
-      .style('font', '0.4em arial')
+      .style('font', '0.5em arial')
       .text(xAxisObj.label)
 
     return x
@@ -144,7 +144,7 @@ export const ScatterGraph: React.FC<ScatterGraphProps> = ({ data, xAxisObj, yAxi
       .attr('x', 0 - height / 2)
       .attr('dy', '1em')
       .style('text-anchor', 'middle')
-      .style('font', '0.4em arial')
+      .style('font', '0.5em arial')
       .text(yAxisObj.label)
 
     return y

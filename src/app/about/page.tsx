@@ -9,7 +9,7 @@ import {
   PERSONAL_GITHUB_URL,
 } from 'utils/constants'
 
-const aboutMePhotoDimensions = { width: 320, height: 320 }
+const aboutMePhotoDimensions = { width: 330, height: 330 }
 
 export const metadata: Metadata = {
   title: 'About Me',
@@ -17,11 +17,11 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <article>
+    <article className="-mt-12">
       <section>
         <div className="mb-8 flex justify-center">
           <Image
-            className="rounded-full"
+            className="rounded-full border-4 border-gray-200"
             src="/images/profile-picture.jpg"
             width={aboutMePhotoDimensions.width}
             height={aboutMePhotoDimensions.height}

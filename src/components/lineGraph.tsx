@@ -117,8 +117,8 @@ export const LineGraph: React.FC<LineGraphProps> = ({
       .selectAll('text')
       .style('text-anchor', 'end')
       .attr('dx', '-.8em')
-      .attr('dy', '.15em')
-      .attr('transform', 'rotate(-65)')
+      .attr('dy', '.1em')
+      .attr('transform', 'rotate(-60)')
 
     // text label for the x axis
     svgElement
@@ -128,7 +128,7 @@ export const LineGraph: React.FC<LineGraphProps> = ({
         'translate(' + width / 2 + ' ,' + (height + margins.top + xAxisObj.labelOffset) + ')'
       )
       .style('text-anchor', 'middle')
-      .style('font', '0.4em arial')
+      .style('font', '0.5em arial')
       .text(xAxisObj.label)
     return x
   }
@@ -156,7 +156,7 @@ export const LineGraph: React.FC<LineGraphProps> = ({
       .attr('y', +yAxisObj.labelOffset - margins.left)
       .attr('dy', '1em')
       .style('text-anchor', 'middle')
-      .style('font', '0.4em arial')
+      .style('font', '0.5em arial')
       .text(yAxisObj.label)
     return y
   }

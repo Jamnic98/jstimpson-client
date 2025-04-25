@@ -25,7 +25,7 @@ export default function ProjectsPage() {
     <>
       <PageHeader
         title="Coding Projects"
-        description="Here are some of the personal programming projects I have worked on:"
+        description="A collection of personal programming projects I've built."
       />
       <article>
         <section>

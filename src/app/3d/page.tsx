@@ -12,11 +12,11 @@ export default function threeD() {
     <article>
       <PageHeader
         title="3D Modelling"
-        description="A collection of 3D model renders I've created using the 3D modelling software, Blender." //, with the most recent images displayed at the top of the page."
+        description="A collection of 3D model renders I've created using the 3D modelling software, Blender."
       />
 
       <section>
-        <h3 className="text-2xl font-semibold">Dice</h3>
+        <h3 className="text-3xl font-semibold">Dice</h3>
         <ProjectGallery
           screenshotURIs={[
             `${diceImageFolder}/action_dice.webp`,
@@ -44,7 +44,7 @@ export default function threeD() {
         </p>
       </section>
 
-      <section className="text-red-950">*** more images coming soon! ***</section>
+      <section className="text-xl text-red-950">*** more images coming soon! ***</section>
     </article>
   )
 }
