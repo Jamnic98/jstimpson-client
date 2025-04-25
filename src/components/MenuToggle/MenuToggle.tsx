@@ -18,7 +18,7 @@ export const MenuToggle: React.FC<MenuToggleProps> = ({ isOpen, onClick }) => {
     <div
       id="menu-toggle"
       onClick={handleOnClick}
-      className="text-neutral hover:text-neutral-light block h-fit w-fit cursor-pointer text-4xl md:hidden"
+      className="text-neutral block h-fit w-fit cursor-pointer text-4xl hover:text-orange-600 md:hidden"
       aria-label="menu toggle"
     >
       {isOpen ? <FaTimes /> : <FaBars />}
