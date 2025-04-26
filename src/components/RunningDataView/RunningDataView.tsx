@@ -13,12 +13,14 @@ export const RunningDataView = ({ runData }: RunningDataViewProps) => (
     <h2 className="mb-0 text-3xl font-semibold">Running Data</h2>
     <hr className="my-4" />
     <RunningStats runData={runData} />
+
+    {/* TODO: Remove */}
     <br />
     <br />
 
     <h3 className="text-2xl font-semibold">Date / Distance:</h3>
     <LineGraph
-      data={runData?.map((data: any) => {
+      data={runData?.map((data: RunData) => {
         const { start_date_local, distance } = data
         return {
           x: start_date_local,
@@ -36,11 +38,12 @@ export const RunningDataView = ({ runData }: RunningDataViewProps) => (
       }}
     />
 
+    {/* TODO: Remove */}
     <br />
 
     <h3 className="text-2xl font-semibold">Distance / Average Pace:</h3>
     <ScatterGraph
-      data={runData?.map((data: any) => {
+      data={runData?.map((data: RunData) => {
         const { distance, duration, start_date_local } = data
         const distanceInKm = distance / 1000
         return {
@@ -56,7 +59,7 @@ export const RunningDataView = ({ runData }: RunningDataViewProps) => (
       yAxisObj={{
         label: 'ave. pace (min / km)',
         labelOffset: -15,
-        labelFormatter: (data: any) => {
+        labelFormatter: (data: number) => {
           const minutes = Math.floor(data)
           const seconds = Number((60 * (data - Math.floor(data))).toFixed(0))
           const secondsStr = seconds === 0 ? `:${seconds}0` : `:${seconds}`

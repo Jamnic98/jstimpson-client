@@ -35,3 +35,20 @@ export const getRunningData = async (timestamp?: number) => {
     }
   }
 }
+
+export const leastSquares = (xSeries: number[], ySeries: number[]) => {
+  const xBar = (xSeries.reduce(reduceSumFunc, 0) * 1.0) / xSeries.length
+  const yBar = (ySeries.reduce(reduceSumFunc, 0) * 1.0) / ySeries.length
+
+  const ssXX = xSeries.map((d) => Math.pow(d - xBar, 2)).reduce(reduceSumFunc, 0)
+
+  const ssYY = ySeries.map((d) => Math.pow(d - yBar, 2)).reduce(reduceSumFunc, 0)
+
+  const ssXY = xSeries.map((d, i) => (d - xBar) * (ySeries[i] - yBar)).reduce(reduceSumFunc, 0)
+
+  const slope = ssXY / ssXX
+  const intercept = yBar - xBar * slope
+  const rSquare = Math.pow(ssXY, 2) / (ssXX * ssYY)
+
+  return [slope, intercept, rSquare]
+}
