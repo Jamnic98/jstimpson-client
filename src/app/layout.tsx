@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Inter } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
 
 import { Footer, Header, MenuToggle, NavLogo, NavLink } from 'components'
 import { MOBILE_SCREEN_WIDTH, navLinkDataArr, useWidth } from 'utils'
@@ -41,6 +42,7 @@ const RootLayout: React.FC<
         </Header>
         <main className="container mx-auto max-w-(--breakpoint-xl) px-6">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   )
