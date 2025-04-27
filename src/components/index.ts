@@ -1,5 +1,6 @@
 export * from './Card'
 // export * from './Caret'
+export * from './DiceModelViewer'
 // export * from './Dropdown'
 // export * from './Emoji'
 export * from './Error'

@@ -12,7 +12,7 @@ interface ProjectGalleryProps {
 
 export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
   screenshotURIs,
-  imageDimensions = { width: 750, height: 750 },
+  imageDimensions = { width: 600, height: 600 },
   isBlenderImage = false,
 }) => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
@@ -45,7 +45,6 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
               alt={`Project screenshot ${index + 1}`}
               width={imageDimensions.width}
               height={imageDimensions.height}
-              // className=""
             />
           ))}
         </div>

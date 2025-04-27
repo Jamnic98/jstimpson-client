@@ -1,5 +1,6 @@
-import { PageHeader, ProjectGallery } from 'components'
 import { type Metadata } from 'next'
+
+import { DiceModelViewer, PageHeader, ProjectGallery } from 'components'
 
 const diceImageFolder = '/images/blender/dice'
 
@@ -17,6 +18,11 @@ export default function threeD() {
 
       <section>
         <h3 className="text-3xl font-semibold">Dice</h3>
+
+        <div className="my-8">
+          <DiceModelViewer />
+        </div>
+
         <ProjectGallery
           screenshotURIs={[
             `${diceImageFolder}/action_dice.webp`,
