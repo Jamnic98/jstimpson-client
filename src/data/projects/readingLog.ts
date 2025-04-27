@@ -1,5 +1,5 @@
 import { LinkType, type Project } from 'types'
-import { projectImageFolderPaths } from 'utils/constants'
+import { projectImagesFolderPaths } from 'utils/constants'
 
 const readingLog: Project = {
   id: 'reading-log',
@@ -14,8 +14,8 @@ const readingLog: Project = {
   ],
   projectPageURI: '/coding/reading-log',
   screenshotURIs: [
-    `${projectImageFolderPaths.readingLog}/author_rating_list.webp`,
-    `${projectImageFolderPaths.readingLog}/move_book_modal.webp`,
+    `${projectImagesFolderPaths.readingLog}/author_rating_list.webp`,
+    `${projectImagesFolderPaths.readingLog}/move_book_modal.webp`,
   ],
   mainLanguage: ['Java'],
   links: [

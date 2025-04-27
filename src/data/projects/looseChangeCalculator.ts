@@ -1,5 +1,5 @@
 import { LinkType, type Project } from 'types'
-import { projectImageFolderPaths } from 'utils/constants'
+import { projectImagesFolderPaths } from 'utils/constants'
 
 const looseChangeCalculator: Project = {
   id: 'loose-change-calculator',
@@ -10,7 +10,7 @@ const looseChangeCalculator: Project = {
     only has to enter the number of coins for each denomination and the calculator will return the total.`,
   ],
   projectPageURI: '/coding/loose-change-calculator',
-  screenshotURIs: [`${projectImageFolderPaths.looseChangeCalculator}/widget.webp`],
+  screenshotURIs: [`${projectImagesFolderPaths.looseChangeCalculator}/widget.webp`],
   mainLanguage: ['Python'],
   links: [
     {

@@ -1,5 +1,5 @@
 import { LinkType, type Project } from 'types'
-import { projectImageFolderPaths } from 'utils/constants'
+import { projectImagesFolderPaths } from 'utils/constants'
 
 const scrabbleScorekeeper: Project = {
   id: 'scrabble-scorekeeper',
@@ -13,9 +13,9 @@ const scrabbleScorekeeper: Project = {
   ],
   projectPageURI: '/coding/scrabble-scorekeeper',
   screenshotURIs: [
-    `${projectImageFolderPaths.scrabbleScorekeeper}/tiles.webp`,
-    `${projectImageFolderPaths.scrabbleScorekeeper}/score_table.webp`,
-    `${projectImageFolderPaths.scrabbleScorekeeper}/empty_board.webp`,
+    `${projectImagesFolderPaths.scrabbleScorekeeper}/tiles.webp`,
+    `${projectImagesFolderPaths.scrabbleScorekeeper}/score_table.webp`,
+    `${projectImagesFolderPaths.scrabbleScorekeeper}/empty_board.webp`,
   ],
   mainLanguage: ['TypeScript'],
   links: [

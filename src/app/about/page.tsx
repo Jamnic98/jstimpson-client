@@ -7,9 +7,9 @@ import {
   AI_HACKATHON_URL,
   PERSONAL_LINKEDIN_URL,
   PERSONAL_GITHUB_URL,
+  PROFILE_PICTURE_FOLDER_PATH,
 } from 'utils/constants'
 
-const PROFILE_PICTURE_FOLDER_PATH = '/images/profile-picture'
 const profilePictureDimensions = { width: 330, height: 330 }
 
 export const metadata: Metadata = {

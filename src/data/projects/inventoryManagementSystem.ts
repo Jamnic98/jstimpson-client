@@ -1,5 +1,5 @@
 import { type Project, LinkType } from 'types'
-import { projectImageFolderPaths } from 'utils/constants'
+import { projectImagesFolderPaths } from 'utils/constants'
 
 const inventoryManagementSystem: Project = {
   id: 'inventory-management-system',
@@ -30,10 +30,10 @@ const inventoryManagementSystem: Project = {
   ],
   projectPageURI: '/coding/inventory-management-system',
   screenshotURIs: [
-    `${projectImageFolderPaths.inventoryManagementSystem}/dashboard.webp`,
-    `${projectImageFolderPaths.inventoryManagementSystem}/edit_item_modal.webp`,
-    `${projectImageFolderPaths.inventoryManagementSystem}/remove_item_modal.webp`,
-    `${projectImageFolderPaths.inventoryManagementSystem}/email_settings.webp`,
+    `${projectImagesFolderPaths.inventoryManagementSystem}/dashboard.webp`,
+    `${projectImagesFolderPaths.inventoryManagementSystem}/edit_item_modal.webp`,
+    `${projectImagesFolderPaths.inventoryManagementSystem}/remove_item_modal.webp`,
+    `${projectImagesFolderPaths.inventoryManagementSystem}/email_settings.webp`,
   ],
   mainLanguage: ['JavaScript'],
   links: [

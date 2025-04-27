@@ -1,5 +1,5 @@
 import { LinkType, type Project } from 'types'
-import { projectImageFolderPaths } from 'utils/constants'
+import { projectImagesFolderPaths } from 'utils/constants'
 
 const libraryBookRenewer: Project = {
   id: 'library-book-renewer',
@@ -13,7 +13,7 @@ const libraryBookRenewer: Project = {
      about which books were renewed.`,
   ],
   projectPageURI: '/coding/library-book-renewer',
-  screenshotURIs: [`${projectImageFolderPaths.libraryBookRenewer}/code.webp`],
+  screenshotURIs: [`${projectImagesFolderPaths.libraryBookRenewer}/code.webp`],
   mainLanguage: ['Python'],
   links: [
     {

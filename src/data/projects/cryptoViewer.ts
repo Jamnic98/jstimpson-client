@@ -1,5 +1,5 @@
 import { type Project } from 'types'
-import { projectImageFolderPaths } from 'utils/constants'
+import { projectImagesFolderPaths } from 'utils/constants'
 
 const readingLog: Project = {
   id: 'crypto-viewer',
@@ -17,8 +17,8 @@ const readingLog: Project = {
   ],
   projectPageURI: '/coding/crypto-viewer',
   screenshotURIs: [
-    `${projectImageFolderPaths.cryptoViewer}/display.webp`,
-    `${projectImageFolderPaths.cryptoViewer}/pcb_diagram.webp`,
+    `${projectImagesFolderPaths.cryptoViewer}/display.webp`,
+    `${projectImagesFolderPaths.cryptoViewer}/pcb_diagram.webp`,
   ],
   mainLanguage: ['C++'],
   links: [],

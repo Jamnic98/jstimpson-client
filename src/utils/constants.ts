@@ -30,18 +30,21 @@ export const AI_ADVENTURE_WRLD_GITHUB_URL = 'https://github.com/duybuile/ai-text
 export const LOREM_IPSUM =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
 
-const projectImageFolderPath = '/images/projects'
-export const projectImageFolderPaths = {
-  blueCheeseClassifier: `${projectImageFolderPath}/blue-cheese-classifier`,
-  cryptoViewer: `${projectImageFolderPath}/crypto-viewer`,
-  inventoryManagementSystem: `${projectImageFolderPath}/inventory-management-system`,
-  libraryBookRenewer: `${projectImageFolderPath}/library-book-renewer`,
-  looseChangeCalculator: `${projectImageFolderPath}/loose-change-calculator`,
-  pokerPreFlopSimulator: `${projectImageFolderPath}/poker-pre-flop-simulator`,
-  portfolioWebsite: `${projectImageFolderPath}/portfolio-website`,
-  pyramidSolitaiere: `${projectImageFolderPath}/pyramid-solitaire`,
-  readingLog: `${projectImageFolderPath}/reading-log`,
-  scrabbleScorekeeper: `${projectImageFolderPath}/scrabble-scorekeeper`,
-  ticTacGo: `${projectImageFolderPath}/tic-tac-go`,
-  touchTyping: `${projectImageFolderPath}/touch-typing`,
+export const PROFILE_PICTURE_FOLDER_PATH = '/images/profile-picture'
+
+const PROJECT_IMAGES_FOLDER_PATH = '/images/projects'
+
+export const projectImagesFolderPaths = {
+  blueCheeseClassifier: `${PROJECT_IMAGES_FOLDER_PATH}/blue-cheese-classifier`,
+  cryptoViewer: `${PROJECT_IMAGES_FOLDER_PATH}/crypto-viewer`,
+  inventoryManagementSystem: `${PROJECT_IMAGES_FOLDER_PATH}/inventory-management-system`,
+  libraryBookRenewer: `${PROJECT_IMAGES_FOLDER_PATH}/library-book-renewer`,
+  looseChangeCalculator: `${PROJECT_IMAGES_FOLDER_PATH}/loose-change-calculator`,
+  pokerPreFlopSimulator: `${PROJECT_IMAGES_FOLDER_PATH}/poker-pre-flop-simulator`,
+  portfolioWebsite: `${PROJECT_IMAGES_FOLDER_PATH}/portfolio-website`,
+  pyramidSolitaiere: `${PROJECT_IMAGES_FOLDER_PATH}/pyramid-solitaire`,
+  readingLog: `${PROJECT_IMAGES_FOLDER_PATH}/reading-log`,
+  scrabbleScorekeeper: `${PROJECT_IMAGES_FOLDER_PATH}/scrabble-scorekeeper`,
+  ticTacGo: `${PROJECT_IMAGES_FOLDER_PATH}/tic-tac-go`,
+  touchTyping: `${PROJECT_IMAGES_FOLDER_PATH}/touch-typing`,
 }
