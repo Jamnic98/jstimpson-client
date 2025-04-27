@@ -9,7 +9,11 @@ export const getRunningData = async (timestamp?: number) => {
   }
 
   try {
-    const response = await fetch(url.toString(), { next: { revalidate: 3600 } })
+    const response = await fetch(
+      url.toString(),
+      // revalidate every 12 hours
+      { next: { revalidate: 43200 } }
+    )
     if (!response.ok) {
       throw new Error(`Failed to fetch running data`)
     }

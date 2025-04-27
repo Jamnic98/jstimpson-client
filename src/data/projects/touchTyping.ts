@@ -1,4 +1,5 @@
 import { LinkType, type Project } from 'types'
+import { projectImageFolderPaths } from 'utils/constants'
 
 const touchTyping: Project = {
   id: 'touch-typing',
@@ -23,7 +24,10 @@ const touchTyping: Project = {
      development, and the project is currently a work in progress.`,
   ],
   projectPageURI: '/coding/touch-typing',
-  screenshotURIs: ['/images/projects/touch-typing.png', '/images/projects/touch-typing-graph.png'],
+  screenshotURIs: [
+    `${projectImageFolderPaths.touchTyping}/input_widget.webp`,
+    `${projectImageFolderPaths.touchTyping}/results_graph.webp`,
+  ],
   mainLanguage: ['TypeScript', 'Python', 'Golang'],
   links: [
     {

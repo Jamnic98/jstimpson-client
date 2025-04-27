@@ -1,4 +1,5 @@
 import { LinkType, type Project } from 'types'
+import { projectImageFolderPaths } from 'utils/constants'
 
 const pyramidSolitaire: Project = {
   id: 'pyramid-solitaire',
@@ -11,9 +12,9 @@ const pyramidSolitaire: Project = {
   ],
   projectPageURI: '/coding/pyramid-solitaire',
   screenshotURIs: [
-    '/images/projects/pyramid-solitaire.png',
-    '/images/projects/pyramid-solitaire-end-game.png',
-    '/images/projects/pyramid-solitaire-start-screen.png',
+    `${projectImageFolderPaths.pyramidSolitaiere}/mid_game.webp`,
+    `${projectImageFolderPaths.pyramidSolitaiere}/game_over.webp`,
+    `${projectImageFolderPaths.pyramidSolitaiere}/title_screen.webp`,
   ],
   mainLanguage: ['Python'],
   links: [

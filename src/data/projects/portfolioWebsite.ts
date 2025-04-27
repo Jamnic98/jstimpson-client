@@ -1,4 +1,5 @@
 import { LinkType, type Project } from 'types'
+import { projectImageFolderPaths } from 'utils/constants'
 
 const diffInMilliseconds = new Date().getTime() - new Date('2022-01-31').getTime()
 const millisecondsInYear = 1000 * 60 * 60 * 24 * 365.25
@@ -32,9 +33,9 @@ const portfolioWebsite: Project = {
 
   projectPageURI: '/coding/portfolio-website',
   screenshotURIs: [
-    '/images/projects/portfolio-website.png',
-    '/images/projects/portfolio-website-projects.png',
-    '/images/projects/portfolio-website-about.png',
+    `${projectImageFolderPaths.portfolioWebsite}/home_page.webp`,
+    `${projectImageFolderPaths.portfolioWebsite}/projects_page.webp`,
+    `${projectImageFolderPaths.portfolioWebsite}/about_page.webp`,
   ],
   mainLanguage: ['TypeScript', 'Python'],
   links: [

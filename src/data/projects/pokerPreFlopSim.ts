@@ -1,4 +1,5 @@
 import { LinkType, type Project } from 'types'
+import { projectImageFolderPaths } from 'utils/constants'
 
 const pokerPreFlopSim: Project = {
   id: 'poker-pre-flop-sim',
@@ -11,8 +12,8 @@ const pokerPreFlopSim: Project = {
   ],
   projectPageURI: '/coding/poker-pre-flop-sim',
   screenshotURIs: [
-    '/images/projects/poker-sim.png',
-    '/images/projects/poker-pre-flop-sim-results-graph.png',
+    `${projectImageFolderPaths.pokerPreFlopSimulator}/cmd_line_results.webp`,
+    `${projectImageFolderPaths.pokerPreFlopSimulator}/results_graph.webp`,
   ],
   mainLanguage: ['Python'],
   links: [

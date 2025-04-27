@@ -1,4 +1,5 @@
 import { LinkType, type Project } from 'types'
+import { projectImageFolderPaths } from 'utils/constants'
 
 const blueCheeseClassifier: Project = {
   id: 'blue-cheese-classifier',
@@ -22,8 +23,8 @@ const blueCheeseClassifier: Project = {
   ],
   projectPageURI: '/coding/blue-cheese-classifier',
   screenshotURIs: [
-    '/images/projects/blue-cheese-classifier-image-classification.png',
-    '/images/projects/blue-cheese-classifier-results-graph.png',
+    `${projectImageFolderPaths.blueCheeseClassifier}/image_classification.webp`,
+    `${projectImageFolderPaths.blueCheeseClassifier}/results_graph.webp`,
   ],
   mainLanguage: ['Python'],
   links: [

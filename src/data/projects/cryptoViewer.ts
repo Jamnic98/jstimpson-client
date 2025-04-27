@@ -1,4 +1,5 @@
 import { type Project } from 'types'
+import { projectImageFolderPaths } from 'utils/constants'
 
 const readingLog: Project = {
   id: 'crypto-viewer',
@@ -15,7 +16,10 @@ const readingLog: Project = {
      the appearance of being shifted upwards incrementally.`,
   ],
   projectPageURI: '/coding/crypto-viewer',
-  screenshotURIs: ['/images/projects/crypto-viewer.png'],
+  screenshotURIs: [
+    `${projectImageFolderPaths.cryptoViewer}/display.webp`,
+    `${projectImageFolderPaths.cryptoViewer}/pcb_diagram.webp`,
+  ],
   mainLanguage: ['C++'],
   links: [],
   techStack: ['C++', 'NodeMCU ESP-12', '2.2" TFT', '16x2 LCD'],

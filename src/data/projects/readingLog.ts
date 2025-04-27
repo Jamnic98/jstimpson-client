@@ -1,4 +1,5 @@
 import { LinkType, type Project } from 'types'
+import { projectImageFolderPaths } from 'utils/constants'
 
 const readingLog: Project = {
   id: 'reading-log',
@@ -12,7 +13,10 @@ const readingLog: Project = {
       a search bar to filter data.`,
   ],
   projectPageURI: '/coding/reading-log',
-  screenshotURIs: ['/images/projects/reading-log.jpg', '/images/projects/reading-log-move.png'],
+  screenshotURIs: [
+    `${projectImageFolderPaths.readingLog}/author_rating_list.webp`,
+    `${projectImageFolderPaths.readingLog}/move_book_modal.webp`,
+  ],
   mainLanguage: ['Java'],
   links: [
     {

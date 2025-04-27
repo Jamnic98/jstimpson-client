@@ -9,7 +9,8 @@ import {
   PERSONAL_GITHUB_URL,
 } from 'utils/constants'
 
-const aboutMePhotoDimensions = { width: 330, height: 330 }
+const PROFILE_PICTURE_FOLDER_PATH = '/images/profile-picture'
+const profilePictureDimensions = { width: 330, height: 330 }
 
 export const metadata: Metadata = {
   title: 'About Me',
@@ -21,11 +22,14 @@ export default function About() {
       <section>
         <div className="mb-8 flex justify-center">
           <Image
-            className="rounded-full border-4 border-gray-200"
-            src="/images/profile-picture.jpg"
-            width={aboutMePhotoDimensions.width}
-            height={aboutMePhotoDimensions.height}
+            src={`${PROFILE_PICTURE_FOLDER_PATH}/me.webp`}
             alt="profile picture"
+            width={profilePictureDimensions.width}
+            height={profilePictureDimensions.height}
+            className="rounded-full border-4 border-gray-200"
+            priority
+            placeholder="blur"
+            blurDataURL={`${PROFILE_PICTURE_FOLDER_PATH}/me_blurred.webp`}
           />
         </div>
         <hr className="my-4 w-full" />
