@@ -6,11 +6,14 @@ const readingLog: Project = {
   title: 'Reading Log',
   summary: 'A list of books the user has read, stored in a MySQL database.',
   paragraphs: [
-    `
-      This program, written in Java, interfaces with a MySQL database to store a list of books the user wants to read
-      and has already read. It also stores information about each book such as the title, author, a rating out of 10
-      and also comments about the book. The graphical user interface was made using the JavaFX library and features
-      a search bar to filter data.`,
+    `Written in Java, this program interfaces with a MySQL database to store and manage a personal reading list.
+     The user can add books they wish to read as well as keep track of books they have already completed.
+     For each book entry, the application stores detailed information, including the title, author, a personal rating out of ten, and optional comments or notes about the book.
+     The graphical user interface was built using the JavaFX library, providing a clean and responsive design.
+     It features functionality such as a search bar that allows for filtering to find specific books based on record data.`,
+
+    `Through this project, I gained valuable experience working with relational databases, writing SQL queries, and designing user-friendly interfaces.
+     It also helped me to improve my understanding of JavaFX event handling, data binding, and best practices for integrating a frontend application with a backend database.`,
   ],
   projectPageURI: '/coding/reading-log',
   screenshotURIs: [
