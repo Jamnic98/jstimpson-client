@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 import { PageHeader, Explorer, RunningStats } from 'components'
 import { type Project, type RunData } from 'types'
+// TODO: clean up imports
 import projects from 'data/projects'
 import portfolioWebsite from 'data/projects/portfolioWebsite'
 
@@ -36,7 +37,7 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
       <PageHeader title="Home" description="Hello and welcome to my portfolio website." />
       <article>
         <section>
-          <p className="text-xl">
+          <p className="text-justify text-xl">
             I built this site entirely from scratch using NextJS, React, TypeScript, Python,
             FastAPI, and MongoDB. The frontend is made using custom components with TailwindCSS for
             styling, and is fully mobile responsive! Here, you will find a range of my programming
@@ -50,11 +51,11 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
             </Link>
             . I also recently added a section for{' '}
             <Link className="text-orange-600 hover:text-black" href="/3d">
-              3D renders
+              3D models
             </Link>{' '}
-            of projects I have made using Blender.
+            I have made using Blender.
           </p>
-          <p className="text-xl">
+          <p className="text-justify text-xl">
             This is an ongoing project where I handle everything from frontend and backend
             development to DevOps processes and deployments, ensuring the site remains dynamic and
             functional.

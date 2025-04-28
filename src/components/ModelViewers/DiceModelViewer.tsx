@@ -5,9 +5,14 @@ import * as THREE from 'three'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
+import { Loader } from 'components'
+
+const modelPath = '/3d-models/dice_model.glb'
+
 export const DiceModelViewer = () => {
   const mountRef = useRef<HTMLDivElement>(null)
   const diceRef = useRef<THREE.Group | null>(null)
+  const [grabbing, setGrabbing] = useState(false)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -69,20 +74,21 @@ export const DiceModelViewer = () => {
     controls.enableDamping = true
     controls.dampingFactor = 0.25
     controls.screenSpacePanning = false
+    controls.enableZoom = false
     controls.maxPolarAngle = Math.PI / 2
 
     // Load the 3D model (dice)
     const loader = new GLTFLoader()
     loader.load(
-      '/3d-models/dice_model.glb',
-      function (gltf) {
-        gltf.scene.scale.set(275, 275, 275) // Scale the model
+      modelPath,
+      (gltf) => {
+        gltf.scene.scale.set(1, 1, 1) // Scale the model
         diceRef.current = gltf.scene
         scene.add(gltf.scene)
         setLoading(false)
       },
       undefined,
-      function (error) {
+      (error) => {
         console.error(error)
         setLoading(false)
       }
@@ -91,9 +97,9 @@ export const DiceModelViewer = () => {
     // Animate the scene
     const animate = () => {
       if (diceRef.current) {
-        diceRef.current.rotation.x += 0.003
-        diceRef.current.rotation.y += 0.003
-        diceRef.current.rotation.z += 0.001
+        diceRef.current.rotation.x += 0.001
+        diceRef.current.rotation.y += 0.001
+        diceRef.current.rotation.z += 0.0005
       }
 
       controls.update()
@@ -121,16 +127,24 @@ export const DiceModelViewer = () => {
     }
   }, [])
 
+  const handleMouse = (down: boolean) => (event: React.MouseEvent) => {
+    event.preventDefault()
+    setGrabbing(down)
+  }
+
   return (
     <div
-      style={{ position: 'relative', width: '100%', height: '500px', cursor: 'grab' }}
+      onMouseDown={handleMouse(true)}
+      onMouseUp={handleMouse(false)}
+      style={{
+        position: 'relative',
+        width: '100%',
+        height: '500px',
+        cursor: grabbing ? 'grabbing' : 'grab',
+      }}
       ref={mountRef}
     >
-      {loading && (
-        <div className="absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 transform">
-          <div className="h-12 w-12 animate-spin rounded-full border-4 border-t-4 border-gray-300 border-t-blue-500"></div>
-        </div>
-      )}
+      {loading && <Loader />}
     </div>
   )
 }
