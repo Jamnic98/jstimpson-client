@@ -26,7 +26,7 @@ export const DiceModelViewer = () => {
     camera.position.z = 5
 
     // Ambient Light (soft light to fill in shadows)
-    const ambientLight = new THREE.AmbientLight(0x404040, 4) // Subtle ambient light for general illumination
+    const ambientLight = new THREE.AmbientLight(0x404040, 6) // Subtle ambient light for general illumination
     scene.add(ambientLight)
 
     // Main Directional Light (Key light)
@@ -36,8 +36,6 @@ export const DiceModelViewer = () => {
     directionalLight.shadow.bias = -0.01 // Slight adjustment to reduce shadow artifacts
     directionalLight.shadow.mapSize.width = 1024
     directionalLight.shadow.mapSize.height = 1024
-    scene.add(directionalLight)
-
     // Add some softness to the shadows
     directionalLight.shadow.camera.near = 0.1
     directionalLight.shadow.camera.far = 10
@@ -45,6 +43,7 @@ export const DiceModelViewer = () => {
     directionalLight.shadow.camera.right = 5
     directionalLight.shadow.camera.top = 5
     directionalLight.shadow.camera.bottom = -5
+    scene.add(directionalLight)
 
     // Add a secondary directional light (opposite side of the first key light)
     const backDirectionalLight = new THREE.DirectionalLight(0xffffff, 3)
@@ -72,9 +71,11 @@ export const DiceModelViewer = () => {
     // OrbitControls for mouse interaction
     const controls = new OrbitControls(camera, renderer.domElement)
     controls.enableDamping = true
-    controls.dampingFactor = 0.25
-    controls.screenSpacePanning = false
     controls.enableZoom = false
+    controls.dampingFactor = 0.25
+    controls.enablePan = false
+    controls.screenSpacePanning = false
+
     controls.maxPolarAngle = Math.PI / 2
 
     // Load the 3D model (dice)

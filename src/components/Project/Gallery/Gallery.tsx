@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { IoClose } from 'react-icons/io5'
 
+import { Loader } from 'components'
+
 interface ProjectGalleryProps {
   screenshotURIs: string[]
   imageDimensions?: { width: number; height: number }
@@ -16,9 +18,21 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
   isBlenderImage = false,
 }) => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
+  const [loading, setLoading] = useState<boolean>(false)
 
   useEffect(() => {
     if (selectedImage) {
+      const img = new window.Image()
+      img.src = selectedImage
+
+      if (img.complete) {
+        // already cached
+        setLoading(false)
+      } else {
+        // still loading
+        setLoading(true)
+      }
+
       document.body.classList.add('overflow-hidden')
     } else {
       document.body.classList.remove('overflow-hidden')
@@ -56,17 +70,20 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
           className="fixed inset-0 z-50 flex items-center justify-center bg-gray-950/75"
           onClick={() => setSelectedImage(null)}
         >
-          <div
-            className="relative mx-4"
-            onClick={(e) => e.stopPropagation()} // Prevent modal close when clicking inside
-          >
+          <div className="relative mx-4" onClick={(e) => e.stopPropagation()}>
+            {loading && <Loader />}
+
             <Image
+              key={selectedImage}
               src={selectedImage}
               alt="Selected project image"
               width={isBlenderImage ? 1280 : imageDimensions.width}
               height={isBlenderImage ? 720 : imageDimensions.height}
-              className="rounded object-cover"
+              className={`rounded object-cover transition-opacity duration-300 ${loading ? 'opacity-0' : 'opacity-100'}`}
+              onLoad={() => setLoading(false)}
+              priority
             />
+
             <button
               className="absolute top-4 right-4 cursor-pointer focus:outline-hidden"
               onClick={() => setSelectedImage(null)}

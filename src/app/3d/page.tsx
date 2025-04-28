@@ -18,12 +18,14 @@ export default function threeD() {
       />
 
       <section>
-        <h3 className="text-3xl font-semibold">Dice</h3>
+        <h2 className="text-4xl font-semibold">Dice</h2>
 
-        <div className="my-8">
+        <div className="my-8 space-y-8">
+          <h3 className="text-2xl">3D Model</h3>
           <DiceModelViewer />
         </div>
 
+        <h3 className="text-2xl">Renders</h3>
         <ProjectGallery
           screenshotURIs={[
             `${diceImageFolder}/action_dice.webp`,
