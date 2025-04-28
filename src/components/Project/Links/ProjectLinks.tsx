@@ -19,7 +19,7 @@ export const ProjectLinks: React.FC<ProjectLinksProps> = ({ links }) => (
             rel="noreferrer"
             key={index}
           >
-            <span className="flex flex-row text-xl font-semibold text-orange-500 group-hover:text-black">
+            <span className="flex flex-row text-xl font-semibold text-orange-600 group-hover:text-black">
               {link.label} <CgExternal className="text-2xl" />
             </span>
           </a>
@@ -27,7 +27,7 @@ export const ProjectLinks: React.FC<ProjectLinksProps> = ({ links }) => (
       } else if (link.type === LinkType.INTERNAL) {
         return (
           <Link
-            className="flex justify-center rounded bg-slate-50 px-12 py-2 text-xl font-semibold text-orange-500 hover:text-black"
+            className="flex justify-center rounded bg-slate-50 px-12 py-2 text-xl font-semibold text-orange-600 hover:text-black"
             href={link.URL}
             key={index}
           >
