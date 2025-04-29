@@ -46,7 +46,7 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
   return (
     <>
       {/* Grid Gallery */}
-      <div className="my-8 flex justify-center">
+      <div className="flex justify-center">
         <div
           className={`grid grid-cols-1 gap-4 sm:grid-cols-2 ${isBlenderImage ? 'lg:grid-cols-3' : 'lg:grid-cols-4'}`}
         >

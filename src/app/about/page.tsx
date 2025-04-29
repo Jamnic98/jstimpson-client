@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <article className="-mt-12">
-      <section>
+      <section className="my-12">
         <div className="mb-8 flex justify-center">
           <Image
             src={`${PROFILE_PICTURE_FOLDER_PATH}/me.webp`}
@@ -34,9 +34,9 @@ export default function About() {
         </div>
         <hr className="my-4 w-full" />
       </section>
-      <section>
+      <section className="my-12">
         <h2 className="mb-4 text-3xl font-semibold">Intro</h2>
-        <p className="text-justify text-xl">
+        <p className="mb-4 text-justify text-xl">
           I'm a Full-Stack Software Engineer and tech enthusiast, based in London. Connect with me
           on
           <>
@@ -65,9 +65,9 @@ export default function About() {
           repositories.
         </p>
       </section>
-      <section>
+      <section className="my-12">
         <h2 className="mb-4 text-3xl font-semibold">Coding Experience</h2>
-        <p className="text-justify text-xl">
+        <p className="mb-4 text-justify text-xl">
           TypeScript and Python are the langauges I excell with, having used them both commercially
           and personally to build performant and scalable full-stack web applications, with tools
           like React, Node.js, Flask and FastAPI. During my 2.5 years at Qudo, I gained exposure to
@@ -78,14 +78,14 @@ export default function About() {
           medication data, which involved writing a GraphQL API to fetch data from a DynamoDB
           database.
         </p>
-        <p className="text-justify text-xl">
+        <p className="mb-4 text-justify text-xl">
           As Lead AI developer at GeniusLead, I led a small team of junior team members to build
           bespoke voice applications for Alexa and Google Hub devices. I was also responisble for my
           building my own projects, deploying them to AWS Lambda, the Alexa Store and Google Cloud
           Platform. The main project I worked on was an app for pilots to help them prepare for a
           flight by querying the METAR and TAF weather reports for a specific airport.
         </p>
-        <p className="text-justify text-xl">
+        <p className="mb-4 text-justify text-xl">
           I have also completed a number of online courses, including an Advanced Python course, an
           Intermediate Machine Learning course and a Python for Data Science course. I enjoy coding
           in my free time and have completed a number of projects in various languages. Take a look
@@ -99,9 +99,9 @@ export default function About() {
           </>
         </p>
       </section>
-      <section>
+      <section className="my-12">
         <h2 className="mb-4 text-3xl font-semibold">Hackathon Win</h2>
-        <p className="text-justify text-xl">
+        <p className="mb-4 text-justify text-xl">
           On the 8th of March 2024 I participated in the largest
           <>
             {' '}
@@ -117,7 +117,7 @@ export default function About() {
           event in London. The event ran for 3 days, and 600+ applicants joined to compete for a
           total cash pool of £20,000.
         </p>
-        <p className="text-justify text-xl">
+        <p className="mb-4 text-justify text-xl">
           Alongside two other developers, we secured 1st place for the &quot;Most promising AI x
           Crypto Build&quot; bounty, with an AI generated, text-based game generator called
           <>
@@ -134,13 +134,13 @@ export default function About() {
           It was a lot of fun and will be looking for more hackathons to join in the future!
         </p>
       </section>
-      <section>
+      <section className="my-12">
         <h2 className="mb-4 text-3xl font-semibold">Running and Marathon</h2>
-        <p className="text-justify text-xl">
+        <p className="mb-4 text-justify text-xl">
           Since late 2020, I have developed a regular running routine, aspiring to one day complete
           an ultramarathon (&#8805;50km).
         </p>
-        <p className="text-justify text-xl">
+        <p className="mb-4 text-justify text-xl">
           On the 22nd of October 2023, I ran the Battersea Park Marathon and raised £275 for The
           Alzheimer&apos;s Society! To explore my running stats, click{' '}
           <Link className="text-orange-600 hover:text-black" href="/logs">

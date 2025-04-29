@@ -17,15 +17,17 @@ export default function threeD() {
         description="A collection of 3D models and renders I created using the computer graphics software Blender."
       />
 
-      <section>
-        <h2 className="text-4xl font-semibold">Dice</h2>
+      <section className="my-12">
+        <h2 className="mb-8 text-4xl font-semibold">Dice</h2>
 
-        <div className="my-8 space-y-8">
-          <h3 className="text-2xl">3D Model</h3>
-          <DiceModelViewer />
-        </div>
+        <h3 className="text-2xl">3D Model</h3>
+        <hr className="my-4" />
+        <DiceModelViewer />
+      </section>
 
+      <section className="my-12">
         <h3 className="text-2xl">Renders</h3>
+        <hr className="my-4" />
         <ProjectGallery
           screenshotURIs={[
             `${diceImageFolder}/action_dice.webp`,
@@ -37,7 +39,12 @@ export default function threeD() {
           ]}
           isBlenderImage={true}
         />
-        <p className="text-justify text-xl">
+      </section>
+
+      <section className="my-12">
+        <h3 className="text-2xl">Description</h3>
+        <hr className="my-4" />
+        <p className="mb-4 text-justify text-xl">
           This model went through a couple of iterations before I settled on the final design.
           Getting the right combination of lighting and materials for the dice was also challenging
           as I wanted the dice to appear as realistic as possible. By experimented with different
@@ -45,7 +52,7 @@ export default function threeD() {
           was happy with. I rendered many images of the dice, but have only included a few of my
           favorites here.
         </p>
-        <p className="text-justify text-xl">
+        <p className="mb-4 text-justify text-xl">
           My favourite part of this project was trying to personify the dice and give them a sense
           of character—especially in the shots where they're lying on the ground together. By
           placing two dice close together and rotating them so the dots face the camera, they appear
@@ -53,7 +60,7 @@ export default function threeD() {
         </p>
       </section>
 
-      <section className="text-xl text-red-950">*** more coming soon! ***</section>
+      <section className="my-12 text-xl text-red-950">*** more coming soon! ***</section>
     </article>
   )
 }

@@ -26,7 +26,7 @@ export const Explorer: React.FC<ExplorerProps> = ({ title, projectData }) => (
           </h3>
 
           {/* Project description */}
-          <p className="line-clamp-1 text-xl text-gray-950">{dataObj.summary}</p>
+          <p className="mb-4 line-clamp-1 text-xl text-gray-950">{dataObj.summary}</p>
         </Link>
       ))}
     </div>

@@ -41,7 +41,7 @@ const RootLayout: React.FC<
           </nav>
           <MenuToggle isOpen={isOpen} onClick={handleOnClick} />
         </Header>
-        <main className="container mx-auto max-w-(--breakpoint-xl) px-6">{children}</main>
+        <main className="container mx-auto my-20 max-w-(--breakpoint-xl) px-6">{children}</main>
         <Footer />
         <Analytics />
         <SpeedInsights />

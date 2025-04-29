@@ -36,13 +36,13 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
     <>
       <PageHeader title="Home" description="Hello and welcome to my portfolio website." />
       <article>
-        <section>
-          <p className="text-justify text-xl">
-            I built this site entirely from scratch using NextJS, React, TypeScript, Python,
-            FastAPI, and MongoDB. The frontend is made using custom components with TailwindCSS for
-            styling, and is fully mobile responsive! Here, you will find a range of my programming
-            projects, mainly in Python, and TypeScript, along with daily updates of my running data,
-            which is fetched using Strava&apos;s API. Read more about this website{' '}
+        <section className="my-12">
+          <p className="mb-4 text-justify text-xl">
+            I built this site from scratch using NextJS, React, TypeScript, Python, FastAPI, and
+            MongoDB. The frontend is made using custom components with TailwindCSS for styling, and
+            is fully mobile responsive! Here, you will find a range of my programming projects,
+            mainly in Python, and TypeScript, along with daily updates of my running data, which is
+            fetched using Strava&apos;s API. Read more about this website{' '}
             <Link
               className="text-orange-600 hover:text-black"
               href={portfolioWebsite.projectPageURI}
@@ -55,18 +55,18 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
             </Link>{' '}
             I have made using Blender.
           </p>
-          <p className="text-justify text-xl">
+          <p className="mb-4 text-justify text-xl">
             This is an ongoing project where I handle everything from frontend and backend
             development to DevOps processes and deployments, ensuring the site remains dynamic and
             functional.
           </p>
         </section>
 
-        <section>
+        <section className="my-12">
           <Explorer title="Coding Projects" projectData={randomProjects} />
         </section>
 
-        <section>
+        <section className="my-12">
           <h2 className="mb-0 text-3xl font-semibold">
             {new Date().toLocaleString('default', { month: 'long' })} Running
           </h2>

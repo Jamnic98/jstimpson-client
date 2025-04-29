@@ -27,7 +27,7 @@ export default function ProjectsPage() {
         description="A collection of personal programming projects I've built."
       />
       <article>
-        <section>
+        <section className="my-12">
           <label className="text-lg"> Filter by language: </label>
           <select
             className="mt-4 w-full rounded-lg bg-slate-100 p-2 focus:outline-hidden"
@@ -42,7 +42,7 @@ export default function ProjectsPage() {
               ))}
           </select>
         </section>
-        <section>
+        <section className="my-12">
           <div className="grid grid-cols-1 flex-col gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {filteredProjects.map((projectData: Project) => (
               <div className="col-span-1 flex justify-center" key={projectData.id}>

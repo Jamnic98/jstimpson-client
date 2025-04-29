@@ -35,22 +35,22 @@ const portfolioWebsite: Project = {
   links: [
     // {
     //   URL: 'https://github.com/Jamnic98/website-client',
-    //   label: '[OLD] - GitHub Repo (client)',
+    //   label: '[OLD] - GitHub (client)',
     //   type: LinkType.EXTERNAL,
     // },
     // {
     //   URL: 'https://github.com/Jamnic98/website-server',
-    //   label: '[OLD] - GitHub Repo (server)',
+    //   label: '[OLD] - GitHub (server)',
     //   type: LinkType.EXTERNAL,
     // },
     {
       URL: 'https://github.com/Jamnic98/jstimpson-client',
-      label: 'GitHub Repo (client)',
+      label: 'GitHub (client)',
       type: LinkType.EXTERNAL,
     },
     {
       URL: 'https://github.com/Jamnic98/jstimpson-server',
-      label: 'GitHub Repo (server)',
+      label: 'GitHub (server)',
       type: LinkType.EXTERNAL,
     },
   ],

@@ -13,7 +13,7 @@ export const ProjectLinks: React.FC<ProjectLinksProps> = ({ links }) => (
       if (link.type === LinkType.EXTERNAL) {
         return (
           <a
-            className="group my-2 mr-2 flex w-full justify-center rounded bg-slate-50 px-12 py-2 sm:w-max"
+            className="group mr-2 mb-2 flex w-full justify-center rounded bg-slate-50 px-12 py-2 sm:w-max"
             href={link.URL}
             target="_blank"
             rel="noreferrer"

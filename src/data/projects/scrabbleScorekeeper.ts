@@ -30,12 +30,12 @@ const scrabbleScorekeeper: Project = {
       type: LinkType.EXTERNAL,
     },
     {
-      label: 'Project',
+      label: 'Live App',
       URL: 'https://scrabble-scorekeeper.netlify.app/',
       type: LinkType.EXTERNAL,
     },
   ],
-  techStack: ['JavaScript', 'React', 'HTML', 'CSS'],
+  techStack: ['React', 'TypeScript', 'HTML', 'CSS'],
 }
 
 export default scrabbleScorekeeper
