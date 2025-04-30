@@ -16,7 +16,7 @@ export const CardStory: Story = {
   args: {
     title: 'Card Title',
     description: LOREM_IPSUM,
-    imageURI: '/images/profile-picture.jpg',
+    imageURI: '/images/profile-picture/me.webp',
     linkURI: '',
   },
 }

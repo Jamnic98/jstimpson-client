@@ -32,7 +32,7 @@ export default function About() {
             blurDataURL={`${PROFILE_PICTURE_FOLDER_PATH}/me_blurred.webp`}
           />
         </div>
-        <hr className="my-4 w-full" />
+        <hr className="my-4 border-gray-300" />
       </section>
       <section className="my-12">
         <h2 className="mb-4 text-3xl font-semibold">Intro</h2>
@@ -45,7 +45,7 @@ export default function About() {
               href={PERSONAL_LINKEDIN_URL}
               target="_blank"
               rel="noreferrer"
-              className="text-orange-600 hover:text-black"
+              className="text-orange-600 hover:text-gray-950"
             >
               LinkedIn
             </a>{' '}
@@ -57,7 +57,7 @@ export default function About() {
               href={PERSONAL_GITHUB_URL}
               target="_blank"
               rel="noreferrer"
-              className="text-orange-600 hover:text-black"
+              className="text-orange-600 hover:text-gray-950"
             >
               GitHub
             </a>{' '}
@@ -92,7 +92,7 @@ export default function About() {
           at some of the personal
           <>
             {' '}
-            <Link className="text-orange-600 hover:text-black" href="/coding">
+            <Link className="text-orange-600 hover:text-gray-950" href="/coding">
               coding projects
             </Link>{' '}
             I have worked on.
@@ -109,7 +109,7 @@ export default function About() {
               href={AI_HACKATHON_URL}
               target="_blank"
               rel="noreferrer"
-              className="text-orange-600 hover:text-black"
+              className="text-orange-600 hover:text-gray-950"
             >
               AI Hackathon
             </a>{' '}
@@ -126,7 +126,7 @@ export default function About() {
               href={AI_ADVENTURE_WRLD_GITHUB_URL}
               target="_blank"
               rel="noreferrer"
-              className="text-orange-600 hover:text-black"
+              className="text-orange-600 hover:text-gray-950"
             >
               AI Adventure World.
             </a>{' '}
@@ -143,7 +143,7 @@ export default function About() {
         <p className="mb-4 text-justify text-xl">
           On the 22nd of October 2023, I ran the Battersea Park Marathon and raised £275 for The
           Alzheimer&apos;s Society! To explore my running stats, click{' '}
-          <Link className="text-orange-600 hover:text-black" href="/logs">
+          <Link className="text-orange-600 hover:text-gray-950" href="/logs">
             here
           </Link>
           .

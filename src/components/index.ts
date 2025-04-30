@@ -15,6 +15,7 @@ export * from './PageHeader'
 export * from './Project'
 export * from './RunningStats'
 export * from './RunningDataView'
+export * from './Select'
 
 export * from './lineGraph'
 export * from './scatterGraph'

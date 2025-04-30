@@ -10,7 +10,7 @@ interface ExplorerProps {
 export const Explorer: React.FC<ExplorerProps> = ({ title, projectData }) => (
   <>
     <h2 className="mb-0 text-3xl font-semibold">{title}</h2>
-    <hr className="my-4" />
+    <hr className="my-4 border-gray-300" />
 
     {/* Project links */}
     <div className="grid grid-cols-1 gap-4 md:grid-cols-2">

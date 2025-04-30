@@ -21,13 +21,13 @@ export default function threeD() {
         <h2 className="mb-8 text-4xl font-semibold">Dice</h2>
 
         <h3 className="text-2xl">3D Model</h3>
-        <hr className="my-4" />
+        <hr className="my-4 border-gray-300" />
         <DiceModelViewer />
       </section>
 
       <section className="my-12">
         <h3 className="text-2xl">Renders</h3>
-        <hr className="my-4" />
+        <hr className="my-4 border-gray-300" />
         <ProjectGallery
           screenshotURIs={[
             `${diceImageFolder}/action_dice.webp`,
@@ -43,7 +43,7 @@ export default function threeD() {
 
       <section className="my-12">
         <h3 className="text-2xl">Description</h3>
-        <hr className="my-4" />
+        <hr className="my-4 border-gray-300" />
         <p className="mb-4 text-justify text-xl">
           This model went through a couple of iterations before I settled on the final design.
           Getting the right combination of lighting and materials for the dice was also challenging

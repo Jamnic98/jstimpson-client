@@ -1,3 +1,6 @@
+import projects from 'data/projects'
+import { type Project } from 'types'
+
 export const reduceSumFunc = (prev: number, cur: number) => prev + cur
 
 export const getRandomElement = <T>(array: T[]) => array[Math.floor(Math.random() * array.length)]
@@ -56,3 +59,9 @@ export const leastSquares = (xSeries: number[], ySeries: number[]) => {
 
   return [slope, intercept, rSquare]
 }
+
+export const projectCodingLanguages = [
+  ...Array.from(
+    new Set(projects.map((projectData: Project) => projectData.mainLanguage).flat())
+  ).sort((a, b) => a.localeCompare(b)),
+]

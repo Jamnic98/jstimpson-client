@@ -2,22 +2,20 @@
 
 import { useState } from 'react'
 
-import { Card, PageHeader } from 'components'
+import { Card, PageHeader, Select } from 'components'
+import { projectCodingLanguages } from 'utils'
 import projects from 'data/projects'
 import { type Project } from 'types'
 
-const languages = [
-  'All',
-  ...Array.from(new Set(projects.map((projectData: Project) => projectData.mainLanguage).flat())),
-]
+const defaultSelectValue = 'All'
 
 export default function ProjectsPage() {
-  const [language, setLanguage] = useState(languages[0])
+  const [language, setLanguage] = useState<string>(defaultSelectValue)
 
   // Filter the projects based on the selected language
   const filteredProjects = projects.filter(
     (projectData: Project) =>
-      language === 'All' || projectData.mainLanguage.indexOf(language) !== -1
+      language === defaultSelectValue || projectData.mainLanguage.indexOf(language) !== -1
   )
 
   return (
@@ -27,22 +25,16 @@ export default function ProjectsPage() {
         description="A collection of personal programming projects I've built."
       />
       <article>
+        {/* <section className="my-12">
+
+        </section> */}
+
         <section className="my-12">
-          <label className="text-lg"> Filter by language: </label>
-          <select
-            className="mt-4 w-full rounded-lg bg-slate-100 p-2 focus:outline-hidden"
-            onChange={(e) => setLanguage(e.target.value)}
-          >
-            {languages
-              .sort((a, b) => a.localeCompare(b))
-              .map((mainLanguage: string, index) => (
-                <option className="border-none bg-slate-100 px-4 focus:outline-hidden" key={index}>
-                  {mainLanguage}
-                </option>
-              ))}
-          </select>
-        </section>
-        <section className="my-12">
+          <div className="my-8">
+            <label className="mb-4 block text-xl">Filter by coding language: </label>
+            <Select defaultValue="All" items={projectCodingLanguages} onChange={setLanguage} />
+          </div>
+
           <div className="grid grid-cols-1 flex-col gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {filteredProjects.map((projectData: Project) => (
               <div className="col-span-1 flex justify-center" key={projectData.id}>

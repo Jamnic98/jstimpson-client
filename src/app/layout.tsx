@@ -25,7 +25,7 @@ const RootLayout: React.FC<
 
   return (
     <html lang="en" className={inter.className}>
-      <body className="flex min-h-screen flex-col">
+      <body className="bg-neutral-light flex min-h-screen flex-col">
         <Header>
           <NavLogo />
           <nav
@@ -41,7 +41,7 @@ const RootLayout: React.FC<
           </nav>
           <MenuToggle isOpen={isOpen} onClick={handleOnClick} />
         </Header>
-        <main className="container mx-auto my-20 max-w-(--breakpoint-xl) px-6">{children}</main>
+        <main className="container mx-auto max-w-(--breakpoint-xl) px-8 py-20">{children}</main>
         <Footer />
         <Analytics />
         <SpeedInsights />

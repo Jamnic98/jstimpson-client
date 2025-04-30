@@ -27,25 +27,25 @@ const Page = async (props: ProjectProps) => {
         {projectData.links.length ? (
           <section className="my-12">
             <h2 className="text-2xl font-semibold">Project Links</h2>
-            <hr className="my-4" />
+            <hr className="my-4 border-gray-300" />
             <ProjectLinks links={projectData.links} />
           </section>
         ) : null}
 
         <section className="my-12">
           <h2 className="text-2xl font-semibold">Gallery</h2>
-          <hr className="my-4" />
+          <hr className="my-4 border-gray-300" />
           <ProjectGallery screenshotURIs={projectData.screenshotURIs} />
         </section>
 
         <section className="my-12">
           <h2 className="text-2xl font-semibold">Description</h2>
-          <hr className="my-4" />
+          <hr className="my-4 border-gray-300" />
           <ProjectDescriptions paragraphs={projectData.paragraphs} />
         </section>
 
         <Link
-          className="my-4 flex w-fit space-x-2 rounded bg-slate-50 px-12 py-2 text-xl leading-none font-semibold text-orange-600 hover:text-black"
+          className="my-4 flex w-fit space-x-2 bg-neutral-50 px-12 py-2 text-xl leading-none font-semibold text-orange-600 shadow hover:text-gray-950"
           href="/coding"
         >
           <FaArrowLeftLong className="text-2xl" /> <span>projects</span>

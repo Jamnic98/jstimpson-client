@@ -13,13 +13,13 @@ export const ProjectLinks: React.FC<ProjectLinksProps> = ({ links }) => (
       if (link.type === LinkType.EXTERNAL) {
         return (
           <a
-            className="group mr-2 mb-2 flex w-full justify-center rounded bg-slate-50 px-12 py-2 sm:w-max"
+            className="group mr-2 mb-2 flex w-full justify-center rounded bg-neutral-50 px-12 py-2 shadow sm:w-max"
             href={link.URL}
             target="_blank"
             rel="noreferrer"
             key={index}
           >
-            <span className="flex flex-row text-xl font-semibold text-orange-600 group-hover:text-black">
+            <span className="flex flex-row text-xl font-semibold text-orange-600 group-hover:text-gray-950">
               {link.label} <CgExternal className="text-2xl" />
             </span>
           </a>
@@ -27,7 +27,7 @@ export const ProjectLinks: React.FC<ProjectLinksProps> = ({ links }) => (
       } else if (link.type === LinkType.INTERNAL) {
         return (
           <Link
-            className="flex justify-center rounded bg-slate-50 px-12 py-2 text-xl font-semibold text-orange-600 hover:text-black"
+            className="flex justify-center rounded bg-neutral-50 px-12 py-2 text-xl font-semibold text-orange-600 shadow hover:text-gray-950"
             href={link.URL}
             key={index}
           >

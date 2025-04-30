@@ -44,13 +44,13 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
             mainly in Python, and TypeScript, along with daily updates of my running data, which is
             fetched using Strava&apos;s API. Read more about this website{' '}
             <Link
-              className="text-orange-600 hover:text-black"
+              className="text-orange-600 hover:text-gray-950"
               href={portfolioWebsite.projectPageURI}
             >
               here
             </Link>
             . I also recently added a section for{' '}
-            <Link className="text-orange-600 hover:text-black" href="/3d">
+            <Link className="text-orange-600 hover:text-gray-950" href="/3d">
               3D models
             </Link>{' '}
             I have made using Blender.
@@ -70,7 +70,7 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
           <h2 className="mb-0 text-3xl font-semibold">
             {new Date().toLocaleString('default', { month: 'long' })} Running
           </h2>
-          <hr className="my-4" />
+          <hr className="my-4 border-gray-300" />
           <>
             {runData && (
               <>
