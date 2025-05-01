@@ -25,10 +25,6 @@ export default function ProjectsPage() {
         description="A collection of personal programming projects I've built."
       />
       <article>
-        {/* <section className="my-12">
-
-        </section> */}
-
         <section className="my-12">
           <div className="my-8">
             <label className="mb-4 block text-xl">Filter by coding language: </label>

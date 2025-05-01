@@ -1,6 +1,6 @@
 import { type Metadata } from 'next'
 import Link from 'next/link'
-import { FaArrowLeftLong } from 'react-icons/fa6'
+import { LuMoveLeft } from 'react-icons/lu'
 
 import { PageHeader, ProjectDescriptions, ProjectLinks, ProjectGallery } from 'components'
 import projects_data from 'data/projects'
@@ -19,7 +19,7 @@ const Page = async (props: ProjectProps) => {
       <article>
         <section className="my-12">
           <p className="mb-4 text-xl">
-            <span className="font-bold text-orange-600">Tech stack: </span>
+            <span className="font-semibold text-orange-600">Tech stack: </span>
             {projectData.techStack.map((tech: string) => tech).join(', ')}
           </p>
         </section>
@@ -45,10 +45,10 @@ const Page = async (props: ProjectProps) => {
         </section>
 
         <Link
-          className="my-4 flex w-fit space-x-2 bg-neutral-50 px-12 py-2 text-xl leading-none font-semibold text-orange-600 shadow hover:text-gray-950"
+          className="flex w-fit space-x-2 rounded bg-neutral-50 px-12 py-2 text-xl leading-none font-medium text-orange-600 shadow hover:text-gray-950"
           href="/coding"
         >
-          <FaArrowLeftLong className="text-2xl" /> <span>projects</span>
+          <LuMoveLeft className="text-2xl" /> <span>projects</span>
         </Link>
       </article>
     </>

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { IoCaretDownOutline } from 'react-icons/io5'
+import { BsCaretDownFill } from 'react-icons/bs'
 
 export interface SelectProps {
   defaultValue?: string
@@ -34,9 +34,9 @@ export const Select: React.FC<SelectProps> = ({ defaultValue = 'All', items, onC
         data-testid="select"
       >
         <span className="flex items-center justify-between px-4 py-1">
-          <span className="text-xl font-semibold">{selectedItem}</span>
-          <IoCaretDownOutline
-            className={`text-xl ${hideDropdown ? '' : 'rotate-180'}`}
+          <span className="text-xl font-medium text-gray-950">{selectedItem}</span>
+          <BsCaretDownFill
+            className={`font-bold text-gray-950 ${hideDropdown ? '' : 'rotate-180'}`}
             data-testid="dropdown-icon"
           />
         </span>
@@ -53,12 +53,12 @@ export const Select: React.FC<SelectProps> = ({ defaultValue = 'All', items, onC
           .filter((item) => item !== selectedItem)
           .map((item, index) => (
             <div
-              className="hover:text-neutral-light cursor-pointer bg-neutral-50 px-4 py-1 hover:bg-orange-600"
+              className="hover:text-neutral-light cursor-pointer bg-neutral-50 px-4 py-1 text-gray-950 hover:bg-orange-600"
               onClick={() => handleOnOptionClick(item)}
               key={index}
               data-testid="select-option"
             >
-              <span className="text-xl font-semibold">{item}</span>
+              <span className="text-xl font-medium">{item}</span>
             </div>
           ))}
       </div>

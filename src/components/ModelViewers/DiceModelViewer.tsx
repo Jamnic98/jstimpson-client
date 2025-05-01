@@ -62,7 +62,7 @@ export const DiceModelViewer = () => {
     scene.add(rimLight)
 
     // Set the background colour of the scene
-    scene.background = new THREE.Color(0xf2f5f4)
+    scene.background = new THREE.Color(0xeeeeee)
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
     renderer.setSize(width, height)

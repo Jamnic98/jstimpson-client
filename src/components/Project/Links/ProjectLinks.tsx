@@ -19,7 +19,7 @@ export const ProjectLinks: React.FC<ProjectLinksProps> = ({ links }) => (
             rel="noreferrer"
             key={index}
           >
-            <span className="flex flex-row text-xl font-semibold text-orange-600 group-hover:text-gray-950">
+            <span className="flex flex-row text-xl text-orange-600 group-hover:text-gray-950">
               {link.label} <CgExternal className="text-2xl" />
             </span>
           </a>
