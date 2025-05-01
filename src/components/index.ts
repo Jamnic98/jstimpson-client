@@ -18,4 +18,5 @@ export * from './RunningDataView'
 export * from './Select'
 
 export * from './lineGraph'
+export * from './histogram'
 export * from './scatterGraph'

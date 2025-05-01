@@ -1,7 +1,7 @@
 'use client'
 import * as d3 from 'd3'
 
-import { LineGraph, RunningStats, ScatterGraph } from 'components'
+import { Histogram, LineGraph, RunningStats, ScatterGraph } from 'components'
 import { type RunData } from 'types'
 
 interface RunningDataViewProps {
@@ -28,12 +28,12 @@ export const RunningDataView = ({ runData }: RunningDataViewProps) => (
         }
       })}
       xAxisObj={{
-        label: 'date (mm/yy)',
+        label: 'Date (mm/yy)',
         labelOffset: 15,
         labelFormatter: d3.timeFormat('%m/%y'),
       }}
       yAxisObj={{
-        label: 'distance (km)',
+        label: 'Distance (km)',
         labelOffset: -10,
       }}
     />
@@ -53,11 +53,11 @@ export const RunningDataView = ({ runData }: RunningDataViewProps) => (
         }
       })}
       xAxisObj={{
-        label: 'distance (km)',
+        label: 'Distance (km)',
         labelOffset: 0,
       }}
       yAxisObj={{
-        label: 'ave. pace (min / km)',
+        label: 'Ave. pace (min / km)',
         labelOffset: -15,
         labelFormatter: (data: number) => {
           const minutes = Math.floor(data)
@@ -65,6 +65,28 @@ export const RunningDataView = ({ runData }: RunningDataViewProps) => (
           const secondsStr = seconds === 0 ? `:${seconds}0` : `:${seconds}`
           return minutes + secondsStr
         },
+      }}
+    />
+
+    {/* TODO: Remove */}
+    <br />
+
+    <h3 className="text-2xl font-semibold">Distance Frequency:</h3>
+    <Histogram
+      data={runData.map((run) => ({ x: run.distance }))}
+      xAxisObj={{
+        label: 'Distance (km)',
+        labelOffset: 0,
+      }}
+      yAxisObj={{
+        label: 'Frequency',
+        labelOffset: -15,
+        // labelFormatter: (data: number) => {
+        //   const minutes = Math.floor(data)
+        //   const seconds = Number((60 * (data - Math.floor(data))).toFixed(0))
+        //   const secondsStr = seconds === 0 ? `:${seconds}0` : `:${seconds}`
+        //   return minutes + secondsStr
+        // },
       }}
     />
   </>
