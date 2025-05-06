@@ -116,7 +116,7 @@ export const Histogram: React.FC<HistogramProps> = ({ data, xAxisObj, yAxisObj }
       .style('text-anchor', 'middle')
       .style('font', '0.5em arial')
       .text(yAxisObj.label)
-  }, [data, xAxisObj, yAxisObj])
+  }, [data, xAxisObj, yAxisObj, width, height, margins.left, margins.top])
 
   return (
     <div id="svgContainer">
