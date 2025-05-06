@@ -90,10 +90,10 @@ export const Histogram: React.FC<HistogramProps> = ({ data, xAxisObj, yAxisObj }
           .tickFormat((d) => `${(d as number) / 1000}`)
       )
       .selectAll('text')
-      .style('text-anchor', 'end')
-      .attr('dx', '-.8em')
-      .attr('dy', '.15em')
-      .attr('transform', 'rotate(-60)')
+      .style('text-anchor', 'middle')
+    // .attr('dx', '-.8em')
+    // .attr('dy', '.15em')
+    // .attr('transform', 'rotate(-60)')
 
     // X axis label
     svgElement

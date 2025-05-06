@@ -21,24 +21,27 @@ const RootLayout: React.FC<
   const [isOpen, setIsOpen] = useState(false)
   const handleOnClick = () => setIsOpen(!isOpen)
 
-  const isMobile = (useWidth() || MOBILE_SCREEN_WIDTH) < MOBILE_SCREEN_WIDTH
+  const width = useWidth()
+  const isMobile = width && width < MOBILE_SCREEN_WIDTH
 
   return (
     <html lang="en" className={inter.className}>
       <body className="bg-neutral-light flex min-h-screen flex-col">
         <Header>
           <NavLogo />
-          <nav
-            className={`flex h-full bg-gray-950 ${isMobile ? `absolute top-0 left-0 h-max w-full translate-y-16 flex-col ${isOpen ? '' : 'hidden'}` : 'transition-none'} `}
-          >
-            {navLinkDataArr.map((navLinkData: NavLinkData) => (
-              <NavLink
-                onClick={() => setIsOpen(false)}
-                navlinkObj={navLinkData}
-                key={navLinkData.label}
-              />
-            ))}
-          </nav>
+          {width && (
+            <nav
+              className={`flex h-full bg-gray-950 ${isMobile ? `absolute top-0 left-0 h-max w-full translate-y-16 flex-col ${isOpen ? '' : 'hidden'}` : 'transition-none'} `}
+            >
+              {navLinkDataArr.map((navLinkData: NavLinkData) => (
+                <NavLink
+                  onClick={() => setIsOpen(false)}
+                  navlinkObj={navLinkData}
+                  key={navLinkData.label}
+                />
+              ))}
+            </nav>
+          )}
           <MenuToggle isOpen={isOpen} onClick={handleOnClick} />
         </Header>
         <main className="container mx-auto max-w-(--breakpoint-xl) px-8 py-20">{children}</main>

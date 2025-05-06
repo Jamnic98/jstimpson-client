@@ -71,7 +71,7 @@ export const RunningDataView = ({ runData }: RunningDataViewProps) => (
     {/* TODO: Remove */}
     <br />
 
-    <h3 className="text-2xl font-semibold">Distance Frequency:</h3>
+    <h3 className="text-2xl font-semibold">Distance / Frequency:</h3>
     <Histogram
       data={runData.map((run) => ({ x: run.distance }))}
       xAxisObj={{
