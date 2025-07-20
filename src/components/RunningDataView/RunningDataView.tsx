@@ -10,7 +10,7 @@ interface RunningDataViewProps {
 
 export const RunningDataView = ({ runData }: RunningDataViewProps) => (
   <>
-    <h2 className="mb-0 text-3xl font-semibold">Running Data</h2>
+    <h2 className="mb-0 text-3xl font-semibold">All Time Data</h2>
     <hr className="my-4 border-gray-300" />
     <RunningStats runData={runData} />
 

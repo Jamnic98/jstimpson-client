@@ -33,16 +33,6 @@ const portfolioWebsite: Project = {
   ],
   mainLanguage: ['TypeScript', 'Python'],
   links: [
-    // {
-    //   URL: 'https://github.com/Jamnic98/website-client',
-    //   label: '[OLD] - GitHub (client)',
-    //   type: LinkType.EXTERNAL,
-    // },
-    // {
-    //   URL: 'https://github.com/Jamnic98/website-server',
-    //   label: '[OLD] - GitHub (server)',
-    //   type: LinkType.EXTERNAL,
-    // },
     {
       URL: 'https://github.com/Jamnic98/jstimpson-client',
       label: 'GitHub (client)',
@@ -56,18 +46,19 @@ const portfolioWebsite: Project = {
   ],
   techStack: [
     'TypeScript',
-    'JavaScript',
+    'Python',
     'Next.js',
     'HTML',
     'TailwindCSS',
     'FastAPI',
     'Vercel',
-    'AWS (Elastic Beanstalk, EC2)',
+    'AWS Lambda',
     'MongoDB Atlas',
-    "Strava's API",
     'D3.js',
     'Jest',
     'React Testing Library',
+    'Pytest',
+    "Strava's API",
   ],
 }
 

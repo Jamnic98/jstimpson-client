@@ -9,7 +9,7 @@ import { Footer, Header, MenuToggle, NavLogo, NavLink } from 'components'
 import { MOBILE_SCREEN_WIDTH, navLinkDataArr, useWidth } from 'utils'
 import { type NavLinkData } from 'types'
 
-import 'styles/global.css'
+import 'styles/tailwind.css'
 
 const inter = Inter({ subsets: ['latin'] }) // Load Inter font
 
