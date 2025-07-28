@@ -37,6 +37,7 @@ const PROJECT_IMAGES_FOLDER_PATH = '/images/projects'
 export const projectImagesFolderPaths = {
   blueCheeseClassifier: `${PROJECT_IMAGES_FOLDER_PATH}/blue-cheese-classifier`,
   cryptoViewer: `${PROJECT_IMAGES_FOLDER_PATH}/crypto-viewer`,
+  eyeTracker: `${PROJECT_IMAGES_FOLDER_PATH}/eye-tracker`,
   inventoryManagementSystem: `${PROJECT_IMAGES_FOLDER_PATH}/inventory-management-system`,
   libraryBookRenewer: `${PROJECT_IMAGES_FOLDER_PATH}/library-book-renewer`,
   looseChangeCalculator: `${PROJECT_IMAGES_FOLDER_PATH}/loose-change-calculator`,

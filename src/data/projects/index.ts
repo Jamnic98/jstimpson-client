@@ -2,6 +2,7 @@ import { type Project } from 'types'
 
 import blueCheeseClassifier from './blueCheeseClassifier'
 import cryptoViewer from './cryptoViewer'
+import eyeTracker from './eyeTracker'
 import inventoryManagementSystem from './inventoryManagementSystem'
 import libraryBookRenewer from './libraryBookRenewer'
 import looseChangeCalculator from './looseChangeCalculator'
@@ -16,6 +17,7 @@ import touchTyping from './touchTyping'
 const projects: Project[] = [
   blueCheeseClassifier,
   cryptoViewer,
+  eyeTracker,
   inventoryManagementSystem,
   libraryBookRenewer,
   looseChangeCalculator,
