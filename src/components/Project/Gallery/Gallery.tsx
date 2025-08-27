@@ -14,7 +14,7 @@ interface ProjectGalleryProps {
 
 export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
   screenshotURIs,
-  imageDimensions = { width: 600, height: 600 },
+  imageDimensions = { width: 1080, height: 1080 },
   isBlenderImage = false,
 }) => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)

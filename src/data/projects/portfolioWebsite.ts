@@ -9,7 +9,7 @@ const portfolioWebsite: Project = {
   id: 'portfolio-website',
   title: 'Portfolio Website',
   summary:
-    'My website, designed and built from scratch to showcase my coding skills, 3D modelling skills and running stats.',
+    'A Full Stack web application for showcasing my coding skills, 3D modelling skills and running stats.',
   paragraphs: [
     `This website has undergone extensive updates since I first deployed it ${yearsSinceDeployment} years ago.
      The first version was built with just React as a single page application and styled with pure CSS.

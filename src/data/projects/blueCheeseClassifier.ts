@@ -4,7 +4,7 @@ import { projectImagesFolderPaths } from 'utils/constants'
 const blueCheeseClassifier: Project = {
   id: 'blue-cheese-classifier',
   title: 'Blue Cheese Classifier',
-  summary: 'An image classifier designed to identify blue cheese.',
+  summary: 'A binary image classifier for identifying blue cheese.',
   paragraphs: [
     `For the intermediate machine learning course I enrolled in back in 2020, we were given the option of creating one of three projects related to ML as our final assignment.
     The options were to create a model to handle big data, image classification, or time series. I chose to make an image classifier as the subject appealed to me the most.`,

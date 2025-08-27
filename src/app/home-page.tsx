@@ -22,11 +22,20 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
     // Shuffle projects and select 4
     const shuffledProjects = projects
       .map((project) => ({
+        id: project.id,
         title: project.title,
         summary: project.summary,
         projectPageURI: project.projectPageURI,
       }))
-      .sort(() => Math.random() - 0.5)
+      .filter((project) =>
+        [
+          'portfolio-website',
+          'typation',
+          'inventory-management-system',
+          'blue-cheese-classifier',
+        ].includes(project.id)
+      )
+      // .sort(() => Math.random() - 0.5)
       .slice(0, PROJECT_COUNT)
 
     setRandomProjects(shuffledProjects)
@@ -63,7 +72,7 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
         </section>
 
         <section className="my-12">
-          <Explorer title="Coding Projects" projectData={randomProjects} />
+          <Explorer title="Featured Projects" projectData={randomProjects} />
         </section>
 
         <section className="my-12">
