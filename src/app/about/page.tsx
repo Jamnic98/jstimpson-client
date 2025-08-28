@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <article className="-mt-12">
+    <article className="-mt-8">
       <section className="my-12">
         <div className="mb-8 flex justify-center">
           <Image

@@ -16,9 +16,9 @@ export const Explorer: React.FC<ExplorerProps> = ({ title, projectData }) => (
     <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
       {projectData.map((dataObj, index) => (
         <Link
-          className="group col-span-1 block rounded bg-neutral-50 p-4 shadow hover:scale-[102%] hover:cursor-pointer hover:shadow-md"
-          href={dataObj.projectPageURI || ''}
           key={index}
+          href={dataObj.projectPageURI || ''}
+          className="group col-span-1 block rounded bg-neutral-50 p-4 shadow transition-all duration-200 ease-in-out hover:scale-[101%] hover:cursor-pointer hover:shadow-md"
         >
           {/* Project name */}
           <h3 className="mb-4 text-2xl font-medium text-orange-600 group-hover:text-gray-950">

@@ -17,7 +17,7 @@ export default async function Page() {
   return (
     <>
       <PageHeader title={pageTitle} description={pageHeaderDescription} />
-      <article>
+      <article className="mb-16">
         <section className="my-12">
           <p className="mb-4 text-justify text-xl">
             Runs are recorded using the Strava app. The backend of this website makes requests to

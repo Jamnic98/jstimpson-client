@@ -16,7 +16,7 @@ export default function threeD() {
         title={pageTitle}
         description="A collection of 3D models and renders I created using the computer graphics software Blender."
       />
-      <article>
+      <article className="mb-16">
         <section className="my-12">
           <h2 className="mb-8 text-4xl font-semibold">Dice</h2>
 

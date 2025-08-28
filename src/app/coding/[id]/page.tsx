@@ -16,7 +16,7 @@ const Page = async (props: ProjectProps) => {
   return (
     <>
       <PageHeader title={projectData.title} description={projectData.summary} />
-      <article>
+      <article className="mb-16">
         <section className="my-12">
           <p className="mb-4 text-xl">
             <span className="font-semibold text-orange-600">Tech stack: </span>

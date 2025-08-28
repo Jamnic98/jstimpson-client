@@ -61,7 +61,7 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
     <>
       <PageHeader title="Home" description="Hello and welcome to my portfolio website." />
 
-      <article>
+      <article className="mb-16">
         {/* About */}
         <section className="my-12">
           <p className="mb-4 text-justify text-xl">
