@@ -11,17 +11,26 @@ interface ThumbnailProps {
   width: number
   height: number
   onClick?: () => void
+  isWide?: boolean // 👈 new
 }
 
-export const Thumbnail: React.FC<ThumbnailProps> = ({ src, alt, width, height, onClick }) => {
+export const Thumbnail: React.FC<ThumbnailProps> = ({
+  src,
+  alt,
+  width,
+  height,
+  onClick,
+  isWide = false,
+}) => {
   const [loading, setLoading] = useState(true)
 
   return (
     <div
-      className="relative aspect-square w-full cursor-pointer rounded shadow-md transition-transform hover:scale-[103%]"
+      className={`relative w-full cursor-pointer rounded shadow-md transition-transform hover:scale-[103%] ${
+        isWide ? 'aspect-video' : 'aspect-square'
+      }`}
       onClick={onClick}
     >
-      {/* Loader overlay */}
       {loading && (
         <div className="absolute inset-0 flex items-center justify-center bg-neutral-100">
           <Loader />

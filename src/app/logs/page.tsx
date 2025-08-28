@@ -1,6 +1,7 @@
 import { type Metadata } from 'next'
+import { Suspense } from 'react'
 
-import { PageHeader, RunningDataView } from 'components'
+import { PageHeader, RunningDataView, Loader } from 'components'
 import { getRunningData } from 'utils'
 
 const pageTitle = 'Running'
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 }
 
 export default async function Page() {
-  const runs = await getRunningData()
+  const runsPromise = getRunningData() // don’t await yet, let Suspense handle it
 
   return (
     <>
@@ -29,8 +30,30 @@ export default async function Page() {
             Marathon and raised £275 for The Alzheimer&apos;s Society!
           </p>
         </section>
-        <section className="my-12">{runs && <RunningDataView runData={runs} />}</section>
+
+        <section className="my-12">
+          <Suspense
+            fallback={
+              <div className="flex justify-center">
+                <Loader />
+              </div>
+            }
+          >
+            {/* Use an async wrapper */}
+            <RunningDataSection runsPromise={runsPromise} />
+          </Suspense>
+        </section>
       </article>
     </>
   )
+}
+
+// Async wrapper component that awaits the runs
+async function RunningDataSection({
+  runsPromise,
+}: {
+  runsPromise: ReturnType<typeof getRunningData>
+}) {
+  const runs = await runsPromise
+  return <RunningDataView runData={runs} />
 }

@@ -48,6 +48,7 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
             width={imageDimensions.width}
             height={imageDimensions.height}
             onClick={() => setSelectedImage(screenshotURI)}
+            isWide={isBlenderImage} // 👈 use video aspect for Blender
           />
         ))}
       </div>
