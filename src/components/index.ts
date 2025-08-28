@@ -16,6 +16,7 @@ export * from './Project'
 export * from './RunningStats'
 export * from './RunningDataView'
 export * from './Select'
+export * from './Thumbnail'
 
 export * from './lineGraph'
 export * from './histogram'
