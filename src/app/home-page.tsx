@@ -6,7 +6,6 @@ import Link from 'next/link'
 import { PageHeader, Explorer, RunningStats, Loader } from 'components'
 import { type Project, type RunData } from 'types'
 import projects from 'data/projects'
-import portfolioWebsite from 'data/projects/portfolioWebsite'
 
 const PROJECT_COUNT = 4
 
@@ -62,18 +61,24 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
       <PageHeader title="Home" description="Hello and welcome to my portfolio website." />
 
       <article className="mb-16">
-        {/* About */}
         <section className="my-12">
           <p className="mb-4 text-justify text-xl">
-            I built this site from scratch using NextJS, React, TypeScript, Python, FastAPI, and
-            MongoDB...{' '}
+            This site was built entirely from scratch with Next.js, React, TypeScript, Python,
+            FastAPI, and MongoDB, alongside some custom{' '}
+            <Link href="/" className="text-orange-600 hover:text-gray-950">
+              3D modelling
+            </Link>{' '}
+            work. I’m also working on{' '}
             <Link
+              href="https://typation.co.uk"
               className="text-orange-600 hover:text-gray-950"
-              href={portfolioWebsite.projectPageURI}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              here
+              Typation
             </Link>
-            .
+            , a typing platform currently deployed in public alpha where anyone can try it out for
+            free!
           </p>
         </section>
 

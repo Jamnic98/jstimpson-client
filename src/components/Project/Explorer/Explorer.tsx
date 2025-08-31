@@ -13,7 +13,7 @@ export const Explorer: React.FC<ExplorerProps> = ({ title, projectData }) => (
     <hr className="my-4 border-gray-300" />
 
     {/* Project links */}
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+    <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
       {projectData.map((dataObj, index) => (
         <Link
           key={index}
@@ -21,12 +21,12 @@ export const Explorer: React.FC<ExplorerProps> = ({ title, projectData }) => (
           className="group col-span-1 block rounded bg-neutral-50 p-4 shadow transition-all duration-200 ease-in-out hover:scale-[101%] hover:cursor-pointer hover:shadow-md"
         >
           {/* Project name */}
-          <h3 className="mb-4 text-2xl font-medium text-orange-600 group-hover:text-gray-950">
+          <h3 className="mb-2 text-2xl font-medium text-orange-600 group-hover:text-gray-950">
             {dataObj.title}
           </h3>
 
           {/* Project description */}
-          <p className="mb-4 line-clamp-1 text-xl text-gray-950">{dataObj.summary}</p>
+          <div className="line-clamp-2 h-14 text-xl text-gray-950">{dataObj.summary}</div>
         </Link>
       ))}
     </div>
