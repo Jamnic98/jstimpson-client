@@ -1,8 +1,10 @@
 import { LinkType, type Project } from 'types'
 import { projectImagesFolderPaths } from 'utils/constants'
 
+const libraryBookRenewerProjectId = 'library-book-renewer'
+
 const libraryBookRenewer: Project = {
-  id: 'library-book-renewer',
+  id: libraryBookRenewerProjectId,
   title: 'Library Book Renewer',
   summary: 'A web scraper that automatically renews my library books.',
   paragraphs: [
@@ -24,13 +26,13 @@ const libraryBookRenewer: Project = {
 
     `This project was a great way to learn about web scraping and how to use Selenium. I also learnt a lot about using the Raspberry Pi and how to set up cron jobs to run scripts automatically.`,
   ],
-  projectPageURI: '/coding/library-book-renewer',
+  projectPageURI: `/coding/${libraryBookRenewerProjectId}`,
   screenshotURIs: [`${projectImagesFolderPaths.libraryBookRenewer}/code.webp`],
   mainLanguage: ['Python'],
   links: [
     {
       label: 'GitHub Repo',
-      URL: 'https://github.com/Jamnic98/library-book-auto-renewer',
+      URL: `https://github.com/Jamnic98/${libraryBookRenewerProjectId}`,
       type: LinkType.EXTERNAL,
     },
   ],

@@ -1,8 +1,10 @@
 import { LinkType, type Project } from 'types'
 import { projectImagesFolderPaths } from 'utils/constants'
 
+const pyramidSolitaireProjectId = 'pyramid-solitaire'
+
 const pyramidSolitaire: Project = {
-  id: 'pyramid-solitaire',
+  id: pyramidSolitaireProjectId,
   title: 'Pyramid Solitaire',
   summary: 'A program based on a variation of the card game, solitaire.',
   paragraphs: [
@@ -13,7 +15,7 @@ const pyramidSolitaire: Project = {
     `This project helped deepen my understanding of game loops, event handling, collision detection, and basic game logic within Pygame.
      It also gave me valuable experience in applying mathematical concepts to programming challenges in a practical, visual way.`,
   ],
-  projectPageURI: '/coding/pyramid-solitaire',
+  projectPageURI: `/coding/${pyramidSolitaireProjectId}`,
   screenshotURIs: [
     `${projectImagesFolderPaths.pyramidSolitaiere}/mid_game.webp`,
     `${projectImagesFolderPaths.pyramidSolitaiere}/game_over.webp`,
@@ -23,7 +25,7 @@ const pyramidSolitaire: Project = {
   links: [
     {
       label: 'GitHub Repo',
-      URL: 'https://github.com/Jamnic98/pyramid-solitaire',
+      URL: `https://github.com/Jamnic98/${pyramidSolitaireProjectId}`,
       type: LinkType.EXTERNAL,
     },
   ],

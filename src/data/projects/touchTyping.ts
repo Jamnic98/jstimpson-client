@@ -1,8 +1,10 @@
 import { LinkType, type Project } from 'types'
 import { projectImagesFolderPaths } from 'utils/constants'
 
+const touchTypingProjectId = 'typation'
+
 const touchTyping: Project = {
-  id: 'typation',
+  id: touchTypingProjectId,
   title: 'Typation',
   summary: 'An adaptive typing program to improve speed and accuracy.',
   paragraphs: [
@@ -20,7 +22,7 @@ const touchTyping: Project = {
     `The live app is already available, and I am actively working to make it fully production-ready for new users.
    I’m excited to continue onboarding people to the app, gather feedback, and evolve it into a polished platform that helps others improve their typing skills just as it has helped me.`,
   ],
-  projectPageURI: '/coding/typation',
+  projectPageURI: `/coding/${touchTypingProjectId}`,
   screenshotURIs: [
     `${projectImagesFolderPaths.touchTyping}/typing_widget.webp`,
     `${projectImagesFolderPaths.touchTyping}/session_summary.webp`,
@@ -30,12 +32,12 @@ const touchTyping: Project = {
   mainLanguage: ['TypeScript', 'Python'],
   links: [
     {
-      URL: 'https://github.com/Jamnic98/typation',
+      URL: `https://github.com/Jamnic98/${touchTypingProjectId}`,
       label: 'GitHub Repo',
       type: LinkType.EXTERNAL,
     },
     {
-      URL: 'https://typation.co.uk',
+      URL: `https://${touchTypingProjectId}.co.uk`,
       label: 'Live Project',
       type: LinkType.EXTERNAL,
     },

@@ -45,7 +45,7 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
         className={`h-full w-full rounded object-cover transition-opacity duration-300 ${
           loading ? 'opacity-0' : 'opacity-100'
         }`}
-        onLoadingComplete={() => setLoading(false)}
+        onLoad={() => setLoading(false)}
       />
     </div>
   )

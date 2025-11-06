@@ -1,8 +1,10 @@
 import { LinkType, type Project } from 'types'
 import { projectImagesFolderPaths } from 'utils/constants'
 
+const pokerPreFlopSimProjectId = 'poker-simulator'
+
 const pokerPreFlopSim: Project = {
-  id: 'poker-pre-flop-sim',
+  id: pokerPreFlopSimProjectId,
   title: 'Poker Pre-flop Simulator',
   summary: 'Runs pre-flop simulations and calculates win rates for starting hands.',
   paragraphs: [
@@ -21,7 +23,7 @@ const pokerPreFlopSim: Project = {
     `The biggest challenge I faced was ensuring that the simulation was accurate and efficient, which I overcame by writing unit tests to verify the correctness of the simulation logic and using parallel processing to speed up the calculations.
       It was a great learning experience in concurrency in Python and optimising performance for computationally intensive tasks.`,
   ],
-  projectPageURI: '/coding/poker-pre-flop-sim',
+  projectPageURI: `/coding/${pokerPreFlopSimProjectId}`,
   screenshotURIs: [
     `${projectImagesFolderPaths.pokerPreFlopSimulator}/cmd_line_results.webp`,
     `${projectImagesFolderPaths.pokerPreFlopSimulator}/results_graph.webp`,
@@ -30,7 +32,7 @@ const pokerPreFlopSim: Project = {
   links: [
     {
       label: 'GitHub Repo',
-      URL: 'https://github.com/Jamnic98/poker-simulator',
+      URL: `https://github.com/Jamnic98/${pokerPreFlopSimProjectId}`,
       type: LinkType.EXTERNAL,
     },
   ],

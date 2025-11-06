@@ -2,15 +2,15 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { BsCaretDownFill } from 'react-icons/bs'
-import { IoClose } from 'react-icons/io5' // 👈 clear button icon
+import { IoClose } from 'react-icons/io5'
 
 export interface SelectProps {
-  defaultValue?: string
+  defaultValue: string
   items: string[]
   onChange: (value: string) => void
 }
 
-export const Select: React.FC<SelectProps> = ({ defaultValue = 'All', items, onChange }) => {
+export const Select: React.FC<SelectProps> = ({ defaultValue, items, onChange }) => {
   const [selectedItem, setSelectedItem] = useState<string>(defaultValue)
   const [hideDropdown, setHideDropdown] = useState<boolean>(true)
   const selectRef = useRef<HTMLDivElement>(null)
@@ -61,7 +61,7 @@ export const Select: React.FC<SelectProps> = ({ defaultValue = 'All', items, onC
           {selectedItem !== defaultValue && (
             <button
               onClick={(e) => {
-                e.stopPropagation() // 👈 don’t toggle dropdown when clearing
+                e.stopPropagation()
                 handleClear()
               }}
               className="rounded p-1 text-gray-500 hover:cursor-pointer hover:bg-gray-200 hover:text-gray-900"

@@ -1,8 +1,10 @@
 import { LinkType, type Project } from 'types'
 import { projectImagesFolderPaths } from 'utils/constants'
 
+const scrabbleScorekeeperProjectId = 'scrabble-scorekeeper'
+
 const scrabbleScorekeeper: Project = {
-  id: 'scrabble-scorekeeper',
+  id: scrabbleScorekeeperProjectId,
   title: 'Scrabble Scorekeeper',
   summary: 'A web program for calculating turn scores in Scrabble.',
   paragraphs: [
@@ -16,7 +18,7 @@ const scrabbleScorekeeper: Project = {
     `The board, table, and tiles were styled using custom CSS to create a visually appealing and clean design that mirrors the look and feel of a real Scrabble game.
      Building this project strengthened my skills in React component architecture, state management, and event handling, as well as improving my understanding of CSS for responsive, user-friendly interface design.`,
   ],
-  projectPageURI: '/coding/scrabble-scorekeeper',
+  projectPageURI: `/coding/${scrabbleScorekeeperProjectId}`,
   screenshotURIs: [
     `${projectImagesFolderPaths.scrabbleScorekeeper}/tiles.webp`,
     `${projectImagesFolderPaths.scrabbleScorekeeper}/score_table.webp`,
@@ -26,12 +28,12 @@ const scrabbleScorekeeper: Project = {
   links: [
     {
       label: 'GitHub Repo',
-      URL: 'https://github.com/Jamnic98/scrabble-scorekeeper',
+      URL: `https://github.com/Jamnic98/${scrabbleScorekeeperProjectId}`,
       type: LinkType.EXTERNAL,
     },
     {
       label: 'Live App',
-      URL: 'https://scrabble-scorekeeper.netlify.app/',
+      URL: `https://${scrabbleScorekeeperProjectId}.netlify.app/`,
       type: LinkType.EXTERNAL,
     },
   ],

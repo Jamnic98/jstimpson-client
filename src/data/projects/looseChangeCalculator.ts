@@ -1,8 +1,10 @@
 import { LinkType, type Project } from 'types'
 import { projectImagesFolderPaths } from 'utils/constants'
 
+const looseChangeCalculatorProjectId = 'loose-change-calculator'
+
 const looseChangeCalculator: Project = {
-  id: 'loose-change-calculator',
+  id: looseChangeCalculatorProjectId,
   title: 'Loose Change Calculator',
   summary: 'A calculator for summing loose change (GBP).',
   paragraphs: [
@@ -13,13 +15,13 @@ const looseChangeCalculator: Project = {
     `Although basic, this project helped me develop a stronger understanding of variables, user input, data types, and simple arithmetic operations in Python.
      It also gave me early experience in thinking about usability when designing a program.`,
   ],
-  projectPageURI: '/coding/loose-change-calculator',
+  projectPageURI: `/coding/${looseChangeCalculatorProjectId}`,
   screenshotURIs: [`${projectImagesFolderPaths.looseChangeCalculator}/widget.webp`],
   mainLanguage: ['Python'],
   links: [
     {
       label: 'GitHub Repo',
-      URL: 'https://github.com/Jamnic98/loose-change-calculator',
+      URL: `https://github.com/Jamnic98/${looseChangeCalculatorProjectId}`,
       type: LinkType.EXTERNAL,
     },
   ],

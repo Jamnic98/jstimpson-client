@@ -1,8 +1,10 @@
 import { type Project, LinkType } from 'types'
 import { projectImagesFolderPaths } from 'utils/constants'
 
+const inventoryManagementSystemProjectId = 'inventory-management-system'
+
 const inventoryManagementSystem: Project = {
-  id: 'inventory-management-system',
+  id: inventoryManagementSystemProjectId,
   title: 'Inventory Management System',
   summary: 'A M.E.R.N stack app for tracking inventory.',
   paragraphs: [
@@ -18,7 +20,7 @@ const inventoryManagementSystem: Project = {
     `Items with the low stock alert turned on are be monitored by the program so that when the quantity of the item falls to 1, it is added to the list of items low in stock.
      From there, a user can choose to send a low stock alert, which will send emails to specified users with the list of low stock items.`,
   ],
-  projectPageURI: '/coding/inventory-management-system',
+  projectPageURI: `/coding/${inventoryManagementSystemProjectId}`,
   screenshotURIs: [
     `${projectImagesFolderPaths.inventoryManagementSystem}/dashboard.webp`,
     `${projectImagesFolderPaths.inventoryManagementSystem}/edit_item_modal.webp`,
@@ -29,7 +31,7 @@ const inventoryManagementSystem: Project = {
   links: [
     {
       label: 'GitHub Repo',
-      URL: 'https://github.com/Jamnic98/inventory-management-system',
+      URL: `https://github.com/Jamnic98/${inventoryManagementSystemProjectId}`,
       type: LinkType.EXTERNAL,
     },
   ],

@@ -1,8 +1,10 @@
 import { type Project } from 'types'
 import { projectImagesFolderPaths } from 'utils/constants'
 
-const readingLog: Project = {
-  id: 'crypto-viewer',
+const cryptoViewerProjectId = 'crypto-viewer'
+
+const cryptoViewer: Project = {
+  id: cryptoViewerProjectId,
   title: 'Crypto Viewer',
   summary: 'Displays real-time cryptocurrency price data.',
   paragraphs: [
@@ -16,7 +18,7 @@ const readingLog: Project = {
      To display more than two cryptocurrencies at a time, I coded the ESP-12 to cycle through the price strings,
      giving them the appearance of being shifted upwards incrementally.`,
   ],
-  projectPageURI: '/coding/crypto-viewer',
+  projectPageURI: `/coding/${cryptoViewerProjectId}`,
   screenshotURIs: [
     `${projectImagesFolderPaths.cryptoViewer}/display.webp`,
     `${projectImagesFolderPaths.cryptoViewer}/pcb_diagram.webp`,
@@ -26,4 +28,4 @@ const readingLog: Project = {
   techStack: ['C++', 'NodeMCU ESP-12', '2.2" TFT', '16x2 LCD'],
 }
 
-export default readingLog
+export default cryptoViewer

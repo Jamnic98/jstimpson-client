@@ -38,7 +38,7 @@ export const Card: React.FC<CardProps> = ({ title, description, imageURI, linkUR
           }`}
           width={cardImgDimensions.width}
           height={cardImgDimensions.height}
-          onLoadingComplete={() => setLoading(false)}
+          onLoad={() => setLoading(false)}
         />
       </div>
 

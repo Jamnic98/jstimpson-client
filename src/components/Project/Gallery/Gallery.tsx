@@ -79,7 +79,7 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
               className={`rounded object-cover transition-opacity duration-300 ${
                 loading ? 'opacity-0' : 'opacity-100'
               }`}
-              onLoadingComplete={() => setLoading(false)}
+              onLoad={() => setLoading(false)}
               priority
             />
 

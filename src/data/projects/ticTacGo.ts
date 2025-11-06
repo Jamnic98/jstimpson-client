@@ -1,8 +1,10 @@
 import { LinkType, type Project } from 'types'
 import { projectImagesFolderPaths } from 'utils/constants'
 
+const ticTacGoProjectId = 'tic-tac-go'
+
 const ticTacGo: Project = {
-  id: 'tic-tac-go',
+  id: ticTacGoProjectId,
   title: 'Tic Tac Go',
   summary: 'A command line interface version of tic tac toe, written in Go.',
   paragraphs: [
@@ -15,7 +17,7 @@ const ticTacGo: Project = {
      It also gave me a better understanding of error handling in Go and the importance of writing clear, maintainable code for interactive applications.`,
   ],
 
-  projectPageURI: '/coding/tic-tac-go',
+  projectPageURI: `/coding/${ticTacGoProjectId}`,
   screenshotURIs: [
     `${projectImagesFolderPaths.ticTacGo}/code.webp`,
     `${projectImagesFolderPaths.ticTacGo}/gameplay.webp`,
@@ -23,7 +25,7 @@ const ticTacGo: Project = {
   mainLanguage: ['Golang'],
   links: [
     {
-      URL: 'https://github.com/Jamnic98/tic-tac-go',
+      URL: `https://github.com/Jamnic98/${ticTacGoProjectId}`,
       label: 'GitHub Repo',
       type: LinkType.EXTERNAL,
     },

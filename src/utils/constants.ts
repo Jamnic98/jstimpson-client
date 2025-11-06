@@ -41,6 +41,7 @@ export const projectImagesFolderPaths = {
   inventoryManagementSystem: `${PROJECT_IMAGES_FOLDER_PATH}/inventory-management-system`,
   libraryBookRenewer: `${PROJECT_IMAGES_FOLDER_PATH}/library-book-renewer`,
   looseChangeCalculator: `${PROJECT_IMAGES_FOLDER_PATH}/loose-change-calculator`,
+  ollamaChatApp: `${PROJECT_IMAGES_FOLDER_PATH}/ollama-chat-app`,
   pokerPreFlopSimulator: `${PROJECT_IMAGES_FOLDER_PATH}/poker-pre-flop-simulator`,
   portfolioWebsite: `${PROJECT_IMAGES_FOLDER_PATH}/portfolio-website`,
   pyramidSolitaiere: `${PROJECT_IMAGES_FOLDER_PATH}/pyramid-solitaire`,

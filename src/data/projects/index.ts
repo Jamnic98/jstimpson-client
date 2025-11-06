@@ -1,18 +1,19 @@
 import { type Project } from 'types'
 
-import blueCheeseClassifier from './blueCheeseClassifier'
-import cryptoViewer from './cryptoViewer'
-import eyeTracker from './eyeTracker'
-import inventoryManagementSystem from './inventoryManagementSystem'
-import libraryBookRenewer from './libraryBookRenewer'
-import looseChangeCalculator from './looseChangeCalculator'
-import pokerPreFlopSim from './pokerPreFlopSim'
-import portfolioWebsite from './portfolioWebsite'
-import pyramidSolitaire from './pyramidSolitaire'
-import readingLog from './readingLog'
-import scrabbleScorekeeper from './scrabbleScorekeeper'
-import ticTacGo from './ticTacGo'
-import touchTyping from './touchTyping'
+import { default as blueCheeseClassifier } from './blueCheeseClassifier'
+import { default as cryptoViewer } from './cryptoViewer'
+import { default as eyeTracker } from './eyeTracker'
+import { default as inventoryManagementSystem } from './inventoryManagementSystem'
+import { default as libraryBookRenewer } from './libraryBookRenewer'
+import { default as looseChangeCalculator } from './looseChangeCalculator'
+import { default as ollamaChatApp } from './ollamaChatApp'
+import { default as pokerPreFlopSim } from './pokerPreFlopSim'
+import { default as portfolioWebsite } from './portfolioWebsite'
+import { default as pyramidSolitaire } from './pyramidSolitaire'
+import { default as readingLog } from './readingLog'
+import { default as scrabbleScorekeeper } from './scrabbleScorekeeper'
+import { default as ticTacGo } from './ticTacGo'
+import { default as touchTyping } from './touchTyping'
 
 const projects: Project[] = [
   blueCheeseClassifier,
@@ -21,6 +22,7 @@ const projects: Project[] = [
   inventoryManagementSystem,
   libraryBookRenewer,
   looseChangeCalculator,
+  ollamaChatApp,
   pokerPreFlopSim,
   portfolioWebsite,
   pyramidSolitaire,

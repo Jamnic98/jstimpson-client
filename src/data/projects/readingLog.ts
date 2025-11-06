@@ -1,8 +1,10 @@
 import { LinkType, type Project } from 'types'
 import { projectImagesFolderPaths } from 'utils/constants'
 
+const readingLogProjectId = 'reading-log'
+
 const readingLog: Project = {
-  id: 'reading-log',
+  id: readingLogProjectId,
   title: 'Reading Log',
   summary: 'A list of books the user has read, stored in a MySQL database.',
   paragraphs: [
@@ -15,7 +17,7 @@ const readingLog: Project = {
     `Through this project, I gained valuable experience working with relational databases, writing SQL queries, and designing user-friendly interfaces.
      It also helped me to improve my understanding of JavaFX event handling, data binding, and best practices for integrating a frontend application with a backend database.`,
   ],
-  projectPageURI: '/coding/reading-log',
+  projectPageURI: `/coding/${readingLogProjectId}`,
   screenshotURIs: [
     `${projectImagesFolderPaths.readingLog}/author_rating_list.webp`,
     `${projectImagesFolderPaths.readingLog}/move_book_modal.webp`,
@@ -24,7 +26,7 @@ const readingLog: Project = {
   links: [
     {
       label: 'GitHub Repo',
-      URL: 'https://github.com/Jamnic98/reading-log',
+      URL: `https://github.com/Jamnic98/${readingLogProjectId}`,
       type: LinkType.EXTERNAL,
     },
   ],
