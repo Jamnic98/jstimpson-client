@@ -1,19 +1,26 @@
 'use client'
 
-import { useRef, useState, useEffect } from 'react'
+import { useRef, useState, useEffect, useMemo } from 'react'
 import { IoChevronBack, IoChevronForward } from 'react-icons/io5'
+
 import { Card, PageHeader, Select } from 'components'
-import { projectCodingLanguages } from 'utils'
+import { projectCodingLanguages, useWidth } from 'utils'
 import projects from 'data/projects'
 import { type Project } from 'types'
 
 const defaultSelectValue = 'All'
-const PROJECTS_PER_PAGE = 4
 
 export default function ProjectsPage() {
+  const width = useWidth()
   const [language, setLanguage] = useState<string>(defaultSelectValue)
   const [currentPage, setCurrentPage] = useState(0)
   const carouselRef = useRef<HTMLDivElement>(null)
+
+  const PROJECTS_PER_PAGE = useMemo(() => {
+    if (width && width < 640) return 1
+    if (width && width < 1024) return 2
+    return 4
+  }, [width])
 
   // Filter projects
   const filteredProjects = projects.filter(
@@ -21,27 +28,37 @@ export default function ProjectsPage() {
       language === defaultSelectValue || projectData.mainLanguage.includes(language)
   )
 
-  // Break into pages of 4 projects
+  // Break into pages
   const pages: Project[][] = []
   for (let i = 0; i < filteredProjects.length; i += PROJECTS_PER_PAGE) {
     pages.push(filteredProjects.slice(i, i + PROJECTS_PER_PAGE))
   }
   const totalPages = pages.length
 
-  // Scroll when currentPage changes
+  // Scroll when currentPage OR layout changes
   useEffect(() => {
     if (!carouselRef.current) return
     const container = carouselRef.current
     const scrollAmount = container.clientWidth * currentPage
     container.scrollTo({ left: scrollAmount, behavior: 'smooth' })
-  }, [currentPage])
+  }, [currentPage, PROJECTS_PER_PAGE])
 
-  // Clamp page index when filters change
+  // Snap instantly on resize to avoid wrong positions
+  useEffect(() => {
+    if (!carouselRef.current) return
+    const container = carouselRef.current
+    const scrollAmount = container.clientWidth * currentPage
+    container.scrollLeft = scrollAmount
+  }, [width, currentPage])
+
+  // Clamp page index when filter changes
   useEffect(() => {
     if (currentPage > totalPages - 1) {
       setCurrentPage(0)
     }
   }, [filteredProjects.length, totalPages, currentPage])
+
+  if (width == null) return null
 
   return (
     <>
@@ -61,7 +78,7 @@ export default function ProjectsPage() {
             {pages.map((page, pageIndex) => (
               <div key={pageIndex} className="flex w-full flex-shrink-0 justify-start px-2">
                 {page.map((projectData) => (
-                  <div key={projectData.id} className="w-1/4 px-2 py-8">
+                  <div key={projectData.id} className="w-full px-2 py-8 sm:w-1/2 lg:w-1/4">
                     <Card
                       title={projectData.title}
                       description={projectData.summary}
@@ -84,7 +101,7 @@ export default function ProjectsPage() {
               <IoChevronBack className="h-6 w-6 text-gray-700" />
             </button>
 
-            <div className="flex space-x-2">
+            <div className="hidden space-x-2 sm:flex">
               {Array.from({ length: totalPages }).map((_, index) => (
                 <button
                   key={index}
@@ -96,7 +113,6 @@ export default function ProjectsPage() {
               ))}
             </div>
 
-            {/* Project count & page info */}
             <div className="text-center text-base text-gray-700">
               Showing <span className="font-semibold">{filteredProjects.length}</span> project
               {filteredProjects.length !== 1 && 's'} · Page{' '}
