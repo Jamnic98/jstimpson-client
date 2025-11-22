@@ -12,9 +12,10 @@ const defaultSelectValue = 'All'
 
 export default function ProjectsPage() {
   const width = useWidth()
+  const prevWidth = useRef<number | null>(null)
+  const carouselRef = useRef<HTMLDivElement>(null)
   const [language, setLanguage] = useState<string>(defaultSelectValue)
   const [currentPage, setCurrentPage] = useState(0)
-  const carouselRef = useRef<HTMLDivElement>(null)
 
   const PROJECTS_PER_PAGE = useMemo(() => {
     if (width && width < 640) return 1
@@ -43,12 +44,17 @@ export default function ProjectsPage() {
     container.scrollTo({ left: scrollAmount, behavior: 'smooth' })
   }, [currentPage, PROJECTS_PER_PAGE])
 
-  // Snap instantly on resize to avoid wrong positions
   useEffect(() => {
     if (!carouselRef.current) return
     const container = carouselRef.current
-    const scrollAmount = container.clientWidth * currentPage
-    container.scrollLeft = scrollAmount
+
+    // Only snap instantly if width changed
+    if (prevWidth.current !== null && prevWidth.current !== width) {
+      const scrollAmount = container.clientWidth * currentPage
+      container.scrollLeft = scrollAmount // instant, no animation
+    }
+
+    prevWidth.current = width
   }, [width, currentPage])
 
   // Clamp page index when filter changes
