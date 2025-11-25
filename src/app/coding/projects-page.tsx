@@ -51,7 +51,7 @@ export default function ProjectsPage() {
     // Only snap instantly if width changed
     if (prevWidth.current !== null && prevWidth.current !== width) {
       const scrollAmount = container.clientWidth * currentPage
-      container.scrollLeft = scrollAmount // instant, no animation
+      container.scrollLeft = scrollAmount
     }
 
     prevWidth.current = width

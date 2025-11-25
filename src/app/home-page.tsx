@@ -7,8 +7,6 @@ import { PageHeader, Explorer, RunningStats, Loader } from 'components'
 import { type Project, type RunData } from 'types'
 import projects from 'data/projects'
 
-const PROJECT_COUNT = 4
-
 interface HomePageProps {
   runData: RunData[]
 }
@@ -41,14 +39,11 @@ const RunningSection = ({ runData }: { runData: RunData[] }) => (
 const HomePage: React.FC<HomePageProps> = ({ runData }) => {
   const filteredProjects = projects
     .filter((project) =>
-      [
-        'portfolio-website',
-        'typation',
-        'inventory-management-system',
-        'blue-cheese-classifier',
-      ].includes(project.id)
+      ['portfolio-website', 'typation', 'inventory-management-system', 'ollama-chat-app'].includes(
+        project.id
+      )
     )
-    .slice(0, PROJECT_COUNT)
+    .slice(0, 4)
     .map(({ id, title, summary, projectPageURI }) => ({
       id,
       title,
