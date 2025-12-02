@@ -35,6 +35,7 @@ export const PROFILE_PICTURE_FOLDER_PATH = '/images/profile-picture'
 const PROJECT_IMAGES_FOLDER_PATH = '/images/projects'
 
 export const projectImagesFolderPaths = {
+  altWorld: `${PROJECT_IMAGES_FOLDER_PATH}/alt-world`,
   blueCheeseClassifier: `${PROJECT_IMAGES_FOLDER_PATH}/blue-cheese-classifier`,
   cryptoViewer: `${PROJECT_IMAGES_FOLDER_PATH}/crypto-viewer`,
   eyeTracker: `${PROJECT_IMAGES_FOLDER_PATH}/eye-tracker`,

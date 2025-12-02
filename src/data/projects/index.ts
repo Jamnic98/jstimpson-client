@@ -1,5 +1,6 @@
 import { type Project } from 'types'
 
+import { default as altWorld } from './altWorld'
 import { default as blueCheeseClassifier } from './blueCheeseClassifier'
 import { default as cryptoViewer } from './cryptoViewer'
 import { default as eyeTracker } from './eyeTracker'
@@ -16,6 +17,7 @@ import { default as ticTacGo } from './ticTacGo'
 import { default as touchTyping } from './touchTyping'
 
 const projects: Project[] = [
+  altWorld,
   blueCheeseClassifier,
   cryptoViewer,
   eyeTracker,
