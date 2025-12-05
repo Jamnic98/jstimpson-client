@@ -15,6 +15,7 @@ import { default as readingLog } from './readingLog'
 import { default as scrabbleScorekeeper } from './scrabbleScorekeeper'
 import { default as ticTacGo } from './ticTacGo'
 import { default as touchTyping } from './touchTyping'
+import { default as ukGardenBirdClassifierApp } from './ukGardenBirdClassifierApp'
 
 const projects: Project[] = [
   altWorld,
@@ -32,6 +33,7 @@ const projects: Project[] = [
   scrabbleScorekeeper,
   ticTacGo,
   touchTyping,
+  ukGardenBirdClassifierApp,
 ]
 
 export default projects

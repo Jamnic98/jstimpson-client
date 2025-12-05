@@ -5,7 +5,8 @@ import { projectImagesFolderPaths } from 'utils/constants'
 const eyeTracker: Project = {
   id: 'eye-tracker',
   title: 'Eye Tracker',
-  summary: 'Tech test submission for tracking horizontal eye movement.',
+  summary:
+    'A full-stack web application designed to detect, calibrate, and analyse horizontal eye movement in real time.',
   paragraphs: [
     `This project was created as a tech test submission for a company looking to track horizontal eye movement using a modern web application. The goal was to build a full-stack solution that could capture, calibrate, and visualise gaze data in real time through the browser.`,
 
