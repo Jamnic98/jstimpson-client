@@ -39,9 +39,12 @@ const RunningSection = ({ runData }: { runData: RunData[] }) => (
 const HomePage: React.FC<HomePageProps> = ({ runData }) => {
   const filteredProjects = projects
     .filter((project) =>
-      ['portfolio-website', 'typation', 'inventory-management-system', 'ollama-chat-app'].includes(
-        project.id
-      )
+      [
+        'portfolio-website',
+        'uk-garden-bird-classifier-app',
+        'inventory-management-system',
+        'ollama-chat-app',
+      ].includes(project.id)
     )
     .slice(0, 4)
     .map(({ id, title, summary, projectPageURI }) => ({
@@ -58,12 +61,9 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
       <article className="mb-16">
         <section className="my-12">
           <p className="mb-4 text-justify text-xl">
-            This site was built entirely from scratch with Next.js, React, TypeScript, Python,
-            FastAPI, and MongoDB, alongside some custom{' '}
-            <Link href="/" className="text-orange-600 hover:text-gray-950">
-              3D modelling
-            </Link>{' '}
-            work. I’m also working on{' '}
+            I designed and built this site from the ground up with Next.js, React, TypeScript,
+            Python, FastAPI, and MongoDB. Take a look at the adaptive typing app I'm working on,
+            called{' '}
             <Link
               href="https://typation.co.uk"
               className="text-orange-600 hover:text-gray-950"
@@ -71,9 +71,8 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
               rel="noopener noreferrer"
             >
               Typation
-            </Link>
-            , a typing platform currently deployed in public alpha where anyone can try it out for
-            free!
+            </Link>{' '}
+            which is currently deployed in public alpha where anyone can try it out for free!
           </p>
         </section>
 
