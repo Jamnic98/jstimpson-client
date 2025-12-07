@@ -60,7 +60,7 @@ export default function threeD() {
           </p>
         </section>
 
-        <section className="my-12 text-xl text-red-950">*** more coming soon! ***</section>
+        {/* <section className="my-12 text-xl text-red-950">*** more coming soon! ***</section> */}
       </article>
     </>
   )
