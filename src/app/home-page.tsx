@@ -40,12 +40,12 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
   const filteredProjects = projects
     .filter((project) =>
       [
-        'portfolio-website',
-        'uk-garden-bird-classifier-app',
+        'alt-world',
         'inventory-management-system',
         'ollama-chat-app',
         'poker-simulator',
-        'alt-world',
+        'portfolio-website',
+        'uk-garden-bird-classifier-app',
       ].includes(project.id)
     )
     .slice(0, 6)
