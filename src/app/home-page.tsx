@@ -44,9 +44,11 @@ const HomePage: React.FC<HomePageProps> = ({ runData }) => {
         'uk-garden-bird-classifier-app',
         'inventory-management-system',
         'ollama-chat-app',
+        'poker-simulator',
+        'alt-world',
       ].includes(project.id)
     )
-    .slice(0, 4)
+    .slice(0, 6)
     .map(({ id, title, summary, projectPageURI }) => ({
       id,
       title,

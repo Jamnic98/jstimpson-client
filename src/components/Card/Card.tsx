@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+
 import { Loader } from 'components'
 
 const cardImgDimensions = { width: 300, height: 300 }
