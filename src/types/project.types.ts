@@ -19,4 +19,5 @@ export type Project = {
   mainLanguage: string[]
   links: ProjectLink[]
   techStack: string[]
+  readmePath?: string
 }

@@ -1,10 +1,10 @@
 import { LinkType, type Project } from 'types'
 import { projectImagesFolderPaths } from 'utils/constants'
 
-const scrabbleScorekeeperProjectId = 'scrabble-scorekeeper'
+const projectId = 'scrabble-scorekeeper'
 
 const scrabbleScorekeeper: Project = {
-  id: scrabbleScorekeeperProjectId,
+  id: projectId,
   title: 'Scrabble Scorekeeper',
   summary: 'A web program for calculating turn scores in Scrabble.',
   paragraphs: [
@@ -18,7 +18,7 @@ const scrabbleScorekeeper: Project = {
     `The board, table, and tiles were styled using custom CSS to create a visually appealing and clean design that mirrors the look and feel of a real Scrabble game.
      Building this project strengthened my skills in React component architecture, state management, and event handling, as well as improving my understanding of CSS for responsive, user-friendly interface design.`,
   ],
-  projectPageURI: `/coding/${scrabbleScorekeeperProjectId}`,
+  projectPageURI: `/coding/${projectId}`,
   screenshotURIs: [
     `${projectImagesFolderPaths.scrabbleScorekeeper}/tiles.webp`,
     `${projectImagesFolderPaths.scrabbleScorekeeper}/score_table.webp`,
@@ -27,17 +27,18 @@ const scrabbleScorekeeper: Project = {
   mainLanguage: ['TypeScript'],
   links: [
     {
-      label: 'GitHub Repo',
-      URL: `https://github.com/Jamnic98/${scrabbleScorekeeperProjectId}`,
+      label: 'Live App',
+      URL: `https://${projectId}.netlify.app/`,
       type: LinkType.EXTERNAL,
     },
     {
-      label: 'Live App',
-      URL: `https://${scrabbleScorekeeperProjectId}.netlify.app/`,
+      label: 'GitHub Repo',
+      URL: `https://github.com/Jamnic98/${projectId}`,
       type: LinkType.EXTERNAL,
     },
   ],
   techStack: ['React', 'TypeScript', 'HTML', 'CSS'],
+  readmePath: `https://raw.githubusercontent.com/Jamnic98/${projectId}/refs/heads/master/README.md`,
 }
 
 export default scrabbleScorekeeper

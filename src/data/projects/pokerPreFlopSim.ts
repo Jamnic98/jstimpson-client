@@ -1,10 +1,10 @@
 import { LinkType, type Project } from 'types'
 import { projectImagesFolderPaths } from 'utils/constants'
 
-const pokerPreFlopSimProjectId = 'poker-simulator'
+const projectId = 'poker-simulator'
 
 const pokerPreFlopSim: Project = {
-  id: pokerPreFlopSimProjectId,
+  id: projectId,
   title: 'Poker Pre-flop Simulator',
   summary: 'Runs pre-flop simulations and calculates win rates for starting hands.',
   paragraphs: [
@@ -23,7 +23,7 @@ const pokerPreFlopSim: Project = {
     `The biggest challenge I faced was ensuring that the simulation was accurate and efficient, which I overcame by writing unit tests to verify the correctness of the simulation logic and using parallel processing to speed up the calculations.
       It was a great learning experience in concurrency in Python and optimising performance for computationally intensive tasks.`,
   ],
-  projectPageURI: `/coding/${pokerPreFlopSimProjectId}`,
+  projectPageURI: `/coding/${projectId}`,
   screenshotURIs: [
     `${projectImagesFolderPaths.pokerPreFlopSimulator}/cmd_line_results.webp`,
     `${projectImagesFolderPaths.pokerPreFlopSimulator}/results_graph.webp`,
@@ -32,11 +32,12 @@ const pokerPreFlopSim: Project = {
   links: [
     {
       label: 'GitHub Repo',
-      URL: `https://github.com/Jamnic98/${pokerPreFlopSimProjectId}`,
+      URL: `https://github.com/Jamnic98/${projectId}`,
       type: LinkType.EXTERNAL,
     },
   ],
   techStack: ['Python', 'Matplotlib', 'NumPy', 'Pandas'],
+  readmePath: `https://raw.githubusercontent.com/Jamnic98/${projectId}/refs/heads/main/README.md`,
 }
 
 export default pokerPreFlopSim

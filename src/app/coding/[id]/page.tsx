@@ -2,7 +2,8 @@ import { type Metadata } from 'next'
 import Link from 'next/link'
 import { LuMoveLeft } from 'react-icons/lu'
 
-import { PageHeader, ProjectDescriptions, ProjectLinks, ProjectGallery } from 'components'
+import { Markdown, PageHeader, ProjectDescriptions, ProjectLinks, ProjectGallery } from 'components'
+import { fetchReadme } from 'lib/readme'
 import projects_data from 'data/projects'
 
 interface ProjectProps {
@@ -12,6 +13,7 @@ interface ProjectProps {
 const Page = async (props: ProjectProps) => {
   const params = await props.params
   const projectData = getProject({ id: params.id })
+  const readme = projectData.readmePath ? await fetchReadme(projectData.readmePath) : null
 
   return (
     <>
@@ -43,6 +45,16 @@ const Page = async (props: ProjectProps) => {
           <hr className="my-4 border-gray-300" />
           <ProjectDescriptions paragraphs={projectData.paragraphs} />
         </section>
+
+        {readme ? (
+          <section className="my-12">
+            <h2 className="text-2xl font-semibold">GitHub ReadMe</h2>
+            <hr className="my-4 border-gray-300" />
+            <div className=" p-6 bg-gray-200">
+              <Markdown content={readme ?? ''} />
+            </div>
+          </section>
+        ) : null}
 
         <Link
           className="flex w-fit space-x-2 rounded bg-neutral-50 px-12 py-2 text-xl leading-none font-medium text-orange-600 shadow hover:text-gray-950"

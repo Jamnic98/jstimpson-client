@@ -1,10 +1,10 @@
 import { LinkType, type Project } from 'types'
 import { projectImagesFolderPaths } from 'utils/constants'
 
-const pyramidSolitaireProjectId = 'pyramid-solitaire'
+const projectId = 'pyramid-solitaire'
 
 const pyramidSolitaire: Project = {
-  id: pyramidSolitaireProjectId,
+  id: projectId,
   title: 'Pyramid Solitaire',
   summary: 'A program based on a variation of the card game, solitaire.',
   paragraphs: [
@@ -15,7 +15,7 @@ const pyramidSolitaire: Project = {
     `This project helped deepen my understanding of game loops, event handling, collision detection, and basic game logic within Pygame.
      It also gave me valuable experience in applying mathematical concepts to programming challenges in a practical, visual way.`,
   ],
-  projectPageURI: `/coding/${pyramidSolitaireProjectId}`,
+  projectPageURI: `/coding/${projectId}`,
   screenshotURIs: [
     `${projectImagesFolderPaths.pyramidSolitaiere}/mid_game.webp`,
     `${projectImagesFolderPaths.pyramidSolitaiere}/game_over.webp`,
@@ -25,11 +25,12 @@ const pyramidSolitaire: Project = {
   links: [
     {
       label: 'GitHub Repo',
-      URL: `https://github.com/Jamnic98/${pyramidSolitaireProjectId}`,
+      URL: `https://github.com/Jamnic98/${projectId}`,
       type: LinkType.EXTERNAL,
     },
   ],
   techStack: ['Python', 'Pygame'],
+  readmePath: `https://raw.githubusercontent.com/Jamnic98/${projectId}/refs/heads/main/README.md`,
 }
 
 export default pyramidSolitaire

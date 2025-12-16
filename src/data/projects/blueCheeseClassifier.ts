@@ -1,10 +1,10 @@
 import { LinkType, type Project } from 'types'
 import { projectImagesFolderPaths } from 'utils/constants'
 
-const blueCheeseClassifierProjectId = 'blue-cheese-classifier'
+const projectId = 'blue-cheese-classifier'
 
 const blueCheeseClassifier: Project = {
-  id: blueCheeseClassifierProjectId,
+  id: projectId,
   title: 'Blue Cheese Classifier',
   summary: 'A binary image classifier for identifying blue cheese.',
   paragraphs: [
@@ -27,7 +27,7 @@ const blueCheeseClassifier: Project = {
      I used the pre-trained model in a Python script to identify the cheese in each image and generate a bounding box for the cheese in the image. The script then cropped around the cheese and saved the modified image.
      I then passed these cropped images through the pipeline I had created to resize, normalise and augment the images. With the updated image set, I trained the model again, which resulted in a 6% increase in the accuracy score.`,
   ],
-  projectPageURI: `/coding/${blueCheeseClassifierProjectId}`,
+  projectPageURI: `/coding/${projectId}`,
   screenshotURIs: [
     `${projectImagesFolderPaths.blueCheeseClassifier}/image_classification.webp`,
     `${projectImagesFolderPaths.blueCheeseClassifier}/results_graph.webp`,
@@ -36,7 +36,7 @@ const blueCheeseClassifier: Project = {
   links: [
     {
       label: 'GitHub Repo',
-      URL: `https://github.com/Jamnic98/${blueCheeseClassifierProjectId}`,
+      URL: `https://github.com/Jamnic98/${projectId}`,
       type: LinkType.EXTERNAL,
     },
   ],
@@ -50,6 +50,7 @@ const blueCheeseClassifier: Project = {
     'Scikit-learn',
     'BeautifiulSoup',
   ],
+  readmePath: `https://raw.githubusercontent.com/Jamnic98/${projectId}/refs/heads/main/README.md`,
 }
 
 export default blueCheeseClassifier

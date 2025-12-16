@@ -1,10 +1,10 @@
 import { type Project, LinkType } from 'types'
 import { projectImagesFolderPaths } from 'utils/constants'
 
-const inventoryManagementSystemProjectId = 'inventory-management-system'
+const projectId = 'inventory-management-system'
 
 const inventoryManagementSystem: Project = {
-  id: inventoryManagementSystemProjectId,
+  id: projectId,
   title: 'Inventory Management System',
   summary: 'A M.E.R.N stack app for tracking inventory.',
   paragraphs: [
@@ -20,7 +20,7 @@ const inventoryManagementSystem: Project = {
     `Items with the low stock alert turned on are be monitored by the program so that when the quantity of the item falls to 1, it is added to the list of items low in stock.
      From there, a user can choose to send a low stock alert, which will send emails to specified users with the list of low stock items.`,
   ],
-  projectPageURI: `/coding/${inventoryManagementSystemProjectId}`,
+  projectPageURI: `/coding/${projectId}`,
   screenshotURIs: [
     `${projectImagesFolderPaths.inventoryManagementSystem}/dashboard.webp`,
     `${projectImagesFolderPaths.inventoryManagementSystem}/edit_item_modal.webp`,
@@ -31,7 +31,7 @@ const inventoryManagementSystem: Project = {
   links: [
     {
       label: 'GitHub Repo',
-      URL: `https://github.com/Jamnic98/${inventoryManagementSystemProjectId}`,
+      URL: `https://github.com/Jamnic98/${projectId}`,
       type: LinkType.EXTERNAL,
     },
   ],
@@ -48,6 +48,7 @@ const inventoryManagementSystem: Project = {
     'Mongoose',
     'MaterialUI',
   ],
+  readmePath: `https://raw.githubusercontent.com/Jamnic98/${projectId}/refs/heads/main/README.md`,
 }
 
 export default inventoryManagementSystem

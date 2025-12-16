@@ -1,43 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with
-[`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# My Portfolio Website
 
-## Getting Started
+This is my personal **Next.js** project where I showcase my coding projects and interactive content.
 
-First, run the development server:
+I built it using [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and enhanced it with a range of features to make it dynamic and engaging.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## What I Built
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the
-file.
+- **Project Showcases**: I display my coding projects with descriptions, tech stack, screenshots, and links. Each project can even include its README rendered directly on the page.
+- **Strava API Integration**: I fetch my activity data from Strava automatically. The backend handles refresh tokens, so the data stays up to date without any manual intervention.
+- **3D Models with Three.js**: I embed interactive 3D models to make the site more visual and engaging. Users can rotate, zoom, and interact with the models.
+- **Markdown Rendering**: Any README content or project documentation can be displayed in clean markdown format with headings, lists, code blocks, and images.
+- **Responsive and Styled**: The site is fully responsive and styled with Tailwind CSS, including proper typography for headings, code, lists, and images.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to
-automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
+## How It Works
 
-To learn more about Next.js, take a look at the following resources:
+- The backend handles API requests and refresh tokens for external services like Strava.
+- Markdown content is fetched and rendered with proper styling and syntax highlighting.
+- Three.js models are embedded and interactive directly in the frontend.
+- Tailwind CSS ensures everything is responsive and visually consistent.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your
-feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the
-[Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
-from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more
-details.
+This project demonstrates my ability to build full-stack interactive web applications using modern frameworks and APIs.

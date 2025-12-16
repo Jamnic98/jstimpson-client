@@ -49,6 +49,6 @@ export const projectImagesFolderPaths = {
   readingLog: `${PROJECT_IMAGES_FOLDER_PATH}/reading-log`,
   scrabbleScorekeeper: `${PROJECT_IMAGES_FOLDER_PATH}/scrabble-scorekeeper`,
   ticTacGo: `${PROJECT_IMAGES_FOLDER_PATH}/tic-tac-go`,
-  touchTyping: `${PROJECT_IMAGES_FOLDER_PATH}/typation`,
+  typation: `${PROJECT_IMAGES_FOLDER_PATH}/typation`,
   ukGardenBirdClassifierApp: `${PROJECT_IMAGES_FOLDER_PATH}/uk-garden-bird-classifier-app`,
 }

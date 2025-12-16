@@ -14,7 +14,7 @@ import { default as pyramidSolitaire } from './pyramidSolitaire'
 import { default as readingLog } from './readingLog'
 import { default as scrabbleScorekeeper } from './scrabbleScorekeeper'
 // import { default as ticTacGo } from './ticTacGo'
-import { default as touchTyping } from './touchTyping'
+import { default as typation } from './typation'
 import { default as ukGardenBirdClassifierApp } from './ukGardenBirdClassifierApp'
 
 const projects: Project[] = [
@@ -32,7 +32,7 @@ const projects: Project[] = [
   readingLog,
   scrabbleScorekeeper,
   // ticTacGo,
-  touchTyping,
+  typation,
   ukGardenBirdClassifierApp,
 ]
 

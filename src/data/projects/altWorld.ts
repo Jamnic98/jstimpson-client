@@ -32,11 +32,12 @@ const altWorld: Project = {
     },
     {
       label: 'Live App',
-      URL: 'https://altworld-teal.vercel.app',
+      URL: 'https://altworld.net',
       type: LinkType.EXTERNAL,
     },
   ],
   techStack: ['TypeScript', 'Next.js', 'TailwindCSS', 'MongoDB'],
+  readmePath: `https://raw.githubusercontent.com/Jamnic98/${projectId}/refs/heads/main/README.md`,
 }
 
 export default altWorld

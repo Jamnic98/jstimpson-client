@@ -2,8 +2,10 @@ import { LinkType, type Project } from 'types'
 
 import { projectImagesFolderPaths } from 'utils/constants'
 
+const projectId = 'eye-tracker'
+
 const eyeTracker: Project = {
-  id: 'eye-tracker',
+  id: projectId,
   title: 'Eye Tracker',
   summary:
     'A full-stack web application designed to detect, calibrate, and analyse horizontal eye movement in real time.',
@@ -28,11 +30,12 @@ const eyeTracker: Project = {
   links: [
     {
       label: 'GitHub',
-      URL: 'https://github.com/Jamnic98/eye-tracker',
+      URL: `https://github.com/Jamnic98/${projectId}`,
       type: LinkType.EXTERNAL,
     },
   ],
   techStack: ['TypeScript', 'Python', 'Tensorflow.js', 'Chart.js', 'FastApi', 'MongoDB'],
+  // readmePath: `https://raw.githubusercontent.com/Jamnic98/${projectId}/refs/heads/main/README.md`,
 }
 
 export default eyeTracker

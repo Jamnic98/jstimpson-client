@@ -62,6 +62,7 @@ const portfolioWebsite: Project = {
     'Pytest',
     "Strava's API",
   ],
+  readmePath: `https://raw.githubusercontent.com/Jamnic98/jstimpson-client/refs/heads/main/README.md`,
 }
 
 export default portfolioWebsite
